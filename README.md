@@ -1,6 +1,6 @@
 # TechnoElevate — React Website
 
-The site is now a **React SPA** built with Vite and React Router. The original static HTML files remain in the project root for reference (`legacy-index.html`, `about.html`, etc.).
+The site is now a **React SPA** built with Vite and React Router. Original static HTML files are in `legacy/` for reference only.
 
 ## Quick start
 
@@ -9,7 +9,17 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+Open [http://localhost:5173](http://localhost:5173) — use **`/`** (not `/index.html`).
+
+Legacy bookmark URLs still work and redirect automatically:
+
+| Old URL | Redirects to |
+|---------|----------------|
+| `/index.html` | `/` |
+| `/about.html` | `/about` |
+| `/case-study.html?id=kotak-sra` | `/case-studies/kotak-sra` |
+
+Original static HTML files are preserved in `legacy/` for reference only.
 
 ## Build for production
 

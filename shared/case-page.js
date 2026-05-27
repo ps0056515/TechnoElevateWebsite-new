@@ -12,10 +12,10 @@
       return;
     }
     document.title=c.client+' — Case Study | TechnoElevate';
-    const imgMap={BFSI:'photo-1563986768609-322da13575f3',Automotive:'photo-1492144534655-ae79c964c9d7',Telecom:'photo-1558618666-fcd25c85cd64','Retail & E-com':'photo-1556742049-0cfed4f6a45d',LegalTech:'photo-1620712943348-d21466881688',Manufacturing:'photo-1581091226825-a6a2a5aee158'};
+    const imgMap={BFSI:'photo-1556761175-5973dc0f32e7',Automotive:'photo-1494976388532-6f2ed50298ed',Telecom:'photo-1516321318823-687547d67d65','Retail & E-com':'photo-1556742049-0cfed4f6a45d',LegalTech:'photo-1620712943348-d21466881688',Manufacturing:'photo-1581091226825-a6a2a5aee158'};
     const photo=imgMap[c.industryNorm]||'photo-1552664730-d307ca884978';
     mount.innerHTML=`
-<section class="cs-full-hero" style="background-image:linear-gradient(135deg,rgba(13,17,23,.92),rgba(20,30,46,.88)),url('https://images.unsplash.com/${photo}?auto=format&fit=crop&w=1920&q=80');background-size:cover;">
+<section class="cs-full-hero" style="background-image:linear-gradient(135deg,rgba(13,17,23,.62),rgba(20,30,46,.55)),url('https://images.unsplash.com/${photo}?auto=format&fit=crop&w=1920&q=80');background-size:cover;">
   <div class="cs-full-inner">
     <div class="page-breadcrumb"><a href="index.html">Home</a><span>/</span><a href="casestudies.html">Case Studies</a><span>/</span><span>${c.client}</span></div>
     <div class="m-ind" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--orange2);font-weight:700;margin-bottom:10px;">${c.industryNorm}</div>

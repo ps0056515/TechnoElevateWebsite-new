@@ -5,7 +5,7 @@
   background:
     radial-gradient(ellipse 120% 80% at 65% 40%, rgba(27,42,74,.75) 0%, transparent 55%),
     radial-gradient(ellipse 60% 60% at 10% 80%, rgba(255,71,19,.15) 0%, transparent 50%),
-    linear-gradient(135deg, rgba(13,17,23,.82) 0%, rgba(15,25,35,.78) 45%, rgba(20,30,46,.85) 100%),
+    linear-gradient(135deg, rgba(13,17,23,.58) 0%, rgba(15,25,35,.52) 45%, rgba(20,30,46,.62) 100%),
     url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
 }
 
@@ -18,7 +18,7 @@
 }
 .page-hero.bg-theme::before{
   content:'';position:absolute;inset:0;z-index:0;
-  background:linear-gradient(135deg,rgba(13,17,23,.88) 0%,rgba(20,30,50,.8) 50%,rgba(13,17,23,.92) 100%);
+  background:linear-gradient(135deg,rgba(13,17,23,.62) 0%,rgba(20,30,50,.55) 50%,rgba(13,17,23,.68) 100%);
 }
 .page-hero.bg-theme::after{opacity:.35;z-index:0;}
 .page-hero.bg-theme .page-hero-inner{z-index:1;}
@@ -33,7 +33,7 @@
 .bg-about{background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');}
 .bg-contact{background-image:url('https://images.unsplash.com/photo-1423666639041-f56000c27aee?auto=format&fit=crop&w=1920&q=80');}
 .bg-technology{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');}
-.bg-devops{background-image:url('https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=1920&q=80');}
+.bg-devops{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4dfdb9?auto=format&fit=crop&w=1920&q=80');}
 .bg-casestudies{background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80');}
 .bg-engagement{background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');}
 
@@ -60,7 +60,7 @@
 .ai-card.bg-card-agentic{background-image:url('https://images.unsplash.com/photo-1485827404703-89b54fcc591e?auto=format&fit=crop&w=800&q=80');}
 .ai-card.bg-card-ml{background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80');}
 .ai-card.bg-card-vision{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80');}
-.ai-card.bg-card-governance{background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80');}
+.ai-card.bg-card-governance{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80');}
 .ai-card.bg-card-product{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4dfdb9?auto=format&fit=crop&w=800&q=80');}
 
 /* About page visual panel */
@@ -87,9 +87,9 @@
   background:linear-gradient(180deg,rgba(255,242,238,.2) 0%,rgba(249,250,251,1) 100%);
 }
 
-.ind-bfsi .ind-card-media{background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80');}
-.ind-telecom .ind-card-media{background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80');}
-.ind-automotive .ind-card-media{background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80');}
+.ind-bfsi .ind-card-media{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80');}
+.ind-telecom .ind-card-media{background-image:url('https://images.unsplash.com/photo-1516321318823-687547d67d65?auto=format&fit=crop&w=800&q=80');}
+.ind-automotive .ind-card-media{background-image:url('https://images.unsplash.com/photo-1494976388532-6f2ed50298ed?auto=format&fit=crop&w=800&q=80');}
 .ind-insurance .ind-card-media{background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80');}
 .ind-healthcare .ind-card-media{background-image:url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80');}
 .ind-manufacturing .ind-card-media{background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80');}
@@ -98,22 +98,8 @@
 .ind-public .ind-card-media{background-image:url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80');}
 .ind-agri .ind-card-media{background-image:url('https://images.unsplash.com/photo-1625246333197-78bfbf810830?auto=format&fit=crop&w=800&q=80');}
 
-/* Service cards — subtle right-side imagery */
-.svc.svc-themed{
-  background-image:linear-gradient(90deg,#fff 0%,#fff 58%,rgba(255,255,255,.92) 72%,rgba(255,255,255,.75) 100%);
-  background-size:cover;background-position:right center;
-}
-.svc-themed.svc-appdev{background-image:linear-gradient(90deg,#fff 0%,#fff 55%,rgba(255,255,255,.88) 70%,rgba(255,255,255,.7) 100%),url('https://images.unsplash.com/photo-1461749680684-dccba630e2f6?auto=format&fit=crop&w=800&q=80');}
-.svc-themed.svc-cloud{background-image:linear-gradient(90deg,#fff 0%,#fff 55%,rgba(255,255,255,.88) 70%,rgba(255,255,255,.7) 100%),url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80');}
-.svc-themed.svc-ai{background-image:linear-gradient(90deg,#fff 0%,#fff 55%,rgba(255,255,255,.88) 70%,rgba(255,255,255,.7) 100%),url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80');}
-.svc-themed.svc-migration{background-image:linear-gradient(90deg,#fff 0%,#fff 55%,rgba(255,255,255,.88) 70%,rgba(255,255,255,.7) 100%),url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80');}
-.svc-themed.svc-digital{background-image:linear-gradient(90deg,#fff 0%,#fff 55%,rgba(255,255,255,.88) 70%,rgba(255,255,255,.7) 100%),url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80');}
-.svc-themed.svc-erp{background-image:linear-gradient(90deg,#fff 0%,#fff 55%,rgba(255,255,255,.88) 70%,rgba(255,255,255,.7) 100%),url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80');}
-.svc-themed.svc-iot{background-image:linear-gradient(90deg,#fff 0%,#fff 55%,rgba(255,255,255,.88) 70%,rgba(255,255,255,.7) 100%),url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80');}
-.svc.svc-themed:hover{
-  background-image:linear-gradient(rgba(17,24,39,.96),rgba(17,24,39,.96)) !important;
-  background-color:var(--ink) !important;
-}
+/* Service cards — clean layout (no background photos) */
+.svc.svc-themed{background-image:none !important;}
 
 /* Home explore cards */
 .home-link-card.has-bg{
@@ -122,11 +108,11 @@
 }
 .home-link-card.has-bg::before{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(13,17,23,.35) 0%,rgba(13,17,23,.88) 100%);
+  background:linear-gradient(180deg,rgba(13,17,23,.22) 0%,rgba(13,17,23,.72) 100%);
   transition:background .3s;
 }
 .home-link-card.has-bg:hover::before{
-  background:linear-gradient(180deg,rgba(255,71,19,.25) 0%,rgba(13,17,23,.92) 100%);
+  background:linear-gradient(180deg,rgba(255,71,19,.2) 0%,rgba(13,17,23,.78) 100%);
 }
 .home-link-card.has-bg > *{position:relative;z-index:1;}
 .home-link-card.has-bg h3,.home-link-card.has-bg p,.home-link-card.has-bg .hl-arrow{color:#fff;}
@@ -138,16 +124,16 @@
 .home-link-card.bg-link-tech{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-engage{background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-ai{background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-devops{background-image:url('https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=80');}
+.home-link-card.bg-link-devops{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4dfdb9?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-contact{background-image:url('https://images.unsplash.com/photo-1423666639041-f56000c27aee?auto=format&fit=crop&w=600&q=80');}
 
 /* Case study & hero — themed imagery */
 .img-hero-engineering,.img-hero-ai,.img-cs-legal,.img-cs-bfsi,.img-cs-fintech{background-size:cover;background-position:center;}
-.img-hero-engineering{background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80');}
-.img-hero-ai{background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80');}
-.img-cs-legal{background-image:url('https://images.unsplash.com/photo-1589829545856-d0955b8452a9?auto=format&fit=crop&w=800&q=80');}
-.img-cs-bfsi{background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80');}
-.img-cs-fintech{background-image:url('https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80');}
+.img-hero-engineering{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80');}
+.img-hero-ai{background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80');}
+.img-cs-legal{background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80');}
+.img-cs-bfsi{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80');}
+.img-cs-fintech{background-image:url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80');}
 .bento-photo-sm{height:130px;}
 
 /* Engagement dark section */

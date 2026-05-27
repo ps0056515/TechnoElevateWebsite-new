@@ -10,6 +10,16 @@ const HERO_HTML = html.split('<section class="section bg-light"')[0];
 
 const FILTERS = ['all', 'BFSI', 'Telecom', 'Automotive', 'Healthcare', 'Insurance', 'Manufacturing', 'Retail & E-com', 'AI'];
 
+function caseCardTitle(project) {
+  const dash = project.indexOf(' — ');
+  return dash > 0 ? project.slice(0, dash) : project;
+}
+
+function caseCardSubtitle(project) {
+  const dash = project.indexOf(' — ');
+  return dash > 0 ? project.slice(dash + 3) : null;
+}
+
 export default function CaseStudiesPage() {
   useDocumentTitle(meta.title);
   const [activeF, setActiveF] = useState('all');
@@ -54,13 +64,18 @@ export default function CaseStudiesPage() {
             </div>
           </div>
           <div className="cs-grid">
-            {visible.map((c) => (
+            {visible.map((c, i) => {
+              const sameClientAsPrev = i > 0 && visible[i - 1].client === c.client;
+              const subtitle = sameClientAsPrev
+                ? caseCardSubtitle(c.project)
+                : c.client;
+              return (
               <Link key={c.id} to={`/case-studies/${c.id}`} className="cs-card">
                 <div className="cs-card-top" />
                 <div className="cs-card-body">
                   <div className="cs-ind">{c.industryNorm}</div>
-                  <div className="cs-client">{c.client}</div>
-                  <div className="cs-proj">{c.project}</div>
+                  <div className="cs-client">{caseCardTitle(c.project)}</div>
+                  {subtitle && <div className="cs-proj">{subtitle}</div>}
                   <p className="cs-excerpt">{c.problem}</p>
                 </div>
                 <div className="cs-card-foot">
@@ -71,7 +86,8 @@ export default function CaseStudiesPage() {
                   <span className="cs-chip">{c.regions[0]}</span>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
           {filtered.length > count && (
             <div className="cs-more-wrap">

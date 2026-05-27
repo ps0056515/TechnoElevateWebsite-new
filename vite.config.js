@@ -6,6 +6,9 @@ export default defineConfig({
   publicDir: 'public',
   server: {
     port: 5173,
-    open: true,
+    open: '/',
+  },
+  preview: {
+    port: 5173,
   },
 });

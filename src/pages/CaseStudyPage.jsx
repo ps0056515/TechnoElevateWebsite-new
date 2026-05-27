@@ -1,16 +1,8 @@
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { CASES } from '../data/cases';
+import { HERO_OVERLAY, INDUSTRY_PHOTOS, PHOTOS, unsplash } from '../config/images';
 import { useDocumentTitle } from '../hooks/useSiteEffects';
-
-const IMG_MAP = {
-  BFSI: 'photo-1563986768609-322da13575f3',
-  Automotive: 'photo-1492144534655-ae79c964c9d7',
-  Telecom: 'photo-1558618666-fcd25c85cd64',
-  'Retail & E-com': 'photo-1556742049-0cfed4f6a45d',
-  LegalTech: 'photo-1620712943348-d21466881688',
-  Manufacturing: 'photo-1581091226825-a6a2a5aee158',
-};
 
 export default function CaseStudyPage() {
   const { id } = useParams();
@@ -30,8 +22,8 @@ export default function CaseStudyPage() {
     );
   }
 
-  const photo = IMG_MAP[c.industryNorm] || 'photo-1552664730-d307ca884978';
-  const bg = `linear-gradient(135deg,rgba(13,17,23,.92),rgba(20,30,46,.88)),url('https://images.unsplash.com/${photo}?auto=format&fit=crop&w=1920&q=80')`;
+  const photo = INDUSTRY_PHOTOS[c.industryNorm] || PHOTOS.casestudies;
+  const bg = `${HERO_OVERLAY},url('${unsplash(photo)}')`;
 
   return (
     <>

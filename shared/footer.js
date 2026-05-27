@@ -1,5 +1,5 @@
 (function(){
-  const LOGO_SRC = 'technoelevate_logo.png?v=3';
+  const LOGO_SRC = 'technoelevate_logo.png?v=5';
   const LOGO_ALT = 'TechnoElevate';
   const LOGO_MARK = '<img src="' + LOGO_SRC + '" alt="' + LOGO_ALT + '" class="f-brand-img" width="200" height="44">';
 
@@ -13,10 +13,10 @@
         </div>
         <p>The product engineering studio within TestYantra Software Solutions. Enterprise AI, cloud-native software and outcome-obsessed delivery.</p>
         <div class="f-socials">
-          <a href="#" class="f-soc">in</a>
-          <a href="#" class="f-soc">X</a>
-          <a href="#" class="f-soc">gh</a>
-          <a href="#" class="f-soc">yt</a>
+          <a href="https://www.linkedin.com/company/testyantra-software-solutions" class="f-soc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">in</a>
+          <a href="https://x.com/testyantra" class="f-soc" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)">X</a>
+          <a href="https://github.com/testyantra" class="f-soc" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">gh</a>
+          <a href="https://www.youtube.com/@TestYantra" class="f-soc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">yt</a>
         </div>
       </div>
       <div class="f-col"><h5>Services</h5><ul>

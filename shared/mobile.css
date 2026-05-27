@@ -178,3 +178,7 @@
 body.nav-mobile-open {
   overflow: hidden;
 }
+
+.page-html-content {
+  display: block;
+}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-
-const LOGO_SRC = '/technoelevate_logo.png?v=3';
+import { LOGO_ALT, LOGO_SRC } from '../config/logo';
+import { SOCIAL_LINKS } from '../config/social';
 
 export default function SiteFooter() {
   return (
@@ -9,14 +9,23 @@ export default function SiteFooter() {
         <div className="footer-grid">
           <div className="f-brand">
             <div className="f-brand-logo">
-              <img src={LOGO_SRC} alt="TechnoElevate" className="f-brand-img" width="200" height="44" />
+              <img src={LOGO_SRC} alt={LOGO_ALT} className="f-brand-img" width="280" height="52" />
             </div>
             <p>The product engineering studio within TestYantra Software Solutions. Enterprise AI, cloud-native software and outcome-obsessed delivery.</p>
             <div className="f-socials">
-              <a href="#" className="f-soc">in</a>
-              <a href="#" className="f-soc">X</a>
-              <a href="#" className="f-soc">gh</a>
-              <a href="#" className="f-soc">yt</a>
+              {SOCIAL_LINKS.map((s) => (
+                <a
+                  key={s.id}
+                  href={s.href}
+                  className="f-soc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  title={s.label}
+                >
+                  {s.short}
+                </a>
+              ))}
             </div>
           </div>
           <div className="f-col">

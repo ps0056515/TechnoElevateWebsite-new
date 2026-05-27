@@ -1,7 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { initReveal } from '../hooks/useSiteEffects';
+import { normalizeHref } from '../utils/paths';
 
 export default function HtmlContent({ html }) {
+  const ref = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const el = ref.current;
@@ -11,9 +15,10 @@ export default function HtmlContent({ html }) {
       const a = e.target.closest('a');
       if (!a) return;
       const href = a.getAttribute('href');
-      if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#')) return;
+      const target = normalizeHref(href);
+      if (!target) return;
       e.preventDefault();
-      navigate(href);
+      navigate(target);
     };
 
     el.addEventListener('click', onClick);
@@ -35,5 +40,19 @@ export default function HtmlContent({ html }) {
     return () => btn.removeEventListener('click', onSubmit);
   }, [html]);
 
-  return <div ref={ref} dangerouslySetInnerHTML={{ __html: html }} />;
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+    let cleanup = initReveal(el);
+    const t = setTimeout(() => {
+      cleanup();
+      cleanup = initReveal(el);
+    }, 50);
+    return () => {
+      clearTimeout(t);
+      cleanup();
+    };
+  }, [html]);
+
+  return <div ref={ref} className="page-html-content" dangerouslySetInnerHTML={{ __html: html }} />;
 }

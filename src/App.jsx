@@ -1,24 +1,43 @@
 import { Suspense, lazy, useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
+import LegacyRedirect from './components/LegacyRedirect';
 import HomePage from './pages/HomePage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyPage from './pages/CaseStudyPage';
 import StaticPage from './pages/StaticPage';
 import { staticRoutes } from './pages/routes';
 
+const pageLoaders = import.meta.glob('./content/pages/*.js');
+
 function LazyStaticRoute({ slug }) {
   const [page, setPage] = useState(null);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    import(`./content/pages/${slug}.js`)
+    const key = `./content/pages/${slug}.js`;
+    const load = pageLoaders[key];
+    if (!load) {
+      setError(true);
+      setPage(null);
+      return;
+    }
+    setError(false);
+    setPage(null);
+    load()
       .then((mod) => setPage({ meta: mod.meta, html: mod.html }))
       .catch(() => setError(true));
   }, [slug]);
 
-  if (error) return <div className="wrap" style={{ padding: '80px var(--pad)' }}><h1>Page not found</h1></div>;
-  if (!page) return null;
+  if (error) {
+    return (
+      <div className="wrap" style={{ padding: '80px var(--pad)' }}>
+        <h1>Page not found</h1>
+        <p><a href="/">Back to home</a></p>
+      </div>
+    );
+  }
+  if (!page) return <div className="wrap" style={{ padding: '80px var(--pad)', color: 'var(--muted)' }}>Loading…</div>;
   return <StaticPage meta={page.meta} html={page.html} />;
 }
 
@@ -36,6 +55,11 @@ export default function App() {
     <BrowserRouter>
       <Suspense fallback={null}>
         <Routes>
+          {/* Legacy static URLs → React routes */}
+          <Route path="index.html" element={<Navigate to="/" replace />} />
+          <Route path="case-study.html" element={<LegacyRedirect />} />
+          <Route path=":slug.html" element={<LegacyRedirect />} />
+
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="casestudies" element={<CaseStudiesPage />} />

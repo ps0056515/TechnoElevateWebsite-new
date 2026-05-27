@@ -2,8 +2,17 @@ import Announcement from '../components/Announcement';
 import HtmlContent from '../components/HtmlContent';
 import { useDocumentTitle } from '../hooks/useSiteEffects';
 
+function decodeHtml(text) {
+  if (!text) return '';
+  return text
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"');
+}
+
 export default function StaticPage({ meta, html }) {
-  useDocumentTitle(meta?.title);
+  useDocumentTitle(decodeHtml(meta?.title));
 
   return (
     <>

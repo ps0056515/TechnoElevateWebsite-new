@@ -1,6 +1,6 @@
 (function(){
   const page = (p) => p;
-  const LOGO_SRC = 'technoelevate_logo.png?v=3';
+  const LOGO_SRC = 'technoelevate_logo.png?v=5';
   const LOGO_ALT = 'TechnoElevate';
 
   const NAV_HTML = `
