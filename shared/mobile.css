@@ -1,0 +1,180 @@
+/* Mobile polish — safe areas, touch targets, small-screen layout */
+
+@media (max-width: 600px) {
+  :root {
+    --pad: 20px;
+  }
+
+  .announcement {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px 12px;
+    padding: 10px var(--pad);
+    font-size: 12px;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .hero.hero-home {
+    min-height: auto;
+  }
+
+  .hero-home-inner {
+    padding-top: 40px;
+    padding-bottom: 28px;
+  }
+
+  .hero-home-visual {
+    min-height: 0;
+  }
+
+  .hero-bento {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .hero-home-cta,
+  .hero-home-cta-ghost {
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .featured-cs,
+  .why-section,
+  .home-insights-preview,
+  .home-links-section,
+  .partners-band,
+  .ai-showcase,
+  .testimonials,
+  .content-section,
+  .section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .page-hero {
+    padding: 56px 0 48px;
+  }
+
+  .cta-band {
+    padding: 56px 0;
+  }
+
+  .cta-band-primary {
+    white-space: normal;
+    width: 100%;
+  }
+
+  .partners-row {
+    gap: 10px;
+  }
+
+  .partner-badge {
+    padding: 10px 14px;
+  }
+
+  .partner-badge span {
+    font-size: 12px;
+  }
+
+  .cs-head {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+
+  .cs-filter-wrap {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .cs-filter-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cs-f {
+    flex-shrink: 0;
+  }
+
+  .nav-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .search-overlay {
+    padding: 72px 12px 20px;
+  }
+
+  .search-panel {
+    border-radius: 12px;
+  }
+
+  .search-input {
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-inner {
+    gap: 8px;
+  }
+
+  .nav-btn {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Notched phones (iPhone X+, etc.) */
+@supports (padding: max(0px)) {
+  .nav-wrap {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+
+  .nav-mobile {
+    padding-bottom: max(48px, calc(24px + env(safe-area-inset-bottom)));
+  }
+
+  .announcement {
+    padding-left: max(var(--pad), env(safe-area-inset-left));
+    padding-right: max(var(--pad), env(safe-area-inset-right));
+  }
+}
+
+/* Better tap feedback on touch devices */
+@media (hover: none) {
+  .nav-trigger,
+  .nav-link-item,
+  .nav-btn,
+  .nav-icon-btn,
+  .nav-burger,
+  .hero-home-cta,
+  .hero-home-cta-ghost,
+  .cs-f,
+  .home-link-card,
+  .feat-card {
+    -webkit-tap-highlight-color: rgba(255, 71, 19, 0.12);
+  }
+
+  .feat-card:hover,
+  .why-item:hover,
+  .home-link-card:hover {
+    transform: none;
+  }
+}
+
+body.nav-mobile-open {
+  overflow: hidden;
+}

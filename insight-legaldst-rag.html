@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="image/png" href="technoelevate_logo.png?v=3">
+<title>Building LegalDST: RAG with Verified Case-Law Citations — TechnoElevate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/site.css">
+<link rel="stylesheet" href="shared/nav.css">
+<link rel="stylesheet" href="shared/backgrounds.css">
+<link rel="stylesheet" href="shared/content.css">
+</head>
+<body>
+<div id="site-nav"></div>
+<section class="page-hero bg-theme bg-ai-section" style="padding-bottom:40px;">
+  <div class="page-hero-inner">
+    <div class="page-breadcrumb"><a href="index.html">Home</a><span>/</span><a href="insights.html">Insights</a><span>/</span><span>LegalDST RAG</span></div>
+  </div>
+</section>
+<article class="article-wrap reveal">
+  <div class="insight-tag">Generative AI</div>
+  <h1>Building LegalDST: RAG with Verified Case-Law Citations</h1>
+  <div class="article-meta">8 min read · AI Hub · By TechnoElevate Engineering</div>
+  <div class="article-body">
+    <p>Legal research is one of the highest-stakes domains for generative AI. A hallucinated statute or fabricated case citation isn't a UX bug — it's a professional liability. When LegalDST approached TechnoElevate to build an AI-powered legal research platform for Indian lawyers, the non-negotiable requirement was clear: every answer must be grounded in verified case law.</p>
+    <h2>The challenge: accuracy over fluency</h2>
+    <p>Off-the-shelf LLMs produce fluent legal prose but routinely invent citations. For practising lawyers, that makes generic chatbots unusable. LegalDST needed a retrieval-augmented generation (RAG) architecture where the LLM synthesises answers strictly from a curated, indexed corpus of Indian case law — with inline references that link back to source documents.</p>
+    <h2>Architecture: RAG with citation verification</h2>
+    <p>We built a multi-stage pipeline: document ingestion and chunking of case-law corpora, vector embedding with hybrid search (semantic + keyword), relevance ranking with jurisdiction and court-level filters, and LLM generation constrained to retrieved passages only. Each generated paragraph carries verified citation metadata — case name, court, year and paragraph reference.</p>
+    <ul>
+      <li>Clerk-based authentication for lawyer accounts and firm-level access</li>
+      <li>Razorpay subscription billing for tiered research plans</li>
+      <li>Chat-style UX optimised for legal query patterns</li>
+      <li>Guardrails blocking generation when retrieval confidence is below threshold</li>
+    </ul>
+    <h2>Production outcomes</h2>
+    <p>LegalDST launched with subscription billing live, serving practising lawyers who previously spent hours manually searching case databases. The platform demonstrates TechnoElevate's enterprise AI capability: not just PoC demos, but production-grade LLM products with auth, payments and domain-specific guardrails.</p>
+    <p><a href="case-study.html?id=legaldst" style="color:var(--orange);font-weight:700;">Read the full LegalDST case study →</a></p>
+  </div>
+</article>
+<div id="site-footer"></div>
+<script src="shared/logo.js"></script>
+<script src="shared/nav.js?v=3"></script>
+<script src="shared/footer.js?v=3"></script>
+</body>
+</html>
