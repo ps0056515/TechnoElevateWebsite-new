@@ -10,6 +10,8 @@
     "check:pages": "node scripts/check-pages.mjs"
   },
   "dependencies": {
+    "@react-spring/web": "^10.1.0",
+    "framer-motion": "^12.40.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.0"
