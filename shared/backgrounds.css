@@ -28,12 +28,12 @@
 .bg-ai-agentic{background-image:url('https://images.unsplash.com/photo-1485827404703-89b54fcc591e?auto=format&fit=crop&w=1920&q=80');}
 .bg-ai-ml{background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80');}
 .bg-ai-vision{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80');}
-.bg-services{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4dfdb9?auto=format&fit=crop&w=1920&q=80');}
+.bg-services{background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80');}
 .bg-industries{background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');}
 .bg-about{background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');}
-.bg-contact{background-image:url('https://images.unsplash.com/photo-1423666639041-f56000c27aee?auto=format&fit=crop&w=1920&q=80');}
+.bg-contact{background-image:url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1920&q=80');}
 .bg-technology{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');}
-.bg-devops{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4dfdb9?auto=format&fit=crop&w=1920&q=80');}
+.bg-devops{background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80');}
 .bg-casestudies{background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80');}
 .bg-engagement{background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');}
 
@@ -117,23 +117,23 @@
 .home-link-card.has-bg > *{position:relative;z-index:1;}
 .home-link-card.has-bg h3,.home-link-card.has-bg p,.home-link-card.has-bg .hl-arrow{color:#fff;}
 .home-link-card.has-bg p{color:rgba(255,255,255,.7);}
-.home-link-card.bg-link-services{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4dfdb9?auto=format&fit=crop&w=600&q=80');}
+.home-link-card.bg-link-services{background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-industries{background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-cases{background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-about{background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-tech{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-engage{background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80');}
 .home-link-card.bg-link-ai{background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-devops{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4dfdb9?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-contact{background-image:url('https://images.unsplash.com/photo-1423666639041-f56000c27aee?auto=format&fit=crop&w=600&q=80');}
+.home-link-card.bg-link-devops{background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80');}
+.home-link-card.bg-link-contact{background-image:url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=600&q=80');}
 
 /* Case study & hero — themed imagery */
 .img-hero-engineering,.img-hero-ai,.img-cs-legal,.img-cs-bfsi,.img-cs-fintech{background-size:cover;background-position:center;}
-.img-hero-engineering{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80');}
-.img-hero-ai{background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80');}
-.img-cs-legal{background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80');}
-.img-cs-bfsi{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80');}
-.img-cs-fintech{background-image:url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80');}
+.img-hero-engineering{background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80');} /* Premium enterprise networking cloud servers representing Cloud & AI Engineering */
+.img-hero-ai{background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80');} /* Gorgeous abstract glowing 3D neural synaptic connectivity network representing AI, LLMs, and RAG */
+.img-cs-legal{background-image:url('https://media.istockphoto.com/id/1330033671/photo/focus-on-hammer-group-of-files-on-judge-table-covered-with-dust-concept-of-pending-old-cases.webp?a=1&b=1&s=612x612&w=0&k=20&c=X0y1qHnkC82Op1WfJe9eApNu6pmoV3xphQTDnUxXA_o=');} /* High-contrast iStock judge gavel representing AI Legal Research pending cases */
+.img-cs-bfsi{background-image:url('https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?auto=format&fit=crop&w=800&q=80');} /* Premium mobile banking transaction authentication representing BFSI Service Request Automation */
+.img-cs-fintech{background-image:url('https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80');} /* High-tech glowing neural prediction charts representing Fintech Credit Underwriting ML */
 .bento-photo-sm{height:130px;}
 
 /* Engagement dark section */

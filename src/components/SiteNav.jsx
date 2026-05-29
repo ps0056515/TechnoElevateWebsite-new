@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { LANGUAGES, LANG_KEY, LANG_NOTICE_KEY, SEARCH_INDEX } from '../data/site';
 
 import { LOGO_ALT, LOGO_SRC } from '../config/logo';
@@ -107,7 +108,13 @@ export default function SiteNav() {
 
   return (
     <>
-      <div className={`nav-wrap${scrolled ? ' scrolled' : ''}${openMega ? ' mega-open' : ''}`} id="navWrap">
+      <motion.div
+        className={`nav-wrap${scrolled ? ' scrolled' : ''}${openMega ? ' mega-open' : ''}`}
+        id="navWrap"
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      >
         <div className="nav-inner">
           <Link to="/" className="nav-logo" id="navLogoLink">
             <img src={LOGO_SRC} alt={LOGO_ALT} className="nav-logo-img" width="280" height="52" />
@@ -228,80 +235,161 @@ export default function SiteNav() {
               <button className="nav-lang" type="button" aria-expanded={langOpen} onClick={() => { setLangOpen(!langOpen); setOpenMega(null); }}>
                 <span>{langCode.toUpperCase()}</span> <span className="chev">▾</span>
               </button>
-              <div className="lang-dropdown" role="listbox" aria-hidden={!langOpen}>
-                {LANGUAGES.map((l) => (
-                  <button key={l.code} type="button" className={`lang-option${langCode === l.code ? ' active' : ''}`} onClick={() => selectLang(l.code)}>
-                    <span>{l.native}</span><span className="lang-code">{l.code.toUpperCase()}</span>
-                  </button>
-                ))}
-              </div>
+              <AnimatePresence>
+                {langOpen && (
+                  <motion.div
+                    className="lang-dropdown"
+                    role="listbox"
+                    aria-hidden={!langOpen}
+                    initial={{ opacity: 0, y: -8, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -6, scale: 0.97 }}
+                    transition={{ duration: 0.15, ease: 'easeOut' }}
+                    style={{
+                      opacity: 1,
+                      visibility: 'visible',
+                      transform: 'none',
+                      transition: 'none',
+                      originX: 1,
+                      originY: 0,
+                    }}
+                  >
+                    {LANGUAGES.map((l) => (
+                      <button key={l.code} type="button" className={`lang-option${langCode === l.code ? ' active' : ''}`} onClick={() => selectLang(l.code)}>
+                        <span>{l.native}</span><span className="lang-code">{l.code.toUpperCase()}</span>
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
             <button className="nav-burger" type="button" aria-label="Menu" onClick={() => setMobileOpen(!mobileOpen)}>
               <span></span><span></span><span></span>
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className={`mega-backdrop${openMega || searchOpen ? ' show' : ''}`} onClick={closeAll} />
+      <AnimatePresence>
+        {(openMega || searchOpen) && (
+          <motion.div
+            className="mega-backdrop show"
+            onClick={closeAll}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            style={{
+              opacity: 1,
+              visibility: 'visible',
+              transition: 'none',
+              pointerEvents: 'auto',
+            }}
+          />
+        )}
+      </AnimatePresence>
 
-      <div className={`search-overlay${searchOpen ? ' open' : ''}`} aria-hidden={!searchOpen} onClick={(e) => e.target === e.currentTarget && closeAll()}>
-        <div className="search-panel" role="dialog" aria-modal="true" aria-label="Site search">
-          <div className="search-head">
-            <svg className="search-head-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-            <input ref={searchInputRef} type="search" className="search-input" placeholder="Search services, industries, case studies, insights…" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} aria-label="Search" />
-            <span className="search-kbd">Esc</span>
-            <button type="button" className="search-close" aria-label="Close search" onClick={closeAll}>&times;</button>
-          </div>
-          <div className="search-body">
-            <div className="search-section-label">Quick links</div>
-            <div className="search-results">
-              {filteredSearch.empty ? (
-                <div className="search-empty">No results for “{searchQuery}”. Try “AI”, “DevOps”, or “Contact”.</div>
-              ) : (
-                Object.entries(filteredSearch.groups).map(([cat, items]) => (
-                  <div className="search-group" key={cat}>
-                    <div className="search-group-label">{cat}</div>
-                    {items.map((item) => (
-                      <Link key={item.href + item.title} to={item.href} className="search-result" onClick={closeAll}>
-                        <span className="search-result-title" dangerouslySetInnerHTML={{ __html: highlightMatch(item.title, filteredSearch.q) }} />
-                        <span className="search-result-cat">{item.cat}</span>
-                      </Link>
-                    ))}
-                  </div>
-                ))
-              )}
+      <AnimatePresence>
+        {searchOpen && (
+          <motion.div
+            className="search-overlay open"
+            aria-hidden={!searchOpen}
+            onClick={(e) => e.target === e.currentTarget && closeAll()}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            style={{
+              opacity: 1,
+              visibility: 'visible',
+              transition: 'none',
+            }}
+          >
+            <motion.div
+              className="search-panel"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Site search"
+              initial={{ opacity: 0, y: -30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 350, damping: 28 }}
+              style={{
+                transition: 'none',
+              }}
+            >
+              <div className="search-head">
+                <svg className="search-head-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <input ref={searchInputRef} type="search" className="search-input" placeholder="Search services, industries, case studies, insights…" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} aria-label="Search" />
+                <span className="search-kbd">Esc</span>
+                <button type="button" className="search-close" aria-label="Close search" onClick={closeAll}>&times;</button>
+              </div>
+              <div className="search-body">
+                <div className="search-section-label">Quick links</div>
+                <div className="search-results">
+                  {filteredSearch.empty ? (
+                    <div className="search-empty">No results for “{searchQuery}”. Try “AI”, “DevOps”, or “Contact”.</div>
+                  ) : (
+                    Object.entries(filteredSearch.groups).map(([cat, items]) => (
+                      <div className="search-group" key={cat}>
+                        <div className="search-group-label">{cat}</div>
+                        {items.map((item) => (
+                          <Link key={item.href + item.title} to={item.href} className="search-result" onClick={closeAll}>
+                            <span className="search-result-title" dangerouslySetInnerHTML={{ __html: highlightMatch(item.title, filteredSearch.q) }} />
+                            <span className="search-result-cat">{item.cat}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            className="nav-mobile open"
+            id="navMobile"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+            style={{
+              display: 'block',
+              transition: 'none',
+            }}
+          >
+            <div className="mob-section"><h6>Services</h6>
+              <Link to="/ai-hub" onClick={closeAll}>TechnoElevate.AI</Link>
+              <Link to="/ai-llm-rag" onClick={closeAll}>LLM &amp; RAG Engineering</Link>
+              <Link to="/devops-sre" onClick={closeAll}>DevOps &amp; SRE</Link>
+              <Link to="/services" onClick={closeAll}>All Services</Link>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={`nav-mobile${mobileOpen ? ' open' : ''}`} id="navMobile">
-        <div className="mob-section"><h6>Services</h6>
-          <Link to="/ai-hub" onClick={closeAll}>TechnoElevate.AI</Link>
-          <Link to="/ai-llm-rag" onClick={closeAll}>LLM &amp; RAG Engineering</Link>
-          <Link to="/devops-sre" onClick={closeAll}>DevOps &amp; SRE</Link>
-          <Link to="/services" onClick={closeAll}>All Services</Link>
-        </div>
-        <div className="mob-section"><h6>Insights</h6>
-          <Link to="/insights" onClick={closeAll}>Articles</Link>
-          <Link to="/casestudies" onClick={closeAll}>Case Studies</Link>
-          <Link to="/whitepapers" onClick={closeAll}>Whitepapers</Link>
-        </div>
-        <div className="mob-section"><h6>Company</h6>
-          <Link to="/about" onClick={closeAll}>About</Link>
-          <Link to="/leadership" onClick={closeAll}>Leadership</Link>
-          <Link to="/careers" onClick={closeAll}>Careers</Link>
-          <Link to="/contact" onClick={closeAll}>Contact</Link>
-        </div>
-        <div className="mob-section"><h6>Language</h6>
-          <div className="mob-lang-list">
-            {LANGUAGES.map((l) => (
-              <button key={l.code} type="button" className={`mob-lang-btn${langCode === l.code ? ' on' : ''}`} onClick={() => selectLang(l.code)}>{l.native}</button>
-            ))}
-          </div>
-        </div>
-      </div>
+            <div className="mob-section"><h6>Insights</h6>
+              <Link to="/insights" onClick={closeAll}>Articles</Link>
+              <Link to="/casestudies" onClick={closeAll}>Case Studies</Link>
+              <Link to="/whitepapers" onClick={closeAll}>Whitepapers</Link>
+            </div>
+            <div className="mob-section"><h6>Company</h6>
+              <Link to="/about" onClick={closeAll}>About</Link>
+              <Link to="/leadership" onClick={closeAll}>Leadership</Link>
+              <Link to="/careers" onClick={closeAll}>Careers</Link>
+              <Link to="/contact" onClick={closeAll}>Contact</Link>
+            </div>
+            <div className="mob-section"><h6>Language</h6>
+              <div className="mob-lang-list">
+                {LANGUAGES.map((l) => (
+                  <button key={l.code} type="button" className={`mob-lang-btn${langCode === l.code ? ' on' : ''}`} onClick={() => selectLang(l.code)}>{l.native}</button>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
@@ -317,11 +405,28 @@ function MegaItem({ id, open, onToggle, onClose, children, cols3, featured }) {
         {id === 'about' && 'About'}
         <span className="chev">▾</span>
       </button>
-      <div className="mega-panel">
-        <div className={`mega-inner${featured ? ' has-featured' : ''}`} onClick={onClose}>
-          {children}
-        </div>
-      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="mega-panel"
+            initial={{ opacity: 0, y: -12, scaleY: 0.95 }}
+            animate={{ opacity: 1, y: 0, scaleY: 1 }}
+            exit={{ opacity: 0, y: -8, scaleY: 0.97 }}
+            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            style={{
+              opacity: 1,
+              visibility: 'visible',
+              transform: 'none',
+              transition: 'none',
+              originY: 0,
+            }}
+          >
+            <div className={`mega-inner${featured ? ' has-featured' : ''}`} onClick={onClose}>
+              {children}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </li>
   );
 }
