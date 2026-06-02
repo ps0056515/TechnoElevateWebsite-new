@@ -23,9 +23,212 @@
 .page-hero.bg-theme::after{opacity:.35;z-index:0;}
 .page-hero.bg-theme .page-hero-inner{z-index:1;}
 
-.bg-ai{background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1920&q=80');}
-.bg-ai-llm{background-image:url('https://images.unsplash.com/photo-1620712943348-d21466881688?auto=format&fit=crop&w=1920&q=80');}
-.bg-ai-agentic{background-image:url('https://images.unsplash.com/photo-1485827404703-89b54fcc591e?auto=format&fit=crop&w=1920&q=80');}
+.bg-ai{background-image:url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80');}
+.bg-ai-llm{background-image:url('/ai_rag_hero_bg.png') !important;}
+
+/* Premium AI LLM Page Hero customization */
+.page-hero.bg-ai-llm {
+  background-image: url('/ai_rag_hero_bg.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Let our custom gradient overlays blend with the background image */
+.page-hero.bg-ai-llm::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: 
+    radial-gradient(circle at 75% 35%, rgba(255, 71, 19, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 25% 75%, rgba(99, 102, 241, 0.25) 0%, transparent 55%),
+    linear-gradient(135deg, rgba(10, 14, 20, 0.85) 0%, rgba(13, 20, 38, 0.65) 50%, rgba(10, 14, 20, 0.9) 100%) !important;
+}
+
+/* Pulsing background glow effect */
+.page-hero.bg-ai-llm::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 71, 19, 0.05) 0%, transparent 60%);
+  animation: breathingGlow 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes breathingGlow {
+  0% {
+    transform: scale(0.9) translate(-2%, -2%);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.1) translate(2%, 2%);
+    opacity: 0.95;
+  }
+}
+
+/* Staggered entrance animations for Hero content */
+.page-hero.bg-ai-llm .page-breadcrumb {
+  animation: faderSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+.page-hero.bg-ai-llm h1 {
+  animation: faderSlide 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  opacity: 0;
+}
+.page-hero.bg-ai-llm .page-hero-lead {
+  animation: faderSlide 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  opacity: 0;
+}
+.page-hero.bg-ai-llm .page-hero-tags {
+  animation: faderSlide 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+/* Staggered load for tags */
+.page-hero.bg-ai-llm .page-tag {
+  opacity: 0;
+  animation: faderIn 0.5s ease-out forwards;
+}
+.page-hero.bg-ai-llm .page-tag:nth-child(1) { animation-delay: 0.4s; }
+.page-hero.bg-ai-llm .page-tag:nth-child(2) { animation-delay: 0.5s; }
+.page-hero.bg-ai-llm .page-tag:nth-child(3) { animation-delay: 0.6s; }
+.page-hero.bg-ai-llm .page-tag:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes faderSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes faderIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Glassmorphism for tags */
+.page-hero.bg-ai-llm .page-tag {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--orange);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.page-hero.bg-ai-llm .page-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 71, 19, 0.15);
+  border-color: rgba(255, 71, 19, 0.35);
+  border-left-color: var(--orange2);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(255, 71, 19, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bg-ai-agentic{background-image:url('/ai_agentic_card_bg.png') !important;}
+
+/* Premium AI Agentic Page Hero customization */
+.page-hero.bg-ai-agentic {
+  background-image: url('/ai_agentic_card_bg.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Blend the hero with premium neon overlays */
+.page-hero.bg-ai-agentic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: 
+    radial-gradient(circle at 75% 35%, rgba(255, 71, 19, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 25% 75%, rgba(6, 182, 212, 0.25) 0%, transparent 55%),
+    linear-gradient(135deg, rgba(10, 14, 20, 0.85) 0%, rgba(13, 20, 38, 0.65) 50%, rgba(10, 14, 20, 0.9) 100%) !important;
+}
+
+/* Pulsing background glow effect */
+.page-hero.bg-ai-agentic::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 60%);
+  animation: breathingGlowAgentic 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes breathingGlowAgentic {
+  0% {
+    transform: scale(0.9) translate(-2%, -2%);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.1) translate(2%, 2%);
+    opacity: 0.95;
+  }
+}
+
+/* Staggered entrance animations for Hero content */
+.page-hero.bg-ai-agentic .page-breadcrumb {
+  animation: faderSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+.page-hero.bg-ai-agentic h1 {
+  animation: faderSlide 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  opacity: 0;
+}
+.page-hero.bg-ai-agentic .page-hero-lead {
+  animation: faderSlide 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  opacity: 0;
+}
+.page-hero.bg-ai-agentic .page-hero-tags {
+  animation: faderSlide 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+/* Staggered load for tags */
+.page-hero.bg-ai-agentic .page-tag {
+  opacity: 0;
+  animation: faderIn 0.5s ease-out forwards;
+}
+.page-hero.bg-ai-agentic .page-tag:nth-child(1) { animation-delay: 0.4s; }
+.page-hero.bg-ai-agentic .page-tag:nth-child(2) { animation-delay: 0.5s; }
+.page-hero.bg-ai-agentic .page-tag:nth-child(3) { animation-delay: 0.6s; }
+.page-hero.bg-ai-agentic .page-tag:nth-child(4) { animation-delay: 0.7s; }
+
+/* Glassmorphism for tags */
+.page-hero.bg-ai-agentic .page-tag {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--orange);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.page-hero.bg-ai-agentic .page-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 71, 19, 0.15);
+  border-color: rgba(255, 71, 19, 0.35);
+  border-left-color: var(--orange2);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(255, 71, 19, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+}
 .bg-ai-ml{background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80');}
 .bg-ai-vision{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80');}
 .bg-services{background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80');}
@@ -33,7 +236,97 @@
 .bg-about{background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');}
 .bg-contact{background-image:url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1920&q=80');}
 .bg-technology{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');}
-.bg-devops{background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80');}
+.bg-devops{background-image:url('/ai_devops_hero_bg.png') !important;}
+
+/* Premium DevOps Page Hero customization */
+.page-hero.bg-devops {
+  background-image: url('/ai_devops_hero_bg.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Blend the hero with premium neon overlays */
+.page-hero.bg-devops::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: 
+    radial-gradient(circle at 75% 35%, rgba(16, 185, 129, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 25% 75%, rgba(6, 182, 212, 0.25) 0%, transparent 55%),
+    linear-gradient(135deg, rgba(10, 14, 20, 0.85) 0%, rgba(13, 20, 38, 0.65) 50%, rgba(10, 14, 20, 0.9) 100%) !important;
+}
+
+/* Pulsing background glow effect */
+.page-hero.bg-devops::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
+  animation: breathingGlowDevOps 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes breathingGlowDevOps {
+  0% {
+    transform: scale(0.9) translate(-2%, -2%);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.1) translate(2%, 2%);
+    opacity: 0.95;
+  }
+}
+
+/* Staggered entrance animations for Hero content */
+.page-hero.bg-devops .page-breadcrumb {
+  animation: faderSlide 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+.page-hero.bg-devops h1 {
+  animation: faderSlide 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  opacity: 0;
+}
+.page-hero.bg-devops .page-hero-lead {
+  animation: faderSlide 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  opacity: 0;
+}
+.page-hero.bg-devops .page-hero-tags {
+  animation: faderSlide 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+/* Staggered load for tags */
+.page-hero.bg-devops .page-tag {
+  opacity: 0;
+  animation: faderIn 0.5s ease-out forwards;
+}
+.page-hero.bg-devops .page-tag:nth-child(1) { animation-delay: 0.4s; }
+.page-hero.bg-devops .page-tag:nth-child(2) { animation-delay: 0.5s; }
+.page-hero.bg-devops .page-tag:nth-child(3) { animation-delay: 0.6s; }
+.page-hero.bg-devops .page-tag:nth-child(4) { animation-delay: 0.7s; }
+
+/* Glassmorphism for tags */
+.page-hero.bg-devops .page-tag {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--orange);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.page-hero.bg-devops .page-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 71, 19, 0.15);
+  border-color: rgba(255, 71, 19, 0.35);
+  border-left-color: var(--orange2);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(255, 71, 19, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+}
 .bg-casestudies{background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80');}
 .bg-engagement{background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');}
 
@@ -56,12 +349,12 @@
   z-index:0;
 }
 .ai-card.has-bg > *{position:relative;z-index:1;}
-.ai-card.bg-card-llm{background-image:url('https://images.unsplash.com/photo-1620712943348-d21466881688?auto=format&fit=crop&w=800&q=80');}
-.ai-card.bg-card-agentic{background-image:url('https://images.unsplash.com/photo-1485827404703-89b54fcc591e?auto=format&fit=crop&w=800&q=80');}
-.ai-card.bg-card-ml{background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80');}
+.ai-card.bg-card-llm{background-image:url('/service_rag_card.png');}
+.ai-card.bg-card-agentic{background-image:url('/service_agentic_card.png');}
+.ai-card.bg-card-ml{background-image:url('/service_ml_card.png');}
 .ai-card.bg-card-vision{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80');}
 .ai-card.bg-card-governance{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80');}
-.ai-card.bg-card-product{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4dfdb9?auto=format&fit=crop&w=800&q=80');}
+.ai-card.bg-card-product{background-image:url('/ai_product_card_bg.png');}
 
 /* About page visual panel */
 .about-img-bg.has-photo{
@@ -131,9 +424,9 @@
 .img-hero-engineering,.img-hero-ai,.img-cs-legal,.img-cs-bfsi,.img-cs-fintech{background-size:cover;background-position:center;}
 .img-hero-engineering{background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80');} /* Premium enterprise networking cloud servers representing Cloud & AI Engineering */
 .img-hero-ai{background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80');} /* Gorgeous abstract glowing 3D neural synaptic connectivity network representing AI, LLMs, and RAG */
-.img-cs-legal{background-image:url('https://media.istockphoto.com/id/1330033671/photo/focus-on-hammer-group-of-files-on-judge-table-covered-with-dust-concept-of-pending-old-cases.webp?a=1&b=1&s=612x612&w=0&k=20&c=X0y1qHnkC82Op1WfJe9eApNu6pmoV3xphQTDnUxXA_o=');} /* High-contrast iStock judge gavel representing AI Legal Research pending cases */
-.img-cs-bfsi{background-image:url('https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?auto=format&fit=crop&w=800&q=80');} /* Premium mobile banking transaction authentication representing BFSI Service Request Automation */
-.img-cs-fintech{background-image:url('https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80');} /* High-tech glowing neural prediction charts representing Fintech Credit Underwriting ML */
+.img-cs-legal{background-image:url('/cs_legal_card.png');}
+.img-cs-bfsi{background-image:url('/cs_kotak_card.png');}
+.img-cs-fintech{background-image:url('/cs_cars24_card.png');}
 .bento-photo-sm{height:130px;}
 
 /* Engagement dark section */

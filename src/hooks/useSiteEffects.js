@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 /** Attach scroll-reveal to .reveal elements inside scope (or whole document). */
 export function initReveal(scope = document) {
   const root = scope && scope.querySelectorAll ? scope : document;
-  const elements = root.querySelectorAll('.reveal:not(.up)');
+  const elements = root.querySelectorAll('.reveal');
   if (!elements.length) return () => {};
 
   const obs = new IntersectionObserver(
@@ -12,7 +12,13 @@ export function initReveal(scope = document) {
       entries.forEach((e) => {
         if (e.isIntersecting) {
           e.target.classList.add('up');
-          obs.unobserve(e.target);
+        } else {
+          // Reset the animation only if the element is below the viewport
+          // (scrolled out of view back to the bottom)
+          const isBelowViewport = e.boundingClientRect.top > 0;
+          if (isBelowViewport) {
+            e.target.classList.remove('up');
+          }
         }
       }),
     { threshold: 0.12 }

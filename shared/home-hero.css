@@ -212,11 +212,11 @@
 }
 
 .bento-photo.img-hero-engineering {
-  background-image: url("https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80"); /* Premium enterprise networking cloud servers representing Cloud & AI Engineering */
+  background-image: url("/home_hero_engineering_bg.png"); /* Custom premium enterprise cloud architecture background */
 }
 
 .bento-photo.img-hero-ai {
-  background-image: url("https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWl8ZW58MHx8MHx8fDA%3D"); /* Gorgeous abstract glowing 3D neural synaptic connectivity network representing AI, LLMs, and RAG */
+  background-image: url("/home_hero_ai_bg.png"); /* Custom premium abstract AI glowing synaptic connectivity background */
 }
 
 .bento-photo::after {
@@ -273,8 +273,8 @@
       rgba(15, 23, 42, 0.15) 0%,
       rgba(15, 23, 42, 0.85) 100%
     ),
-    url("https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80")
-      center/cover no-repeat; /* Warm professional close up of payment transaction for Kotak SRA */
+    url("/home_hero_bank_bg.png")
+      center/cover no-repeat; /* Custom secure automated fintech processing background */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -463,3 +463,471 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* High-Fidelity Corporate & Tech Brand Logos CSS Sprite Grid */
+.brand-sprite {
+  background-image: url("/brand_logos_sprite.png?v=3");
+  background-size: 128px 128px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* Row 0 - Clients */
+.brand-sprite.kotak { background-position: 0px 0px; }
+.brand-sprite.jpmorgan { background-position: -32px 0px; }
+.brand-sprite.lloyds { background-position: -64px 0px; }
+.brand-sprite.verizon { background-position: -96px 0px; }
+
+/* Row 1 - Clients / Partners */
+.brand-sprite.cars24 { background-position: 0px -32px; }
+.brand-sprite.legaldst { background-position: -32px -32px; }
+.brand-sprite.autonomo { background-position: -64px -32px; }
+.brand-sprite.cmmi { background-position: -96px -32px; }
+
+/* Row 2 - Tech Partners */
+.brand-sprite.aws { background-position: 0px -64px; }
+.brand-sprite.azure { background-position: -32px -64px; }
+.brand-sprite.gcp { background-position: -64px -64px; }
+.brand-sprite.kubernetes { background-position: -96px -64px; }
+
+/* Row 3 - Tech Standards */
+.brand-sprite.iso { background-position: 0px -96px; }
+
+/* ═══════════════════════════════════════════════════════════
+   Core Services — Full-Screen Alternating Cards (Enhanced)
+   ═══════════════════════════════════════════════════════════ */
+.core-services-section {
+  padding: 0;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Light premium header */
+.core-services-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 100px var(--pad) 64px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.core-services-section > .core-services-header .s-eyebrow {
+  color: var(--orange);
+}
+.core-services-section > .core-services-header .s-title {
+  color: #0f172a;
+}
+.core-services-section > .core-services-header .s-sub {
+  color: #475569;
+}
+
+/* Light dot grid background behind header */
+.core-services-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* ─── Service Card Stack with luxurious spacing ─── */
+.services-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 64px; /* Generous space between cards */
+  padding-bottom: 120px; /* Space at the bottom of the section */
+}
+
+/* Premium Floating Card Container */
+.svc-card {
+  max-width: var(--max);
+  margin: 0 auto;
+  width: calc(100% - (var(--pad) * 2));
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.02);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Alternating gradients inside cards */
+.svc-card:nth-child(odd) {
+  background: linear-gradient(180deg, #ffffff 0%, #fcfdfe 100%);
+}
+.svc-card:nth-child(even) {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.svc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.06);
+  border-color: rgba(255, 71, 19, 0.18);
+}
+
+/* Inner 2-column grid */
+.svc-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+}
+
+/* ─── Image Side ─── */
+.svc-card-img {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 330px; /* Highly compact card height */
+  overflow: hidden;
+}
+
+/* Image gradient overlay — cinematic */
+.svc-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(15, 23, 42, 0.55) 0%,
+    rgba(15, 23, 42, 0.1) 40%,
+    rgba(15, 23, 42, 0.55) 100%
+  );
+  z-index: 1;
+  transition: background 0.6s ease;
+}
+.svc-card:hover .svc-card-img-overlay {
+  background: linear-gradient(
+    160deg,
+    rgba(15, 23, 42, 0.35) 0%,
+    rgba(15, 23, 42, 0) 40%,
+    rgba(15, 23, 42, 0.35) 100%
+  );
+}
+
+/* Large watermark step number on image */
+.svc-card-img-num {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  z-index: 2;
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glassmorphism metric badge on image */
+.svc-card-metric-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.svc-card:hover .svc-card-metric-badge {
+  background: rgba(255, 71, 19, 0.18);
+  border-color: rgba(255, 71, 19, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(255, 71, 19, 0.2);
+}
+.svc-metric-value {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.svc-metric-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Hover zoom on image background */
+.svc-card-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.svc-card:hover .svc-card-img::after {
+  transform: scale(1.06);
+}
+
+/* ─── Text Side ─── */
+.svc-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 40px; /* Reduced from 40px 48px */
+}
+
+.svc-card-title {
+  font-size: clamp(20px, 2.2vw, 26px); /* Reduced from clamp(24px, 2.8vw, 34px) */
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 10px; /* Reduced from 16px */
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.svc-card-title-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(255, 71, 19, 0.1), rgba(255, 71, 19, 0.04));
+  border: 1px solid rgba(255, 71, 19, 0.15);
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.svc-card:hover .svc-card-title-icon {
+  background: linear-gradient(135deg, rgba(255, 71, 19, 0.18), rgba(255, 71, 19, 0.06));
+  border-color: rgba(255, 71, 19, 0.3);
+  transform: scale(1.08);
+}
+
+.svc-card-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange), #ff6b35);
+  border-radius: 2px;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.svc-card:hover .svc-card-title::after {
+  width: 64px;
+}
+
+.svc-card-desc {
+  font-size: 14px; /* Reduced from 15px */
+  line-height: 1.65; /* Slightly tighter line height */
+  color: #475569;
+  max-width: 500px;
+  margin-bottom: 14px; /* Reduced from 20px */
+}
+
+/* ─── Highlight bullet list ─── */
+.svc-card-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0; /* Reduced from 24px */
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Tighter highlights gap */
+}
+.svc-card-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px; /* Reduced from 13.5px */
+  font-weight: 500;
+  color: #334155;
+  line-height: 1.4;
+}
+.svc-check-icon {
+  width: 16px; /* Reduced from 18px */
+  height: 16px; /* Reduced from 18px */
+  flex-shrink: 0;
+  color: var(--orange);
+  margin-top: 1px;
+}
+
+/* ─── Footer: tags + CTA ─── */
+.svc-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 2px;
+}
+
+.svc-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.svc-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+.svc-tag:hover {
+  background: #fff2ee;
+  color: var(--orange);
+  border-color: rgba(255, 71, 19, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 71, 19, 0.08);
+}
+
+/* CTA link */
+.svc-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--orange);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.svc-card-cta svg {
+  transition: transform 0.3s ease;
+}
+.svc-card-cta:hover {
+  color: #e03a0a;
+  border-bottom-color: #e03a0a;
+}
+.svc-card-cta:hover svg {
+  transform: translateX(4px);
+}
+
+/* ─── Accent bars on content side ─── */
+.svc-card.img-left .svc-card-content {
+  border-left: 3px solid transparent;
+  transition: border-color 0.4s ease;
+}
+.svc-card.img-left:hover .svc-card-content {
+  border-left-color: var(--orange);
+}
+.svc-card.img-right .svc-card-content {
+  border-right: 3px solid transparent;
+  transition: border-color 0.4s ease;
+}
+.svc-card.img-right:hover .svc-card-content {
+  border-right-color: var(--orange);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Responsive — Core Services Cards
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .svc-card-content {
+    padding: 48px 40px;
+  }
+}
+
+@media (max-width: 960px) {
+  .core-services-header {
+    padding: 80px var(--pad) 48px;
+  }
+  .services-cards-stack {
+    gap: 40px;
+    padding-bottom: 80px;
+  }
+  .svc-card {
+    min-height: auto;
+  }
+  .svc-card-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .svc-card.img-right .svc-card-content {
+    order: 2;
+    border-right: none;
+  }
+  .svc-card.img-right .svc-card-img {
+    order: 1;
+    border-radius: 0;
+  }
+  .svc-card.img-left .svc-card-img {
+    border-radius: 0;
+  }
+  .svc-card.img-left .svc-card-content {
+    border-left: none;
+  }
+  
+  .svc-card-img {
+    min-height: 280px;
+  }
+  .svc-card-content {
+    padding: 36px 24px 48px;
+  }
+  .svc-card-img-num {
+    font-size: 48px;
+    bottom: 16px;
+    left: 20px;
+  }
+  .svc-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .core-services-header {
+    padding: 60px var(--pad) 32px;
+  }
+  .svc-card-img {
+    min-height: 220px;
+  }
+  .svc-card-content {
+    padding: 28px 20px 40px;
+  }
+  .svc-card-title {
+    font-size: 22px;
+  }
+  .svc-card-desc {
+    font-size: 14px;
+  }
+  .svc-card-highlights li {
+    font-size: 12.5px;
+  }
+  .svc-card-metric-badge {
+    padding: 10px 14px;
+    border-radius: 10px;
+  }
+  .svc-metric-value {
+    font-size: 18px;
+  }
+}
+
