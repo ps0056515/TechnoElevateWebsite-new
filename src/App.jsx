@@ -26,7 +26,10 @@ function LazyStaticRoute({ slug }) {
     setPage(null);
     load()
       .then((mod) => setPage({ meta: mod.meta, html: mod.html }))
-      .catch(() => setError(true));
+      .catch((err) => {
+        console.error('Error loading static page module:', err);
+        setError(true);
+      });
   }, [slug]);
 
   if (error) {
@@ -51,6 +54,7 @@ const NotFound = lazy(() => Promise.resolve({
 }));
 
 export default function App() {
+  console.log('Static Routes:', staticRoutes);
   return (
     <BrowserRouter>
       <Suspense fallback={null}>

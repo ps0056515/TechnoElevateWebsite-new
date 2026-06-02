@@ -74,7 +74,6 @@ export default function HomePage() {
         linkText="Explore AI Hub →"
         light
       />
-
       <section className="hero hero-home">
         <div className="hero-home-bg" />
         <div className="hero-home-inner">
@@ -215,8 +214,8 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
         </div>
-      </section>
-
+      </section>{" "}
+      <CoreServicesRow />
       <ClientsBand />
       <PartnersBand />
       <FeaturedCaseStudies />
@@ -230,70 +229,440 @@ export default function HomePage() {
   );
 }
 
+function CoreServicesRow() {
+  const services = [
+    {
+      title: "Application Development & Management",
+      desc: "We design, build and manage enterprise-grade web and mobile applications — from greenfield products to legacy modernization — with modern frameworks, design systems, and CI/CD-first delivery.",
+      icon: "🌐",
+      img: "/service_web_app.png",
+      tags: ["React & Next.js", "Angular", "SPAs & SSR", "Micro-Frontends"],
+      imgSide: "left",
+      highlights: [
+        "Full-stack React, Angular & Vue applications with SSR and ISR",
+        "Design system creation with Figma-to-code pipelines",
+        "Progressive Web Apps with offline-first architecture",
+        "Legacy application modernization & re-platforming",
+      ],
+      metric: "50+",
+      metricLabel: "Production apps delivered",
+      link: "/services",
+    },
+    {
+      title: "Mobile Engineering",
+      desc: "Native and cross-platform mobile experiences built for scale — from ride-hailing to banking. We ship production apps with fluid animations, biometric auth, offline sync, and deep OS integrations.",
+      icon: "📱",
+      img: "/service_mobile_dev.png",
+      tags: ["React Native", "iOS & Android", "Flutter", "Offline Sync"],
+      imgSide: "right",
+      highlights: [
+        "Cross-platform development with shared business logic",
+        "Biometric authentication & secure local storage",
+        "Real-time push notifications & background sync",
+        "App Store optimization & release management",
+      ],
+      metric: "4.8★",
+      metricLabel: "Avg. app store rating",
+      link: "/services",
+    },
+    {
+      title: "Cloud & Infrastructure",
+      desc: "Cloud-native transformation from strategy to execution. We architect highly-available, auto-scaling infrastructure on AWS, Azure and GCP — with Kubernetes orchestration and infrastructure-as-code at the core.",
+      icon: "☁️",
+      img: "/home_hero_engineering_bg.png",
+      tags: ["AWS & Azure", "Kubernetes", "Terraform", "GitOps"],
+      imgSide: "left",
+      highlights: [
+        "Multi-cloud strategy & workload migration",
+        "Kubernetes cluster design, deployment & management",
+        "Infrastructure-as-Code with Terraform & Pulumi",
+        "Cost optimization — avg. 35% cloud spend reduction",
+      ],
+      metric: "99.99%",
+      metricLabel: "Uptime SLA achieved",
+      link: "/devops-sre",
+    },
+    {
+      title: "Data & Analytics",
+      desc: "Turn raw data into real-time intelligence. We build end-to-end data platforms — from ingestion pipelines and data lakes to BI dashboards and predictive analytics — enabling data-driven decision making at enterprise scale.",
+      icon: "📈",
+      img: "/home_hero_bank_bg.png",
+      tags: ["Spark & Kafka", "Snowflake", "Power BI", "ETL Pipelines"],
+      imgSide: "right",
+      highlights: [
+        "Real-time streaming with Kafka & Apache Flink",
+        "Data lake architecture on S3, ADLS & BigQuery",
+        "BI dashboard & visualization with Power BI & Tableau",
+        "Data governance, lineage tracking & compliance",
+      ],
+      metric: "10x",
+      metricLabel: "Faster reporting cycles",
+      link: "/services",
+    },
+    {
+      title: "AI & LLM Integration",
+      desc: "Production-grade AI that goes beyond proof-of-concept. We deploy enterprise LLMs, RAG pipelines with verified citations, ML scoring engines, and computer vision systems — with the guardrails regulated industries demand.",
+      icon: "🧠",
+      img: "/service_ai_llm.png",
+      tags: ["LLM & RAG", "Vector DBs", "ML Scoring", "Computer Vision"],
+      imgSide: "left",
+      highlights: [
+        "Retrieval Augmented Generation with verified citations",
+        "Custom fine-tuned models with enterprise guardrails",
+        "ML credit scoring & alternative data pipelines",
+        "Computer vision for retail, automotive & healthcare",
+      ],
+      metric: "10x",
+      metricLabel: "Research speed improvement",
+      link: "/ai-llm-rag",
+    },
+    {
+      title: "Agentic AI & Automation",
+      desc: "Intelligent multi-agent systems that orchestrate complex business workflows autonomously. We build human-in-the-loop validation, automated decision engines, and self-healing pipelines that transform how enterprises operate.",
+      icon: "🤖",
+      img: "/service_agentic.png",
+      tags: ["Multi-Agents", "LangGraph", "CrewAI", "Workflow Automation"],
+      imgSide: "right",
+      highlights: [
+        "Multi-agent orchestration with LangGraph & CrewAI",
+        "Human-in-the-loop validation for critical decisions",
+        "Automated document processing & contract analysis",
+        "Self-healing CI/CD and infrastructure automation",
+      ],
+      metric: "80%",
+      metricLabel: "Manual effort reduction",
+      link: "/ai-agentic",
+    },
+    {
+      title: "Enterprise Integration & APIs",
+      desc: "Connect your entire technology ecosystem with clean, well-documented APIs and robust integration layers. From payment gateways to ERP connectors — we build the middleware that makes enterprise systems work together seamlessly.",
+      icon: "🔌",
+      img: "/service_api.png",
+      tags: ["REST & GraphQL", "gRPC", "Event-Driven", "iPaaS"],
+      imgSide: "left",
+      highlights: [
+        "RESTful & GraphQL API design with OpenAPI specs",
+        "Event-driven architecture with Kafka & RabbitMQ",
+        "Payment gateway integration — Stripe, Razorpay, Adyen",
+        "ERP & CRM connectors — SAP, Salesforce, HubSpot",
+      ],
+      metric: "200+",
+      metricLabel: "API endpoints managed",
+      link: "/services",
+    },
+    {
+      title: "Enterprise IT Security",
+      desc: "Zero-trust security architecture woven into every layer of your stack. We implement comprehensive identity management, encryption frameworks, compliance automation, and continuous threat monitoring for regulated enterprises.",
+      icon: "🛡️",
+      img: "/cs_kotak_bg.png",
+      tags: ["Zero Trust", "IAM & SSO", "SOC2", "Pen Testing"],
+      imgSide: "right",
+      highlights: [
+        "Zero-trust network architecture & micro-segmentation",
+        "Identity & Access Management with OAuth2 & SAML",
+        "Compliance automation — SOC2, ISO 27001, GDPR",
+        "Continuous vulnerability scanning & penetration testing",
+      ],
+      metric: "ISO 27001",
+      metricLabel: "Security aligned",
+      link: "/services",
+    },
+    {
+      title: "SRE & Observability",
+      desc: "Embed reliability into every layer of your infrastructure. We implement comprehensive distributed tracing, centralized logging, proactive alerting, and chaos engineering — ensuring zero-downtime operations at enterprise scale.",
+      icon: "📊",
+      img: "/service_sre.png",
+      tags: ["Prometheus", "Grafana", "OpenTelemetry", "PagerDuty"],
+      imgSide: "left",
+      highlights: [
+        "Distributed tracing with OpenTelemetry & Jaeger",
+        "SLO-driven reliability with error budgets & burn rates",
+        "Centralized logging with ELK Stack & Datadog",
+        "Chaos engineering & disaster recovery automation",
+      ],
+      metric: "<5min",
+      metricLabel: "Mean time to detect",
+      link: "/devops-sre",
+    },
+    {
+      title: "CX Transformation",
+      desc: "Reimagine your customer experience with intelligent, omnichannel digital journeys. We create personalized touchpoints powered by data, design thinking, and AI — driving measurable improvements in engagement, retention, and revenue.",
+      icon: "💎",
+      img: "/hero_digital_bg.png",
+      tags: [
+        "Design Thinking",
+        "Omnichannel",
+        "Personalization",
+        "A/B Testing",
+      ],
+      imgSide: "right",
+      highlights: [
+        "Customer journey mapping & experience audits",
+        "AI-powered personalization & recommendation engines",
+        "Omnichannel engagement — web, mobile, voice, chat",
+        "Conversion optimization with A/B testing frameworks",
+      ],
+      metric: "3x",
+      metricLabel: "Conversion improvement",
+      link: "/services",
+    },
+    {
+      title: "Quality Engineering & Testing",
+      desc: "Shift-left testing at enterprise scale. We build comprehensive test automation frameworks, performance benchmarking suites, and continuous quality gates — ensuring every release meets the highest standards before reaching production.",
+      icon: "✅",
+      img: "/ai_product_card_bg.png",
+      tags: ["Selenium & Cypress", "JMeter", "API Testing", "CI Quality Gates"],
+      imgSide: "left",
+      highlights: [
+        "End-to-end test automation with Selenium & Cypress",
+        "Performance testing & capacity planning with JMeter",
+        "API contract testing with Pact & Postman",
+        "AI-assisted test generation & visual regression",
+      ],
+      metric: "90%",
+      metricLabel: "Test automation coverage",
+      link: "/services",
+    },
+    {
+      title: "Consulting & Digital Strategy",
+      desc: "Strategic technology consulting that bridges the gap between business vision and engineering execution. We assess, plan and roadmap digital transformations — from modernization audits to architecture reviews — with clear, measurable outcomes.",
+      icon: "🎯",
+      img: "/service_consulting.png",
+      tags: ["Tech Audits", "Architecture Review", "Roadmapping", "CMMI L3"],
+      imgSide: "right",
+      highlights: [
+        "Technology landscape assessment & gap analysis",
+        "Enterprise architecture review & modernization roadmap",
+        "Build vs. buy analysis with TCO modeling",
+        "CMMI Level 3 process maturity & governance frameworks",
+      ],
+      metric: "20+",
+      metricLabel: "Enterprise engagements",
+      link: "/about",
+    },
+  ];
+
+  const imgVariants = {
+    hiddenLeft: { opacity: 0, x: -120, scale: 0.95 },
+    hiddenRight: { opacity: 0, x: 120, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
+
+  const textVariants = {
+    hiddenLeft: { opacity: 0, x: -80 },
+    hiddenRight: { opacity: 0, x: 80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.9, delay: 0.12, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
+
+  const tagVariants = {
+    hidden: { opacity: 0, y: 12, scale: 0.9 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        delay: 0.35 + i * 0.06,
+        duration: 0.45,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    }),
+  };
+
+  const highlightVariants = {
+    hidden: { opacity: 0, x: -16 },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 0.25 + i * 0.08,
+        duration: 0.5,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    }),
+  };
+
+  return (
+    <section className="core-services-section">
+      <div className="core-services-header">
+        <ScrollReveal direction="up" distance={20}>
+          <div className="s-eyebrow">Enterprise Capabilities</div>
+          <h2 className="s-title">Core Engineering Services</h2>
+          <p className="s-sub" style={{ maxWidth: 700, margin: "0 auto" }}>
+            End-to-end digital engineering — from strategy and consulting
+            through application development, cloud transformation, AI
+            integration, and managed services. We imagine, engineer, modernize,
+            and manage.
+          </p>
+        </ScrollReveal>
+      </div>
+
+      <div className="services-cards-stack">
+        {services.map((s, idx) => {
+          const isImgLeft = s.imgSide === "left";
+
+          const imageBlock = (
+            <motion.div
+              className="svc-card-img"
+              style={{ backgroundImage: `url(${s.img})` }}
+              initial={isImgLeft ? "hiddenLeft" : "hiddenRight"}
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              variants={imgVariants}
+            >
+              <div className="svc-card-img-overlay" />
+              {s.metric && (
+                <div className="svc-card-metric-badge">
+                  <span className="svc-metric-value">{s.metric}</span>
+                  <span className="svc-metric-label">{s.metricLabel}</span>
+                </div>
+              )}
+            </motion.div>
+          );
+
+          const textBlock = (
+            <motion.div
+              className="svc-card-content"
+              initial={isImgLeft ? "hiddenRight" : "hiddenLeft"}
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              variants={textVariants}
+            >
+              <h3 className="svc-card-title">
+                <span className="svc-card-title-icon">{s.icon}</span>
+                {s.title}
+              </h3>
+              <p className="svc-card-desc">{s.desc}</p>
+
+              {s.highlights && (
+                <ul className="svc-card-highlights">
+                  {s.highlights.map((h, hi) => (
+                    <motion.li
+                      key={hi}
+                      custom={hi}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false, amount: 0.3 }}
+                      variants={highlightVariants}
+                    >
+                      <svg
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        className="svc-check-icon"
+                      >
+                        <path
+                          d="M6 10l3 3 5-6"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      {h}
+                    </motion.li>
+                  ))}
+                </ul>
+              )}
+
+              <div className="svc-card-footer">
+                <div className="svc-card-tags">
+                  {s.tags.map((t, ti) => (
+                    <motion.span
+                      className="svc-tag"
+                      key={t}
+                      custom={ti}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false, amount: 0.3 }}
+                      variants={tagVariants}
+                    >
+                      {t}
+                    </motion.span>
+                  ))}
+                </div>
+                {/* {s.link && (
+                  <Link to={s.link} className="svc-card-cta">
+                    Learn more
+                    <svg
+                      viewBox="0 0 20 20"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    >
+                      <path d="M5 10h10M11 6l4 4-4 4" />
+                    </svg>
+                  </Link>
+                )} */}
+              </div>
+            </motion.div>
+          );
+
+          return (
+            <div
+              className={`svc-card ${isImgLeft ? "img-left" : "img-right"}`}
+              key={s.title}
+            >
+              <div className="svc-card-inner">
+                {isImgLeft ? (
+                  <>
+                    {imageBlock}
+                    {textBlock}
+                  </>
+                ) : (
+                  <>
+                    {textBlock}
+                    {imageBlock}
+                  </>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 function ClientsBand() {
   const logos = [
     {
       name: "Kotak Mahindra Bank",
-      bg: "#ED1C24",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2.2v-3.8l-2.6 3.8H5.9l3.5-5-3.3-5h2.3l2.4 3.7V6.5H13v10z" />
-        </svg>
-      ),
+      spriteClass: "kotak",
     },
     {
       name: "JPMorgan Chase",
-      bg: "#0066CC",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M0 15.415c0 .468.38.85.848.85h5.937V.575L0 7.72v7.695m15.416 8.582c.467 0 .846-.38.846-.849v-5.937H.573l7.146 6.785h7.697M24 8.587a.844.844 0 0 0-.847-.846h-5.938V23.43l6.782-7.148L24 8.586M8.585.003a.847.847 0 0 0-.847.847v5.94h15.688L16.282.003H8.585Z" />
-        </svg>
-      ),
+      spriteClass: "jpmorgan",
     },
     {
       name: "Lloyds Banking Group",
-      bg: "#006A4D",
-      svg: (
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-          <path d="M19.1 7.2c-.4-.8-1.2-1.3-2.1-1.3-.4 0-.8.1-1.2.3.2-.8.1-1.7-.3-2.4-.4-.7-1.2-1.2-2.1-1.2-.5 0-1 .2-1.4.5.1-.6-.1-1.2-.5-1.7-.5-.6-1.3-.9-2.1-.9-.7 0-1.4.3-1.9.9-.4.5-.5 1.2-.4 1.8-.4-.3-.9-.5-1.5-.5-1.1 0-2.1.8-2.3 1.9l-.8 3.2C2.1 8.3 1.7 9 1.7 9.8c0 .5.2.9.5 1.2l.3.3c-.3.4-.4 1-.4 1.5 0 .8.4 1.5 1.1 1.9l.4.2c-.2.5-.2 1 0 1.5.3.7.9 1.2 1.7 1.3l.4.1v5c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-4.5l1.6 1.1c.3.2.7.3 1.1.3h4c1.1 0 2-.9 2-2v-6.2c0-.5-.2-1-.5-1.4l-.4-.4c.5-.3.8-.8 1-1.4l.6-2.4c.1-.4 0-.9-.3-1.2z" />
-        </svg>
-      ),
+      spriteClass: "lloyds",
     },
     {
       name: "Verizon",
-      bg: "#CD040B",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M18.302 0H22v.003L10.674 24H7.662L2 12h3.727l3.449 7.337z" />
-        </svg>
-      ),
+      spriteClass: "verizon",
     },
     {
       name: "CARS24",
-      bg: "#FF6B00",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.7 1.5 1.5-.67 1.5-1.5 1.5z" />
-        </svg>
-      ),
+      spriteClass: "cars24",
     },
     {
       name: "LegalDST",
-      bg: "#1E40AF",
-      svg: (
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2v20M17 5H7M4.5 10c0 3 2.5 5 2.5 5s2.5-2 2.5-5M14.5 10c0 3 2.5 5 2.5 5s2.5-2 2.5-5M3 22h18" />
-        </svg>
-      ),
+      spriteClass: "legaldst",
     },
     {
       name: "Autonomo",
-      bg: "#10B981",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-        </svg>
-      ),
+      spriteClass: "autonomo",
     },
   ];
   const track = [...logos, ...logos];
@@ -326,14 +695,9 @@ function ClientsBand() {
       </div>
       <div className="clients-marquee">
         <div className="clients-track">
-          {track.map(({ svg, bg, name }, i) => (
+          {track.map(({ name, spriteClass }, i) => (
             <div className="c-logo" key={`${name}-${i}`}>
-              <div
-                className="c-logo-mark"
-                style={{ background: bg, color: "#fff", display: "grid", placeItems: "center" }}
-              >
-                {svg}
-              </div>
+              <div className={`c-logo-mark brand-sprite ${spriteClass}`} />
               <span className="c-logo-text">{name}</span>
             </div>
           ))}
@@ -347,62 +711,27 @@ function PartnersBand() {
   const badges = [
     {
       label: "CMMI Level 3",
-      bg: "#1B3A5C",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 11.9c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z M12 6a3 3 0 00-3 3v2h6V9a3 3 0 00-3-3z" />
-        </svg>
-      ),
+      spriteClass: "cmmi",
     },
     {
       label: "AWS Cloud",
-      bg: "#FF9900",
-      svg: (
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-          <text x="2" y="14" fontSize="12" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="-0.5">aws</text>
-          <path d="M2 17c4.5 2.5 10.5 2.5 15 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-          <path d="M17 17l-1-2 M17 17l-2 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-        </svg>
-      ),
+      spriteClass: "aws",
     },
     {
       label: "Microsoft Azure",
-      bg: "#0078D4",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M12 3.5L2 14.5h7.5L12 3.5z" opacity="0.8" />
-          <path d="M2 14.5h7.5L12 20.5 2 14.5z" opacity="0.95" />
-          <path d="M12 3.5l10 11h-7.5L12 3.5z" opacity="0.6" />
-          <path d="M22 14.5h-7.5L12 20.5 22 14.5z" opacity="0.85" />
-        </svg>
-      ),
+      spriteClass: "azure",
     },
     {
       label: "Google Cloud",
-      bg: "#4285F4",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M12.19 2.38a9.344 9.344 0 0 0-9.234 6.893c.053-.02-.055.013 0 0-3.875 2.551-3.922 8.11-.247 10.941l.006-.007-.007.03a6.717 6.717 0 0 0 4.077 1.356h5.173l.03.03h5.192c6.687.053 9.376-8.605 3.835-12.35a9.365 9.365 0 0 0-2.821-4.552l-.043.043.006-.05A9.344 9.344 0 0 0 12.19 2.38zm-.358 4.146c1.244-.04 2.518.368 3.486 1.15a5.186 5.186 0 0 1 1.862 4.078v.518c3.53-.07 3.53 5.262 0 5.193h-5.193l-.008.009v-.04H6.785a2.59 2.59 0 0 1-1.067-.23h.001a2.597 2.597 0 1 1 3.437-3.437l3.013-3.012A6.747 6.747 0 0 0 8.11 8.24c.018-.01.04-.026.054-.023a5.186 5.186 0 0 1 3.67-1.69z" />
-        </svg>
-      ),
+      spriteClass: "gcp",
     },
     {
       label: "Kubernetes",
-      bg: "#326CE5",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-2.075-2.597l2.578-.437.004.005a.44.44 0 0 1 .484.606zm-.833-2.129a.44.44 0 0 0 .173-.756l.002-.011L7.585 9.7a5.143 5.143 0 0 0-.73 3.255l2.514-.725.002-.009zm1.145-1.98a.44.44 0 0 0 .699-.337l.01-.005.15-2.62a5.144 5.144 0 0 0-3.01 1.442l2.147 1.523.004-.002zm.76 2.75l.723.349.722-.347.18-.78-.5-.623h-.804l-.5.623.179.779zm1.5-3.095a.44.44 0 0 0 .7.336l.008.003 2.134-1.513a5.188 5.188 0 0 0-2.992-1.442l.148 2.615.002.001zm10.876 5.97l-5.773 7.181a1.6 1.6 0 0 1-1.248.594l-9.261.003a1.6 1.6 0 0 1-1.247-.596l-5.776-7.18a1.583 1.583 0 0 1-.307-1.34L2.1 5.573c.108-.47.425-.864.863-1.073L11.305.513a1.606 1.606 0 0 1 1.385 0l8.345 3.985c.438.209.755.604.863 1.073l2.062 8.955c.108.47-.005.963-.308 1.34zm-3.289-2.057c-.042-.01-.103-.026-.145-.034-.174-.033-.315-.025-.479-.038-.35-.037-.638-.067-.895-.148-.105-.04-.18-.165-.216-.216l-.201-.059a6.45 6.45 0 0 0-.105-2.332 6.465 6.465 0 0 0-.936-2.163c.052-.047.15-.133.177-.159.008-.09.001-.183.094-.282.197-.185.444-.338.743-.522.142-.084.273-.137.415-.242.032-.024.076-.062.11-.089.24-.191.295-.52.123-.736-.172-.216-.506-.236-.745-.045-.034.027-.08.062-.111.088-.134.116-.217.23-.33.35-.246.25-.45.458-.673.609-.097.056-.239.037-.303.033l-.19.135a6.545 6.545 0 0 0-4.146-2.003l-.012-.223c-.065-.062-.143-.115-.163-.25-.022-.268.015-.557.057-.905.023-.163.061-.298.068-.475.001-.04-.001-.099-.001-.142 0-.306-.224-.555-.5-.555-.275 0-.499.249-.499.555l.001.014c0 .041-.002.092 0 .128.006.177.044.312.067.475.042.348.078.637.056.906a.545.545 0 0 1-.162.258l-.012.211a6.424 6.424 0 0 0-4.166 2.003 8.373 8.373 0 0 1-.18-.128c-.09.012-.18.04-.297-.029-.223-.15-.427-.358-.673-.608-.113-.12-.195-.234-.329-.349-.03-.026-.077-.062-.111-.088a.594.594 0 0 0-.348-.132.481.481 0 0 0-.398.176c-.172.216-.117.546.123.737l.007.005.104.083c.142.105.272.159.414.242.299.185.546.338.743.522.076.082.09.226.1.288l.16.143a6.462 6.462 0 0 0-1.02 4.506l-.208.06c-.055.072-.133.184-.215.217-.257.081-.546.11-.895.147-.164.014-.305.006-.48.039-.037.007-.09.02-.133.03l-.004.002-.007.002c-.295.071-.484.342-.423.608.061.267.349.429.645.365l.007-.001.01-.003.129-.029c.17-.046.294-.113.448-.172.33-.118.604-.217.87-.256.112-.009.23.069.288.101l.217-.037a6.5 6.5 0 0 0 2.88 3.596l-.09.218c.033.084.069.199.044.282-.097.252-.263.517-.452.813-.091.136-.185.242-.268.399-.02.037-.045.095-.064.134-.128.275-.034.591.213.71.248.12.556-.007.69-.282v-.002c.02-.039.046-.09.062-.127.07-.162.094-.301.144-.458.132-.332.205-.68.387-.897.05-.06.13-.082.215-.105l.113-.205a6.453 6.453 0 0 0 4.609.012l.106.192c.086.028.18.042.256.155.136.232.229.507.342.84.05.156.074.295.145.457.016.037.043.09.062.129.133.276.442.402.69.282.247-.118.341-.435.213-.71-.02-.039-.045-.096-.065-.134-.083-.156-.177-.261-.268-.398-.19-.296-.346-.541-.443-.793-.04-.13.007-.21.038-.294-.018-.022-.059-.144-.083-.202a6.499 6.499 0 0 0 2.88-3.622c.064.01.176.03.213.038.075-.05.144-.114.28-.104.266.039.54.138.87.256.154.06.277.128.448.173.036.01.088.019.13.028l.009.003.007.001c.297.064.584-.098.645-.365.06-.266-.128-.537-.423-.608zM16.4 9.701l-1.95 1.746v.005a.44.44 0 0 0 .173.757l.003.01 2.526.728a5.199 5.199 0 0 0-.108-1.674A5.208 5.208 0 0 0 16.4 9.7zm-4.013 5.325a.437.437 0 0 0-.404-.232.44.44 0 0 0-.372.233h-.002l-1.268 2.292a5.164 5.164 0 0 0 3.326.003l-1.27-2.296h-.01zm1.888-1.293a.44.44 0 0 0-.27.036.44.44 0 0 0-.214.572l-.003.004 1.01 2.438a5.15 5.15 0 0 0 2.081-2.615l-2.6-.44-.004.005z" />
-        </svg>
-      ),
+      spriteClass: "kubernetes",
     },
     {
       label: "ISO 27001 Aligned",
-      bg: "#231F20",
-      svg: (
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 11.9c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z M12 6a3 3 0 00-3 3v2h6V9a3 3 0 00-3-3z" />
-        </svg>
-      ),
+      spriteClass: "iso",
     },
   ];
 
@@ -447,7 +776,7 @@ function PartnersBand() {
         whileInView="visible"
         viewport={{ once: false, amount: 0.15 }}
       >
-        {badges.map(({ svg, bg, label }) => (
+        {badges.map(({ label, spriteClass }) => (
           <motion.div
             className="partner-badge"
             key={label}
@@ -464,12 +793,7 @@ function PartnersBand() {
               damping: 15,
             }}
           >
-            <div
-              className="partner-badge-icon"
-              style={{ background: bg, color: "#fff", display: "grid", placeItems: "center" }}
-            >
-              {svg}
-            </div>
+            <div className={`partner-badge-icon brand-sprite ${spriteClass}`} />
             <span>{label}</span>
           </motion.div>
         ))}
@@ -581,7 +905,8 @@ function AiShowcase() {
       desc: "LLM products with verified citations and enterprise guardrails.",
       link: "/ai-llm-rag",
       bgClass: "bg-card-llm",
-      img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80",
+      img: "/service_rag_card.png",
+      textTag: "RAG & LLM",
     },
     {
       icon: "⚡",
@@ -589,7 +914,8 @@ function AiShowcase() {
       desc: "Multi-step AI agents for complex enterprise workflows.",
       link: "/ai-agentic",
       bgClass: "bg-card-agentic",
-      img: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=600&q=80",
+      img: "/service_agentic_card.png",
+      textTag: "AGENTIC AI",
     },
     {
       icon: "📊",
@@ -597,7 +923,8 @@ function AiShowcase() {
       desc: "Credit scoring, MLOps and real-time inference at scale.",
       link: "/ai-ml-platform",
       bgClass: "bg-card-ml",
-      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+      img: "/service_ml_card.png",
+      textTag: "ML & DATA",
     },
   ];
 
@@ -690,6 +1017,7 @@ function AiShowcase() {
                       "linear-gradient(180deg, rgba(13,17,23,0.1) 0%, rgba(13,17,23,0.75) 100%)",
                   }}
                 />
+
                 <motion.div
                   className="ai-card-icon"
                   style={{
@@ -729,7 +1057,16 @@ function WhySection() {
     {
       num: "01",
       icon: (
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--orange)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          viewBox="0 0 24 24"
+          width="28"
+          height="28"
+          fill="none"
+          stroke="var(--orange)"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M12 2L2 7l10 5 10-5-10-5z" />
           <path d="M2 17l10 5 10-5" />
           <path d="M2 12l10 5 10-5" />
@@ -741,7 +1078,16 @@ function WhySection() {
     {
       num: "02",
       icon: (
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--orange)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          viewBox="0 0 24 24"
+          width="28"
+          height="28"
+          fill="none"
+          stroke="var(--orange)"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M12 2a4 4 0 014 4c0 1.95-2 3-2 5h-4c0-2-2-3.05-2-5a4 4 0 014-4z" />
           <path d="M10 17h4" />
           <path d="M10 20h4" />
@@ -754,7 +1100,16 @@ function WhySection() {
     {
       num: "03",
       icon: (
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--orange)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          viewBox="0 0 24 24"
+          width="28"
+          height="28"
+          fill="none"
+          stroke="var(--orange)"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <rect x="3" y="3" width="7" height="7" rx="1" />
           <rect x="14" y="3" width="7" height="7" rx="1" />
           <rect x="3" y="14" width="7" height="7" rx="1" />
@@ -768,7 +1123,16 @@ function WhySection() {
     {
       num: "04",
       icon: (
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--orange)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          viewBox="0 0 24 24"
+          width="28"
+          height="28"
+          fill="none"
+          stroke="var(--orange)"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <circle cx="12" cy="12" r="10" />
           <path d="M2 12h20" />
           <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
@@ -931,17 +1295,17 @@ function Testimonials() {
             >
               <div className="testi-stars">
                 {"★★★★★".split("").map((s, j) => (
-                  <span key={j} style={{ color: "var(--orange2)", fontSize: 13 }}>
+                  <span
+                    key={j}
+                    style={{ color: "var(--orange2)", fontSize: 13 }}
+                  >
                     {s}
                   </span>
                 ))}
               </div>
               <p className="testi-quote">{t.quote}</p>
               <div className="testi-author">
-                <div
-                  className="testi-avatar"
-                  style={{ background: t.color }}
-                >
+                <div className="testi-avatar" style={{ background: t.color }}>
                   {t.initials}
                 </div>
                 <div>
@@ -1067,15 +1431,78 @@ function InsightsPreview() {
 
 function ExploreLinks() {
   const links = [
-    ["/services", "bg-link-services", "🏗️", "Services", "Seven service lines from app dev to AI & IoT.", "View services →"],
-    ["/industries", "bg-link-industries", "🏦", "Industries", "Deep expertise across BFSI, telecom, automotive and more.", "View industries →"],
-    ["/casestudies", "bg-link-cases", "📋", "Case Studies", "Documented projects with real clients and measurable outcomes.", "View case studies →"],
-    ["/about", "bg-link-about", "🎯", "About Us", "Your engineering partner — not just a vendor.", "About us →"],
-    ["/technology", "bg-link-tech", "⚙️", "Technology", "Java, React, K8s, DevOps/SRE and full-stack observability.", "View stack →"],
-    ["/devops-sre", "bg-link-devops", "☁️", "DevOps & SRE", "CI/CD, Kubernetes, SLOs and unified observability at scale.", "Platform engineering →"],
-    ["/engagement", "bg-link-engage", "🤝", "Engagement Models", "Fixed-scope, T&M, BOT, staff aug and managed services.", "How we work →"],
-    ["/ai-hub", "bg-link-ai", "🤖", "AI Hub", "LLM, RAG, agents, ML and computer vision solutions.", "Explore AI →"],
-    ["/contact", "bg-link-contact", "✉️", "Contact", "Start a conversation about your next project.", "Get in touch →"],
+    [
+      "/services",
+      "bg-link-services",
+      "🏗️",
+      "Services",
+      "Seven service lines from app dev to AI & IoT.",
+      "View services →",
+    ],
+    [
+      "/industries",
+      "bg-link-industries",
+      "🏦",
+      "Industries",
+      "Deep expertise across BFSI, telecom, automotive and more.",
+      "View industries →",
+    ],
+    [
+      "/casestudies",
+      "bg-link-cases",
+      "📋",
+      "Case Studies",
+      "Documented projects with real clients and measurable outcomes.",
+      "View case studies →",
+    ],
+    [
+      "/about",
+      "bg-link-about",
+      "🎯",
+      "About Us",
+      "Your engineering partner — not just a vendor.",
+      "About us →",
+    ],
+    [
+      "/technology",
+      "bg-link-tech",
+      "⚙️",
+      "Technology",
+      "Java, React, K8s, DevOps/SRE and full-stack observability.",
+      "View stack →",
+    ],
+    [
+      "/devops-sre",
+      "bg-link-devops",
+      "☁️",
+      "DevOps & SRE",
+      "CI/CD, Kubernetes, SLOs and unified observability at scale.",
+      "Platform engineering →",
+    ],
+    [
+      "/engagement",
+      "bg-link-engage",
+      "🤝",
+      "Engagement Models",
+      "Fixed-scope, T&M, BOT, staff aug and managed services.",
+      "How we work →",
+    ],
+    [
+      "/ai-hub",
+      "bg-link-ai",
+      "🤖",
+      "AI Hub",
+      "LLM, RAG, agents, ML and computer vision solutions.",
+      "Explore AI →",
+    ],
+    [
+      "/contact",
+      "bg-link-contact",
+      "✉️",
+      "Contact",
+      "Start a conversation about your next project.",
+      "Get in touch →",
+    ],
   ];
 
   const containerVariants = {

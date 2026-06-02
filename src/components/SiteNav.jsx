@@ -129,16 +129,16 @@ export default function SiteNav() {
                   <MegaLink to="/ai-agentic">Agentic Business Automation</MegaLink>
                   <MegaLink to="/ai-ml-platform">ML &amp; Data Platforms</MegaLink>
                   <MegaLink to="/devops-sre">DevOps, SRE &amp; Observability</MegaLink>
-                  <MegaLink to="/services">Application Development</MegaLink>
-                  <MegaLink to="/services">Cloud &amp; Infrastructure</MegaLink>
-                  <MegaLink to="/services">Consulting</MegaLink>
+                  <MegaLink to="/application-development">Application Development</MegaLink>
+                  <MegaLink to="/devops-sre">Cloud &amp; Infrastructure</MegaLink>
+                  <MegaLink to="/consulting">Consulting</MegaLink>
                 </div>
                 <div>
-                  <MegaLink to="/services">Digital Transformation</MegaLink>
+                  <MegaLink to="/digital-transformation">Digital Transformation</MegaLink>
                   <MegaLink to="/ai-computer-vision">Computer Vision &amp; Edge AI</MegaLink>
-                  <MegaLink to="/services">Migration &amp; Modernisation</MegaLink>
-                  <MegaLink to="/services">ERP &amp; Platform Integration</MegaLink>
-                  <MegaLink to="/services">IoT &amp; Edge Computing</MegaLink>
+                  <MegaLink to="/migration-modernisation">Migration &amp; Modernisation</MegaLink>
+                  <MegaLink to="/erp-integration">ERP &amp; Platform Integration</MegaLink>
+                  <MegaLink to="/iot-edge">IoT &amp; Edge Computing</MegaLink>
                   <MegaLink to="/engagement">Engagement Models</MegaLink>
                 </div>
               </MegaCols>
