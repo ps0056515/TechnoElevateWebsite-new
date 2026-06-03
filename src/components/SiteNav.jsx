@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LANGUAGES, LANG_KEY, LANG_NOTICE_KEY, SEARCH_INDEX } from '../data/site';
+import { PRODUCTS } from '../data/products';
 
 import { LOGO_ALT, LOGO_SRC } from '../config/logo';
 
@@ -94,7 +95,7 @@ export default function SiteNav() {
     const q = searchQuery.trim().toLowerCase();
     const items = q
       ? SEARCH_INDEX.filter((item) => (item.title + ' ' + item.cat + ' ' + item.keys).toLowerCase().includes(q))
-      : SEARCH_INDEX.filter((item) => ['Pages', 'Services', 'AI', 'Insights'].includes(item.cat)).slice(0, 8);
+      : SEARCH_INDEX.filter((item) => ['Pages', 'Services', 'Products', 'AI', 'Insights'].includes(item.cat)).slice(0, 8);
     const groups = {};
     items.forEach((item) => {
       if (!groups[item.cat]) groups[item.cat] = [];
@@ -163,6 +164,25 @@ export default function SiteNav() {
                   <MegaLink to="/industries">LegalTech</MegaLink>
                   <MegaLink to="/industries">Enterprise SaaS</MegaLink>
                   <MegaLink to="/industries">AgriTech &amp; EdTech</MegaLink>
+                </div>
+              </MegaCols>
+            </MegaItem>
+            <MegaItem id="products" open={openMega === 'products'} onToggle={() => setOpenMega(openMega === 'products' ? null : 'products')} onClose={closeAll}>
+              <MegaAll to="/products" label="All Products" />
+              <MegaCols>
+                <div>
+                  {PRODUCTS.slice(0, 4).map((p) => (
+                    <MegaLink key={p.slug} to={`/products/${p.slug}`} highlight={p.slug === 'admitiq'}>
+                      {p.name}
+                    </MegaLink>
+                  ))}
+                </div>
+                <div>
+                  {PRODUCTS.slice(4).map((p) => (
+                    <MegaLink key={p.slug} to={`/products/${p.slug}`}>
+                      {p.name}
+                    </MegaLink>
+                  ))}
                 </div>
               </MegaCols>
             </MegaItem>
@@ -369,6 +389,14 @@ export default function SiteNav() {
               <Link to="/devops-sre" onClick={closeAll}>DevOps &amp; SRE</Link>
               <Link to="/services" onClick={closeAll}>All Services</Link>
             </div>
+            <div className="mob-section"><h6>Products</h6>
+              <Link to="/products" onClick={closeAll}>All Products</Link>
+              {PRODUCTS.map((p) => (
+                <Link key={p.slug} to={`/products/${p.slug}`} onClick={closeAll}>
+                  {p.name}
+                </Link>
+              ))}
+            </div>
             <div className="mob-section"><h6>Insights</h6>
               <Link to="/insights" onClick={closeAll}>Articles</Link>
               <Link to="/casestudies" onClick={closeAll}>Case Studies</Link>
@@ -400,6 +428,7 @@ function MegaItem({ id, open, onToggle, onClose, children, cols3, featured }) {
       <button className="nav-trigger" aria-expanded={open} onClick={(e) => { e.stopPropagation(); onToggle(); }} type="button">
         {id === 'services' && 'Services'}
         {id === 'industries' && 'Industries'}
+        {id === 'products' && 'Products'}
         {id === 'ai' && 'AI Platforms & Solutions'}
         {id === 'insights' && 'Insights'}
         {id === 'about' && 'About'}

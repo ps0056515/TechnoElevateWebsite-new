@@ -1,0 +1,7 @@
+01-sow-or-po-redacted.pdf
+02-architecture-diagram-sanitized.pdf
+03-uat-or-go-live-signoff.pdf
+04-metrics-evidence.pdf
+05-client-case-study-approval.pdf
+06-screenshots-or-demo-redacted.pdf
+07-case-study-sales-2pager.pdf

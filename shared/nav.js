@@ -66,6 +66,28 @@
           </div>
         </div>
       </li>
+      <li class="nav-item has-mega" data-mega="products">
+        <button class="nav-trigger" aria-expanded="false">Products <span class="chev">▾</span></button>
+        <div class="mega-panel">
+          <div class="mega-inner">
+            <a href="${page('products.html')}" class="mega-all">All Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <div class="mega-rule"></div>
+            <div class="mega-cols">
+              <div>
+                <a href="${page('products.html')}#ivrai-bot" class="highlight">IVRAI-BOT</a>
+                <a href="${page('products.html')}#admitiq">AdmitIQ</a>
+                <a href="${page('products.html')}#agentic-platform">Agentic Platform</a>
+                <a href="${page('products.html')}#zupfly">ZupFly</a>
+              </div>
+              <div>
+                <a href="${page('products.html')}#accesshub">AccessHub</a>
+                <a href="${page('products.html')}#lexiquest">LexiQuest</a>
+                <a href="${page('products.html')}#interviewiq">InterviewIQ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
       <li class="nav-item has-mega" data-mega="ai">
         <button class="nav-trigger" aria-expanded="false">AI Platforms &amp; Solutions <span class="chev">▾</span></button>
         <div class="mega-panel">
@@ -177,6 +199,11 @@
     <a href="${page('devops-sre.html')}">DevOps &amp; SRE</a>
     <a href="${page('services.html')}">All Services</a>
   </div>
+  <div class="mob-section"><h6>Products</h6>
+    <a href="${page('products.html')}">All Products</a>
+    <a href="${page('products.html')}">IVRAI-BOT · AdmitIQ · Agentic Platform</a>
+    <a href="${page('products.html')}">ZupFly · AccessHub · LexiQuest · InterviewIQ</a>
+  </div>
   <div class="mob-section"><h6>Insights</h6>
     <a href="${page('insights.html')}">Articles</a>
     <a href="${page('casestudies.html')}">Case Studies</a>
@@ -220,6 +247,7 @@
     { title: 'Agentic AI Workflows', href: 'ai-agentic.html', cat: 'AI', keys: 'agentic automation agents copilot' },
     { title: 'ML & Data Platforms', href: 'ai-ml-platform.html', cat: 'AI', keys: 'machine learning mlops scoring underwriting' },
     { title: 'Computer Vision & Edge AI', href: 'ai-computer-vision.html', cat: 'AI', keys: 'computer vision retail autonomo edge' },
+    { title: 'Products', href: 'products.html', cat: 'Products', keys: 'products ivrai admitiq agentic zupfly accesshub lexiquest interviewiq' },
     { title: 'Industries', href: 'industries.html', cat: 'Industries', keys: 'bfsi telecom automotive healthcare manufacturing' },
     { title: 'BFSI & Fintech', href: 'industry-bfsi.html', cat: 'Industries', keys: 'banking kotak jpmorgan lloyds cars24 fintech' },
     { title: 'Automotive', href: 'industry-automotive.html', cat: 'Industries', keys: 'tekion dms dealership oem automotive' },
@@ -333,7 +361,7 @@
             const hay = (item.title + ' ' + item.cat + ' ' + item.keys).toLowerCase();
             return hay.includes(query);
           })
-        : SEARCH_INDEX.filter(item => ['Pages', 'Services', 'AI', 'Insights'].includes(item.cat)).slice(0, 8);
+        : SEARCH_INDEX.filter(item => ['Pages', 'Services', 'Products', 'AI', 'Insights'].includes(item.cat)).slice(0, 8);
 
       if(!items.length){
         results.innerHTML = '<div class="search-empty">No results for “' + esc(q) + '”. Try “AI”, “DevOps”, or “Contact”.</div>';

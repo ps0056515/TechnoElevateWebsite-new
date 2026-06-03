@@ -45,6 +45,12 @@
         <li><a href="ai-llm-rag.html">LLM &amp; RAG</a></li>
         <li><a href="engagement.html">Engagement Models</a></li>
       </ul></div>
+      <div class="f-col"><h5>Products</h5><ul>
+        <li><a href="products.html">All Products</a></li>
+        <li><a href="products.html">IVRAI-BOT</a></li>
+        <li><a href="products.html">AdmitIQ</a></li>
+        <li><a href="products.html">InterviewIQ</a></li>
+      </ul></div>
       <div class="f-col"><h5>Industries</h5><ul>
         <li><a href="industries.html">All Industries</a></li>
         <li><a href="industry-bfsi.html">BFSI &amp; Fintech</a></li>

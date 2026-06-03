@@ -93,6 +93,26 @@ export default function SiteFooter() {
             </ul>
           </div>
           <div className="f-col">
+            <h5>Products</h5>
+            <ul>
+              <li>
+                <Link to="/products">All Products</Link>
+              </li>
+              <li>
+                <Link to="/products/ivrai-bot">IVRAI-BOT</Link>
+              </li>
+              <li>
+                <Link to="/products/admitiq">AdmitIQ</Link>
+              </li>
+              <li>
+                <Link to="/products/interviewiq">InterviewIQ</Link>
+              </li>
+              <li>
+                <Link to="/products/lexiquest">LexiQuest</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="f-col">
             <h5>Industries</h5>
             <ul>
               <li>
