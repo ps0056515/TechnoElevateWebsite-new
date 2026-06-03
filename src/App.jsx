@@ -8,6 +8,7 @@ import CaseStudyPage from './pages/CaseStudyPage';
 import ProductsPage from './pages/ProductsPage';
 import ProductPage from './pages/ProductPage';
 import StaticPage from './pages/StaticPage';
+import PrivacyPage from './pages/PrivacyPage';
 import { staticRoutes } from './pages/routes';
 
 const pageLoaders = import.meta.glob('./content/pages/*.js');
@@ -72,6 +73,7 @@ export default function App() {
             <Route path="case-studies/:id" element={<CaseStudyPage />} />
             <Route path="products" element={<ProductsPage />} />
             <Route path="products/:slug" element={<ProductPage />} />
+            <Route path="privacy" element={<PrivacyPage />} />
             {staticRoutes.map(({ path, slug }) => (
               <Route key={path} path={path.slice(1)} element={<LazyStaticRoute slug={slug} />} />
             ))}
