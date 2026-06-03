@@ -21,7 +21,7 @@ export default function ProductPage() {
     );
   }
 
-  const others = PRODUCTS.filter((p) => p.slug !== slug).slice(0, 4);
+  const others = PRODUCTS.filter((p) => p.slug !== slug);
 
   return (
     <motion.div
@@ -36,7 +36,7 @@ export default function ProductPage() {
         linkText="All products →"
       />
 
-      <section className={`page-hero bg-theme bg-products`}>
+      <section className={`page-hero bg-theme ${product.heroClass}`}>
         <div className="page-hero-inner">
           <div className="page-breadcrumb">
             <Link to="/">Home</Link>
@@ -52,10 +52,18 @@ export default function ProductPage() {
           </h1>
           <p className="page-hero-lead">{product.summary}</p>
           <div className="page-hero-tags">
-            {product.tech.slice(0, 5).map((t) => (
+            {product.tech.slice(0, 6).map((t) => (
               <span key={t} className="page-tag">
                 {t}
               </span>
+            ))}
+          </div>
+          <div className="product-hero-stats">
+            {product.metrics.map((m) => (
+              <div key={m.label} className="product-stat">
+                <div className="num">{m.value}</div>
+                <div className="lbl">{m.label}</div>
+              </div>
             ))}
           </div>
         </div>
@@ -63,35 +71,149 @@ export default function ProductPage() {
 
       <section className="content-section">
         <div className="wrap">
-          <div className="content-grid">
-            <div className="content-block reveal">
+          <div className="product-split reveal">
+            <div>
               <div className="s-eyebrow">Overview</div>
-              <h2 className="s-title" style={{ fontSize: 'clamp(24px,3vw,32px)' }}>
-                What {product.name} does
+              <h2 className="s-title" style={{ fontSize: 'clamp(26px,3vw,36px)' }}>
+                Built for production, not demos
               </h2>
-              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.75 }}>{product.description}</p>
-            </div>
-            <div className="content-block reveal">
-              <div className="s-eyebrow">Capabilities</div>
-              <h2 className="s-title" style={{ fontSize: 'clamp(24px,3vw,32px)' }}>
-                Key features
-              </h2>
-              <div className="cap-list">
-                {product.features.map((f, i) => (
-                  <div key={f} className="cap-item">
-                    <div className="cap-num">{String(i + 1).padStart(2, '0')}</div>
-                    <div>
-                      <p style={{ margin: 0, fontSize: 15, color: 'var(--body)', lineHeight: 1.6 }}>{f}</p>
-                    </div>
-                  </div>
+              <p style={{ fontSize: 16, color: 'var(--body)', lineHeight: 1.8, marginBottom: 20 }}>
+                {product.description}
+              </p>
+              <div className="product-personas">
+                {product.personas.map((persona) => (
+                  <span key={persona} className="product-persona">
+                    {persona}
+                  </span>
                 ))}
               </div>
+              <div className="product-problem-box">
+                <h4>The challenge</h4>
+                <p>{product.problem}</p>
+              </div>
+              <div className="product-problem-box solution">
+                <h4>How {product.name} solves it</h4>
+                <p>{product.solution}</p>
+              </div>
+            </div>
+            <div
+              className="product-split-visual reveal"
+              style={{
+                backgroundImage: `url(${product.heroImage})`,
+                '--product-accent': product.accent,
+              }}
+              role="img"
+              aria-label={`${product.name} visual`}
+            />
+          </div>
+
+          <div
+            className="product-gallery reveal"
+            style={{ '--product-accent': product.accent }}
+          >
+            <div
+              className="product-gallery-main"
+              style={{ backgroundImage: `url(${product.heroImage})` }}
+            />
+            <div className="product-gallery-side">
+              <div
+                className="product-gallery-tile"
+                style={{ backgroundImage: `url(${product.cardImage})` }}
+              />
+              <div
+                className="product-gallery-tile product-gallery-tile--alt"
+                style={{
+                  backgroundImage: `url(${product.galleryAlt || product.cardImage})`,
+                }}
+              />
             </div>
           </div>
         </div>
       </section>
 
+      <section className="product-metrics-band">
+        <div className="wrap">
+          <div className="s-eyebrow" style={{ color: 'var(--orange2)' }}>
+            At a glance
+          </div>
+          <h2 className="s-title white">Platform highlights</h2>
+          <div className="product-metrics-grid reveal">
+            {product.metrics.map((m) => (
+              <div key={m.label} className="product-metric-dark">
+                <div className="num">{m.value}</div>
+                <div className="lbl">{m.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section bg-light">
+        <div className="wrap">
+          <div className="s-eyebrow">Use cases</div>
+          <h2 className="s-title">Who uses {product.name}</h2>
+          <p className="s-sub" style={{ maxWidth: 640 }}>
+            Typical adoption patterns from institutes, enterprises, and teams we have designed for.
+          </p>
+          <div className="product-use-grid reveal">
+            {product.useCases.map((uc) => (
+              <div key={uc.title} className="product-use-card">
+                <h4>{uc.title}</h4>
+                <p>{uc.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap">
+          <div className="s-eyebrow">Architecture</div>
+          <h2 className="s-title">Core modules</h2>
+          <div className="product-modules-grid reveal">
+            {product.modules.map((mod) => (
+              <div key={mod.title} className="product-module">
+                <h4>{mod.title}</h4>
+                <p>{mod.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="content-section bg-content-ai">
+        <div className="wrap">
+          <div className="s-eyebrow">Capabilities</div>
+          <h2 className="s-title">Feature depth</h2>
+          <div className="cap-list reveal">
+            {product.features.map((f, i) => (
+              <div key={f} className="cap-item">
+                <div className="cap-num">{String(i + 1).padStart(2, '0')}</div>
+                <div>
+                  <p style={{ margin: 0, fontSize: 15, color: 'var(--body)', lineHeight: 1.65 }}>{f}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-light">
+        <div className="wrap">
+          <div className="s-eyebrow">Workflow</div>
+          <h2 className="s-title">How it runs end-to-end</h2>
+          <div className="product-workflow reveal">
+            {product.workflow.map((step, i) => (
+              <span key={step} style={{ display: 'contents' }}>
+                {i > 0 && <span className="product-workflow-arrow">→</span>}
+                <div className="product-workflow-step">{step}</div>
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="wrap">
           <div className="s-eyebrow">Technology</div>
           <h2 className="s-title">Stack &amp; domains</h2>
@@ -111,21 +233,25 @@ export default function ProductPage() {
       </section>
 
       {others.length > 0 && (
-        <section className="section">
+        <section className="section bg-light">
           <div className="wrap">
             <div className="s-eyebrow">More products</div>
             <h2 className="s-title">Explore the portfolio</h2>
-            <div className="services-grid reveal" style={{ marginTop: 40 }}>
+            <div
+              className="products-grid reveal"
+              style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', marginTop: 40 }}
+            >
               {others.map((p) => (
-                <div key={p.slug} className={`svc ${p.svcClass}`}>
-                  <h3>
-                    <Link to={`/products/${p.slug}`}>{p.name}</Link>
-                  </h3>
-                  <p className="svc-body">{p.tagline}</p>
-                  <Link to={`/products/${p.slug}`} className="svc-link">
-                    View product →
-                  </Link>
-                </div>
+                <Link key={p.slug} to={`/products/${p.slug}`} className="product-related-card">
+                  <div
+                    className="product-related-img"
+                    style={{ backgroundImage: `url(${p.cardImage})` }}
+                  />
+                  <div className="product-related-body">
+                    <h4>{p.name}</h4>
+                    <p>{p.tagline}</p>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -135,13 +261,13 @@ export default function ProductPage() {
       <div className="cta-band">
         <div className="cta-band-inner">
           <h2>
-            Interested in {product.name}
+            Deploy {product.name}
             <br />
-            <em>for your organisation?</em>
+            <em>with TechnoElevate</em>
           </h2>
           <div className="cta-band-btns">
             <Link to="/contact" className="cta-band-primary">
-              Contact Us
+              Request a Demo
             </Link>
             <Link to="/products" className="cta-band-secondary">
               All products →

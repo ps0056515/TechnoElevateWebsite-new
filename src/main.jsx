@@ -8,6 +8,7 @@ import '../shared/backgrounds.css';
 import '../shared/content.css';
 import '../shared/home-hero.css';
 import '../shared/mobile.css';
+import '../shared/products.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

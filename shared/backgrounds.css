@@ -233,7 +233,14 @@
 .bg-ai-vision{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80');}
 .bg-services{background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80');}
 .bg-industries{background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');}
-.bg-products{background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80');}
+.bg-products{background-image:url('/home_hero_engineering_bg.png');}
+.bg-product-ivrai{background-image:url('/products/ivrai-hero.jpg');}
+.bg-product-admitiq{background-image:url('/products/admitiq-hero.jpg');}
+.bg-product-agentic{background-image:url('/products/agentic-hero.jpg');}
+.bg-product-zupfly{background-image:url('/products/zupfly-hero.jpg');}
+.bg-product-accesshub{background-image:url('/products/accesshub-hero.jpg');}
+.bg-product-lexiquest{background-image:url('/products/lexiquest-hero.jpg');}
+.bg-product-interviewiq{background-image:url('/products/interviewiq-hero.jpg');}
 .bg-about{background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');}
 .bg-contact{background-image:url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1920&q=80');}
 .bg-technology{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');}
