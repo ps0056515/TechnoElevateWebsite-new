@@ -7,6 +7,7 @@ import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyPage from './pages/CaseStudyPage';
 import ProductsPage from './pages/ProductsPage';
 import ProductPage from './pages/ProductPage';
+import LeadershipPage from './pages/LeadershipPage';
 import StaticPage from './pages/StaticPage';
 import { staticRoutes } from './pages/routes';
 
@@ -72,6 +73,7 @@ export default function App() {
             <Route path="case-studies/:id" element={<CaseStudyPage />} />
             <Route path="products" element={<ProductsPage />} />
             <Route path="products/:slug" element={<ProductPage />} />
+            <Route path="leadership" element={<LeadershipPage />} />
             {staticRoutes.map(({ path, slug }) => (
               <Route key={path} path={path.slice(1)} element={<LazyStaticRoute slug={slug} />} />
             ))}

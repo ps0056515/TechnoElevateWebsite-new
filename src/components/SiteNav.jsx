@@ -167,24 +167,47 @@ export default function SiteNav() {
                 </div>
               </MegaCols>
             </MegaItem>
-            <MegaItem id="products" open={openMega === 'products'} onToggle={() => setOpenMega(openMega === 'products' ? null : 'products')} onClose={closeAll}>
+            <MegaItem id="products" open={openMega === 'products'} onToggle={() => setOpenMega(openMega === 'products' ? null : 'products')} onClose={closeAll} featured>
               <MegaAll to="/products" label="All Products" />
-              <MegaCols>
-                <div>
-                  {PRODUCTS.slice(0, 4).map((p) => (
-                    <MegaLink key={p.slug} to={`/products/${p.slug}`} highlight={p.slug === 'admitiq'}>
-                      {p.name}
-                    </MegaLink>
+              <div className="mega-products-layout">
+                {(() => {
+                  const feat = PRODUCTS.find((p) => p.slug === 'admitiq') || PRODUCTS[0];
+                  return (
+                    <Link to={`/products/${feat.slug}`} className="mega-product-featured" onClick={closeAll}>
+                      <div
+                        className="mega-product-featured-img"
+                        style={{ backgroundImage: `url(${feat.cardImage})`, '--product-accent': feat.accent }}
+                      />
+                      <div className="mega-product-featured-body">
+                        <span className="mega-product-featured-badge">Featured</span>
+                        <h5>{feat.name}</h5>
+                        <p>{feat.tagline}</p>
+                        <span className="mega-product-featured-link">Explore platform →</span>
+                      </div>
+                    </Link>
+                  );
+                })()}
+                <div className="mega-products-links">
+                  {PRODUCTS.map((p) => (
+                    <Link
+                      key={p.slug}
+                      to={`/products/${p.slug}`}
+                      className={`mega-product-link${p.slug === 'admitiq' ? ' highlight' : ''}`}
+                      onClick={closeAll}
+                    >
+                      <span className="mega-product-link-name">{p.name}</span>
+                      <span className="mega-product-link-desc">{p.tagline}</span>
+                    </Link>
                   ))}
                 </div>
-                <div>
-                  {PRODUCTS.slice(4).map((p) => (
-                    <MegaLink key={p.slug} to={`/products/${p.slug}`}>
-                      {p.name}
-                    </MegaLink>
-                  ))}
-                </div>
-              </MegaCols>
+              </div>
+              <div className="mega-featured">
+                <span className="mega-featured-badge">7 platforms</span>
+                <p>
+                  Voice AI, enterprise agents, admissions, ed-tech, accessibility, and hiring intelligence —
+                  full-stack products engineered for production deploy.
+                </p>
+              </div>
             </MegaItem>
             <MegaItem id="ai" open={openMega === 'ai'} onToggle={() => setOpenMega(openMega === 'ai' ? null : 'ai')} onClose={closeAll} featured>
               <MegaAll to="/ai-hub" label="All AI Solutions" />

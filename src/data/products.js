@@ -366,3 +366,58 @@ export const PRODUCTS = [
 export function getProduct(slug) {
   return PRODUCTS.find((p) => p.slug === slug);
 }
+
+export const PRODUCT_FILTERS = [
+  { id: 'all', label: 'All products' },
+  { id: 'ai', label: 'AI & agents' },
+  { id: 'edtech', label: 'EdTech & learning' },
+  { id: 'community', label: 'Community & a11y' },
+];
+
+const FILTER_BY_SLUG = {
+  'ivrai-bot': 'ai',
+  'agentic-platform': 'ai',
+  'interviewiq': 'ai',
+  'admitiq': 'edtech',
+  'zupfly': 'edtech',
+  'lexiquest': 'edtech',
+  'accesshub': 'community',
+};
+
+export function getProductFilterGroup(slug) {
+  return FILTER_BY_SLUG[slug] || 'ai';
+}
+
+/** Ushur-style platform trust pillars — shared across product pages */
+export const PLATFORM_TRUST = [
+  {
+    icon: '🛡️',
+    title: 'Production-grade by default',
+    desc: 'Multi-tenant patterns, OpenAPI contracts, Docker deploy paths, and observability hooks — not prototype code.',
+  },
+  {
+    icon: '⚡',
+    title: 'Agentic & voice-native',
+    desc: 'Voice pipelines, LLM gateways, tool registries, and human-in-the-loop approvals engineered into the core.',
+  },
+  {
+    icon: '📊',
+    title: 'Full-stack ownership',
+    desc: 'Web consoles, mobile packaging, APIs, workers, and data layers shipped as one product — not siloed demos.',
+  },
+  {
+    icon: '🔁',
+    title: 'Iterate at product speed',
+    desc: 'Cursor-accelerated engineering with Sheets CMS, YAML agents, and monorepo workflows for rapid content and feature velocity.',
+  },
+];
+
+export const PORTFOLIO_STATS = [
+  { value: '7', label: 'Product lines', sub: 'Voice · agents · ed-tech · hiring' },
+  { value: 'AI-first', label: 'Core stack', sub: 'LLM, RAG, voice & orchestration' },
+  { value: 'Full-stack', label: 'Ship path', sub: 'Web · API · mobile · workers' },
+  { value: 'SaaS', label: 'Patterns', sub: 'Multi-tenant · JWT · webhooks' },
+];
+
+export const FEATURED_PRODUCT_SLUG = 'admitiq';
+

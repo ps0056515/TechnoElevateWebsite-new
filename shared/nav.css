@@ -103,6 +103,48 @@
 }
 .mega-featured p{font-size:13px;color:var(--body);line-height:1.5;}
 
+/* Products mega — rich cards */
+.mega-products-layout{
+  display:grid;grid-template-columns:280px 1fr;gap:28px;margin-top:4px;
+}
+.mega-product-featured{
+  display:flex;flex-direction:column;border-radius:14px;overflow:hidden;
+  border:1px solid var(--rule);background:var(--white);color:inherit;
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+}
+.mega-product-featured:hover{
+  transform:translateY(-3px);box-shadow:0 16px 40px rgba(15,23,42,.1);
+  border-color:rgba(255,71,19,.35);color:inherit;
+}
+.mega-product-featured-img{
+  height:140px;background-size:cover;background-position:center;position:relative;
+}
+.mega-product-featured-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 20%,rgba(13,17,23,.75) 100%);
+}
+.mega-product-featured-body{padding:18px 20px 20px;}
+.mega-product-featured-badge{
+  font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:8px;display:block;
+}
+.mega-product-featured-body h5{
+  font-size:16px;font-weight:800;color:var(--ink);margin-bottom:6px;letter-spacing:-.02em;
+}
+.mega-product-featured-body p{font-size:12px;color:var(--body);line-height:1.5;margin:0 0 10px;}
+.mega-product-featured-link{font-size:12px;font-weight:700;color:var(--orange);}
+.mega-products-links{
+  display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;align-content:start;
+}
+.mega-product-link{
+  display:flex;flex-direction:column;gap:2px;padding:10px 8px;border-radius:8px;
+  transition:background .2s,padding-left .2s;color:inherit;
+}
+.mega-product-link:hover{background:var(--light);padding-left:12px;color:inherit;}
+.mega-product-link.highlight .mega-product-link-name{color:var(--orange);font-weight:700;}
+.mega-product-link-name{font-size:14px;font-weight:600;color:var(--ink);}
+.mega-product-link-desc{font-size:11px;color:var(--muted);line-height:1.4;}
+
 /* Mobile nav toggle */
 .nav-burger{display:none;width:40px;height:40px;border:1.5px solid var(--rule);border-radius:8px;background:var(--white);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0;}
 .nav-burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s;}
