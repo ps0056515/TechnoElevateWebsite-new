@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { SITE } from '../config/site.js';
+import { getSeoForPath } from '../data/seo.js';
 
 /** Attach scroll-reveal to .reveal elements inside scope (or whole document). */
 export function initReveal(scope = document) {
@@ -52,6 +54,49 @@ export function useDocumentTitle(title) {
   useEffect(() => {
     document.title = title ? `${title} — TechnoElevate` : 'TechnoElevate — Software Engineering at Scale';
   }, [title]);
+}
+
+function upsertMeta(attr, key, content) {
+  if (!content) return;
+  let el = document.querySelector(`meta[${attr}="${key}"]`);
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', content);
+}
+
+function upsertLink(rel, href) {
+  if (!href) return;
+  let el = document.querySelector(`link[rel="${rel}"]`);
+  if (!el) {
+    el = document.createElement('link');
+    el.setAttribute('rel', rel);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('href', href);
+}
+
+/** Per-route SEO: title, description, Open Graph, Twitter, canonical. */
+export function usePageMeta(pathname) {
+  useEffect(() => {
+    const seo = getSeoForPath(pathname);
+    document.title = seo.title;
+
+    upsertMeta('name', 'description', seo.description);
+    upsertMeta('name', 'keywords', seo.keywords || SITE.defaultKeywords);
+    upsertMeta('property', 'og:title', seo.title);
+    upsertMeta('property', 'og:description', seo.description);
+    upsertMeta('property', 'og:url', seo.canonical);
+    upsertMeta('property', 'og:type', 'website');
+    upsertMeta('property', 'og:site_name', SITE.name);
+    upsertMeta('property', 'og:locale', SITE.locale);
+    upsertMeta('name', 'twitter:card', 'summary_large_image');
+    upsertMeta('name', 'twitter:title', seo.title);
+    upsertMeta('name', 'twitter:description', seo.description);
+    upsertLink('canonical', seo.canonical);
+  }, [pathname]);
 }
 
 export function useBodyClass(className) {

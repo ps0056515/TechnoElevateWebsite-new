@@ -58,7 +58,6 @@ const NotFound = lazy(() => Promise.resolve({
 }));
 
 export default function App() {
-  console.log('Static Routes:', staticRoutes);
   return (
     <BrowserRouter>
       <Suspense fallback={null}>
