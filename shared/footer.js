@@ -1,5 +1,5 @@
 (function(){
-  const LOGO_SRC = 'technoelevate_logo.png?v=5';
+  const LOGO_SRC = 'Theme%20Light.svg';
   const LOGO_ALT = 'TechnoElevate';
   const LOGO_MARK = '<img src="' + LOGO_SRC + '" alt="' + LOGO_ALT + '" class="f-brand-img" width="200" height="44">';
 
