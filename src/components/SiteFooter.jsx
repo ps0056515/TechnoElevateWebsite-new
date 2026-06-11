@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LOGO_ALT, LOGO_SRC } from "../config/logo";
+import { LOGO_ALT, LOGO_FOOTER_SRC } from "../config/logo";
 import { SOCIAL_LINKS } from "../config/social";
 
 const getSocialIcon = (id) => {
@@ -71,7 +71,7 @@ export default function SiteFooter() {
           <div className="f-brand">
             <div className="f-brand-logo">
               <img
-                src={LOGO_SRC}
+                src={LOGO_FOOTER_SRC}
                 alt={LOGO_ALT}
                 className="f-brand-img"
                 width="280"
