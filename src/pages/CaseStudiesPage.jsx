@@ -114,7 +114,7 @@ export default function CaseStudiesPage() {
 
   return (
     <>
-      <Announcement pill={ann.pill} text={ann.text} linkHref={`/${ann.linkHref}`} linkText={ann.linkText} />
+      <Announcement pill={ann.pill} text={ann.text} linkHref={ann.linkHref} linkText={ann.linkText} />
 
       <section className="case-index-hero">
         <motion.div
@@ -137,7 +137,7 @@ export default function CaseStudiesPage() {
           </motion.h1>
           <motion.p variants={heroItem}>
             From banking automation and legal AI to automotive platforms and cloud-native
-            modernization, explore production work delivered by TechnoElevate teams.
+            modernization, explore production work delivered by Innovexce teams.
           </motion.p>
           <motion.div className="case-index-stats" variants={heroItem}>
             <span><strong>{CASES.length}+</strong> engagements</span>

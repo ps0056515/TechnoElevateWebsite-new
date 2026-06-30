@@ -10,13 +10,13 @@ const PAGE_SEO = {
     description: SITE.defaultDescription,
   },
   '/about': {
-    title: 'About TechnoElevate',
+    title: 'About Innovexce',
     description:
       'Product engineering studio within TestYantra — CMMI Level 3 certified. Embedded partners for BFSI, telecom, automotive and enterprise AI since 2016.',
   },
   '/contact': {
     title: 'Contact',
-    description: 'Talk to TechnoElevate about enterprise AI, DevOps/SRE, application development and product engineering engagements.',
+    description: 'Talk to Innovexce about enterprise AI, DevOps/SRE, application development and product engineering engagements.',
   },
   '/services': {
     title: 'Services',
@@ -26,7 +26,7 @@ const PAGE_SEO = {
   '/products': {
     title: 'Products',
     description:
-      'Production platforms built by TechnoElevate — IVRAI voice AI, AdmitIQ, Agentic Platform, ZupFly, AccessHub, LexiQuest and InterviewIQ.',
+      'Production platforms built by Innovexce — IVRAI voice AI, AdmitIQ, Agentic Platform, ZupFly, AccessHub, LexiQuest and InterviewIQ.',
   },
   '/casestudies': {
     title: 'Case Studies',
@@ -35,7 +35,7 @@ const PAGE_SEO = {
   },
   '/ai-hub': {
     title: 'AI Hub',
-    description: 'Enterprise AI strategy, LLM & RAG engineering, agentic workflows, ML platforms and computer vision — from TechnoElevate.',
+    description: 'Enterprise AI strategy, LLM & RAG engineering, agentic workflows, ML platforms and computer vision — from Innovexce.',
   },
   '/devops-sre': {
     title: 'DevOps, SRE & Observability',
@@ -43,17 +43,17 @@ const PAGE_SEO = {
   },
   '/leadership': {
     title: 'Leadership',
-    description: 'TechnoElevate leadership — practice heads for AI, cloud, delivery and client success within the TestYantra group.',
+    description: 'Innovexce leadership — practice heads for AI, cloud, delivery and client success within the TestYantra group.',
   },
   '/careers': {
     title: 'Careers',
-    description: 'Engineering careers at TechnoElevate — Kotak-scale banking, CARS24 fintech ML, Tekion cloud DMS and LegalDST AI.',
+    description: 'Engineering careers at Innovexce — Kotak-scale banking, CARS24 fintech ML, Tekion cloud DMS and LegalDST AI.',
   },
 };
 
 function titleWithBrand(title) {
-  if (!title || title.includes('TechnoElevate')) return title || SITE.defaultTitle;
-  return `${title} — TechnoElevate`;
+  if (!title || title.includes('Innovexce')) return title || SITE.defaultTitle;
+  return `${title} — Innovexce`;
 }
 
 export function getSeoForPath(pathname) {
@@ -96,7 +96,7 @@ export function getSeoForPath(pathname) {
   if (indexEntry) {
     return {
       title: titleWithBrand(indexEntry.title),
-      description: `${indexEntry.title} — TechnoElevate product engineering, AI and enterprise delivery.`,
+      description: `${indexEntry.title} — Innovexce product engineering, AI and enterprise delivery.`,
       canonical,
       path,
     };

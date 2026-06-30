@@ -14,9 +14,9 @@ export const LANGUAGES = [
 ];
 
 export const SEARCH_INDEX = [
-  { title: 'Home', href: '/', cat: 'Pages', keys: 'homepage technoelevate ai engineering' },
+  { title: 'Home', href: '/', cat: 'Pages', keys: 'homepage innovexce ai engineering' },
   { title: 'Contact Us', href: '/contact', cat: 'Pages', keys: 'contact email phone get in touch sales' },
-  { title: 'About TechnoElevate', href: '/about', cat: 'Pages', keys: 'about company testyantra partner' },
+  { title: 'About Innovexce', href: '/about', cat: 'Pages', keys: 'about company testyantra partner' },
   { title: 'Services', href: '/services', cat: 'Services', keys: 'application development cloud devops consulting' },
   { title: 'DevOps, SRE & Observability', href: '/devops-sre', cat: 'Services', keys: 'devops sre observability cicd kubernetes prometheus grafana' },
   { title: 'Engagement Models', href: '/engagement', cat: 'Services', keys: 'fixed scope t&m bot staff augmentation managed' },

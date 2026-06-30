@@ -1,4 +1,4 @@
-/** TestYantra / TechnoElevate product portfolio — built via Cursor engineering. */
+/** TestYantra / Innovexce product portfolio — built via Cursor engineering. */
 
 /** Local hero / card / gallery assets under public/products/ */
 const productImg = (key, role) => `/products/${key}-${role}.jpg`;

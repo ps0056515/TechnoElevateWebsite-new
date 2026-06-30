@@ -69,7 +69,7 @@ export default function HomePage() {
     <>
       <Announcement
         pill="New"
-        text="TechnoElevate now supports AI-powered product engineering — LLM, RAG and ML at enterprise scale."
+        text="Innovexce now supports AI-powered product engineering — LLM, RAG and ML at enterprise scale."
         linkHref="/ai-hub"
         linkText="Explore AI Hub →"
         light
@@ -95,7 +95,7 @@ export default function HomePage() {
               <span className="hl-teal">real outcomes.</span>
             </motion.h1>
             <motion.p className="hero-home-lead" variants={itemVariants}>
-              TechnoElevate is the product engineering studio within TestYantra
+              Innovexce is the product engineering studio within TestYantra
               — from LLM-powered legal research to ML credit scoring and
               computer-vision retail, we design, build and scale enterprise
               software.
@@ -956,7 +956,7 @@ function AiShowcase() {
                 flexShrink: 0,
               }}
             />
-            TechnoElevate.AI
+            Innovexce.AI
           </div>
         </ScrollReveal>
         <ScrollReveal direction="up" distance={20} delay={0.06}>
@@ -1168,7 +1168,7 @@ function WhySection() {
     <section className="why-section">
       <div className="wrap">
         <ScrollReveal direction="up" distance={15}>
-          <div className="s-eyebrow">Why TechnoElevate</div>
+          <div className="s-eyebrow">Why Innovexce</div>
         </ScrollReveal>
         <ScrollReveal direction="up" distance={15} delay={0.05}>
           <h2 className="s-title">What makes us different.</h2>
@@ -1222,7 +1222,7 @@ function Testimonials() {
   const testimonials = [
     {
       quote:
-        "TechnoElevate embedded with our team like true partners — not vendors. They understood banking compliance constraints and still delivered sub-second API performance at peak load.",
+        "Innovexce embedded with our team like true partners — not vendors. They understood banking compliance constraints and still delivered sub-second API performance at peak load.",
       initials: "KM",
       name: "Engineering Lead",
       role: "Kotak Mahindra Bank",
@@ -1230,7 +1230,7 @@ function Testimonials() {
     },
     {
       quote:
-        "Building in-house ML scoring was a strategic bet. TechnoElevate delivered proprietary models that cut third-party costs and improved new-to-credit approval rates — at our production volume.",
+        "Building in-house ML scoring was a strategic bet. Innovexce delivered proprietary models that cut third-party costs and improved new-to-credit approval rates — at our production volume.",
       initials: "C24",
       name: "Product Director",
       role: "CARS24",
@@ -1238,7 +1238,7 @@ function Testimonials() {
     },
     {
       quote:
-        "The LegalDST platform needed verified case-law citations — not hallucinated answers. TechnoElevate built production RAG with the rigour our lawyer users demand.",
+        "The LegalDST platform needed verified case-law citations — not hallucinated answers. Innovexce built production RAG with the rigour our lawyer users demand.",
       initials: "LD",
       name: "Founder & CEO",
       role: "LegalDST",

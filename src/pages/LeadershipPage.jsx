@@ -54,9 +54,9 @@ export default function LeadershipPage() {
     >
       <Announcement
         pill="TestYantra group"
-        text="TechnoElevate leadership sits within TestYantra Software Solutions — CMMI Level 3 certified since 2003."
+        text="Innovexce leadership sits within TestYantra Software Solutions — CMMI Level 3 certified since 2003."
         linkHref="/about"
-        linkText="About TechnoElevate →"
+        linkText="About Innovexce →"
       />
 
       <section className="page-hero bg-theme bg-about">
@@ -111,7 +111,7 @@ export default function LeadershipPage() {
               </h2>
             </div>
             <p className="s-sub leadership-intro-copy">
-              TechnoElevate is the product engineering studio within TestYantra. Leadership here is
+              Innovexce is the product engineering studio within TestYantra. Leadership here is
               structured around four pillars — practice &amp; product, technology, delivery, and client
               growth — so every engagement has a clear owner from pursuit through production support.
               We organise the way global consultancies do: visible executives, named practice
@@ -126,7 +126,7 @@ export default function LeadershipPage() {
           <div className="wrap">
             <div className="s-eyebrow">Executive leadership</div>
             <h2 className="s-title" style={{ marginBottom: 28 }}>
-              Head of TechnoElevate
+              Head of Innovexce
             </h2>
             <div className="reveal">
               <LeaderCard leader={executiveLeader} featured />
@@ -255,7 +255,7 @@ export default function LeadershipPage() {
                 Talk to us →
               </Link>
               <Link to="/careers" className="cta-outline" style={{ padding: '14px 28px', borderRadius: 8 }}>
-                Careers at TechnoElevate →
+                Careers at Innovexce →
               </Link>
             </div>
           </div>

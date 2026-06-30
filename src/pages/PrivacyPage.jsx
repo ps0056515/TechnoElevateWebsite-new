@@ -11,7 +11,7 @@ const SECTIONS = [
     title: '1. Introduction & Trust',
     badge: 'Trust & Governance',
     summary: 'We collect and process your data transparently to deliver high-quality software engineering services under the TestYantra Group.',
-    legal: `TechnoElevate ("we," "us," or "our"), a dedicated product engineering division of the TestYantra Group, is committed to safeguarding your privacy. This Privacy Policy explains how we collect, use, disclose, and secure your personal data when you interact with our website (technoelevate.com), utilize our enterprise engineering solutions, or engage in business inquiries. We operate in compliance with major international standards including GDPR, CCPA, and secure software development lifecycles (SDLC).`,
+    legal: `Innovexce ("we," "us," or "our"), a dedicated product engineering division of the TestYantra Group, is committed to safeguarding your privacy. This Privacy Policy explains how we collect, use, disclose, and secure your personal data when you interact with our website (innovexce.com), utilize our enterprise engineering solutions, or engage in business inquiries. We operate in compliance with major international standards including GDPR, CCPA, and secure software development lifecycles (SDLC).`,
     icon: '🛡️'
   },
   {
@@ -91,9 +91,9 @@ const SECTIONS = [
     id: 'contact',
     title: '8. Contact & DPO Inquiries',
     badge: 'Data Protection Officer',
-    summary: 'Have privacy questions? Reach out to our Data Protection Officer at privacy@technoelevate.com or contactus@testyantra.com.',
+    summary: 'Have privacy questions? Reach out to our Data Protection Officer at privacy@innovexce.com or contactus@testyantra.com.',
     legal: `If you have questions, concerns, or requests regarding this Privacy Policy or our data protection activities, please get in touch:
-    • Email: privacy@technoelevate.com or contactus@testyantra.com
+    • Email: privacy@innovexce.com or contactus@testyantra.com
     • Headquarters: 3rd Floor, Brigade Software Park, Banashankari, Bengaluru, Karnataka 560070, India
     We will respond to all verified requests within thirty (30) days.`,
     icon: '✉️'
@@ -102,7 +102,7 @@ const SECTIONS = [
 
 
 export default function PrivacyPage() {
-  useDocumentTitle('Privacy Policy — TechnoElevate');
+  useDocumentTitle('Privacy Policy — Innovexce');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState('detailed'); // 'detailed' or 'summary'
   const [activeSection, setActiveSection] = useState('intro');
@@ -217,7 +217,7 @@ export default function PrivacyPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            At TechnoElevate, we embed security, governance, and transparent data processing directly into our software engineering practices.
+            At Innovexce, we embed security, governance, and transparent data processing directly into our software engineering practices.
           </motion.p>
           <motion.div
             className="page-hero-tags"
@@ -411,7 +411,7 @@ export default function PrivacyPage() {
                               <details className="faq-details">
                                 <summary className="faq-summary">Do you sell personal data?</summary>
                                 <div className="faq-content">
-                                  <p>No. TechnoElevate does not sell, lease, or monetize personal data to third parties. We collect data solely to support contract execution, answer inquiries, and optimize services.</p>
+                                  <p>No. Innovexce does not sell, lease, or monetize personal data to third parties. We collect data solely to support contract execution, answer inquiries, and optimize services.</p>
                                 </div>
                               </details>
                               <details className="faq-details">

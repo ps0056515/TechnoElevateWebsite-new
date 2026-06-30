@@ -11,7 +11,7 @@
       mount.innerHTML='<div class="wrap" style="padding:80px var(--pad);"><h1>Case study not found</h1><p><a href="casestudies.html">Back to case studies</a></p></div>';
       return;
     }
-    document.title=c.client+' — Case Study | TechnoElevate';
+    document.title=c.client+' — Case Study | Innovexce';
     const imgMap={BFSI:'photo-1556761175-5973dc0f32e7',Automotive:'photo-1494976388532-6f2ed50298ed',Telecom:'photo-1516321318823-687547d67d65','Retail & E-com':'photo-1556742049-0cfed4f6a45d',LegalTech:'photo-1620712943348-d21466881688',Manufacturing:'photo-1581091226825-a6a2a5aee158'};
     const photo=imgMap[c.industryNorm]||'photo-1552664730-d307ca884978';
     mount.innerHTML=`

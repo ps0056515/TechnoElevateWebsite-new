@@ -1,4 +1,4 @@
-/** Official TestYantra / TechnoElevate social profiles */
+/** Official TestYantra / Innovexce social profiles */
 export const SOCIAL_LINKS = [
   {
     id: 'linkedin',

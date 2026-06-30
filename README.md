@@ -1,4 +1,4 @@
-# TechnoElevate — React Website
+# Innovexce — React Website
 
 The site is now a **React SPA** built with Vite and React Router. Original static HTML files are in `legacy/` for reference only.
 
@@ -54,6 +54,43 @@ Then refresh the dev server.
 
 ## Notes
 
-- Homepage and case study listing are fully React components.
+- Homepage, Case Studies listing, and the Contact page are fully React components.
 - Other pages render migrated HTML with client-side link handling.
 - Over time, convert individual pages from `src/content/pages/*.js` to proper JSX components.
+
+## Web3Forms Contact Integration
+
+The contact form is integrated with **Web3Forms** for handling email notifications without a backend.
+
+### Setup Instructions
+
+1. Get a free access key from [web3forms.com](https://web3forms.com/).
+2. Open `src/config/site.js`.
+3. Add your key:
+   ```javascript
+   web3FormsAccessKey: 'YOUR_ACCESS_KEY',
+   ```
+
+### Form Fields Configured
+
+Submissions will send the following data directly to your email:
+- `firstName`: First Name of the sender
+- `lastName`: Last Name of the sender
+- `email`: Work Email (configured as `replyto` so you can reply to them directly)
+- `company`: Company name
+- `service`: Selected service of interest
+- `message`: Project details or message description
+
+### Premium Email Styling Configuration
+
+Inside `src/pages/ContactPage.jsx`, the form submission appends layout configuration:
+```javascript
+formData.append('access_key', SITE.web3FormsAccessKey);
+formData.append('subject', 'New Contact Form Submission - Innovexce');
+formData.append('from_name', `${formData.get('firstName')} ${formData.get('lastName')}`);
+formData.append('replyto', formData.get('email'));
+formData.append('theme', 'orange'); // Automatically styles the email table template to orange
+```
+
+You can customize the email look by changing `theme` to `dark`, `purple`, `green`, `blue`, or `red`.
+

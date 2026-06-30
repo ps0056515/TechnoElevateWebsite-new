@@ -30,7 +30,7 @@ function extractBody(html) {
 }
 
 function extractMeta(html) {
-  const title = html.match(/<title>([^<]+)<\/title>/)?.[1]?.replace(' — TechnoElevate', '') || '';
+  const title = html.match(/<title>([^<]+)<\/title>/)?.[1]?.replace(' — Innovexce', '') || '';
   const annMatch = html.match(/<div class="announcement[^"]*">([\s\S]*?)<\/div>/);
   let announcement = null;
   if (annMatch) {

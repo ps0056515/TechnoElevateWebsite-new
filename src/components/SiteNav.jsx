@@ -125,7 +125,7 @@ export default function SiteNav() {
               <MegaAll to="/services" label="All Services" />
               <MegaCols>
                 <div>
-                  <MegaLink to="/ai-hub">TechnoElevate.AI</MegaLink>
+                  <MegaLink to="/ai-hub">Innovexce.AI</MegaLink>
                   <MegaLink to="/ai-llm-rag">LLM &amp; RAG Engineering</MegaLink>
                   <MegaLink to="/ai-agentic">Agentic Business Automation</MegaLink>
                   <MegaLink to="/ai-ml-platform">ML &amp; Data Platforms</MegaLink>
@@ -227,7 +227,7 @@ export default function SiteNav() {
               </MegaCols>
               <div className="mega-featured">
                 <span className="mega-featured-badge">Featured</span>
-                <p>LegalDST — AI-powered legal research with verified case-law RAG. Built end-to-end by TechnoElevate.</p>
+                <p>LegalDST — AI-powered legal research with verified case-law RAG. Built end-to-end by Innovexce.</p>
               </div>
             </MegaItem>
             <li className="nav-item">
@@ -249,7 +249,7 @@ export default function SiteNav() {
               </MegaCols>
             </MegaItem>
             <MegaItem id="about" open={openMega === 'about'} onToggle={() => setOpenMega(openMega === 'about' ? null : 'about')} onClose={closeAll}>
-              <MegaAll to="/about" label="About TechnoElevate" />
+              <MegaAll to="/about" label="About Innovexce" />
               <MegaCols>
                 <div>
                   <MegaLink to="/about">Who We Are</MegaLink>
@@ -407,7 +407,7 @@ export default function SiteNav() {
             }}
           >
             <div className="mob-section"><h6>Services</h6>
-              <Link to="/ai-hub" onClick={closeAll}>TechnoElevate.AI</Link>
+              <Link to="/ai-hub" onClick={closeAll}>Innovexce.AI</Link>
               <Link to="/ai-llm-rag" onClick={closeAll}>LLM &amp; RAG Engineering</Link>
               <Link to="/devops-sre" onClick={closeAll}>DevOps &amp; SRE</Link>
               <Link to="/services" onClick={closeAll}>All Services</Link>

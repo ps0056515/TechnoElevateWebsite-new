@@ -1,4 +1,4 @@
-# TechnoElevate Proof Pack
+# Innovexce Proof Pack
 
 Everything on the public website must be traceable to evidence in this folder — or the copy must change.
 

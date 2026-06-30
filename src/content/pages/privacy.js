@@ -2,7 +2,7 @@ export const meta = {
   title: "Privacy Policy",
   announcement: {
     pill: "Privacy",
-    text: "How TechnoElevate collects, uses, and protects personal data.",
+    text: "How Innovexce collects, uses, and protects personal data.",
     linkHref: "contact",
     linkText: "Talk to us →",
   },

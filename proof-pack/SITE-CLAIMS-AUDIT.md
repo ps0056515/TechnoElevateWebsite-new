@@ -1,7 +1,7 @@
-# Site Claims Audit — TechnoElevate
+# Site Claims Audit — Innovexce
 
 **Audit date:** May 2026  
-**Scope:** All public claims on technoelevate website  
+**Scope:** All public claims on innovexce website  
 **Source of truth:** `shared/cases.js` (20 published case studies)
 
 ---
@@ -32,7 +32,7 @@
 
 | Claim | Location | Status | Proof required | Recommended action |
 |-------|----------|--------|----------------|-------------------|
-| TechnoElevate since 2016 | Homepage eyebrow, about | 🟡 | Incorporation / first SOW date | Define: "TechnoElevate practice since 2016" |
+| Innovexce since 2016 | Homepage eyebrow, about | 🟡 | Incorporation / first SOW date | Define: "Innovexce practice since 2016" |
 | Part of TestYantra Software Solutions | About, footer | ✅ | Group structure doc | Keep |
 | TestYantra founded 2003 | About group block | 🔴 | Company registration | Verify date or remove |
 | CMMI Level 3 (group) | About, homepage, security | 🔴 | Appraisal certificate PDF | Add cert to evidence/ or soften to "group practices aligned with CMMI L3" |
@@ -101,7 +101,7 @@
 
 | Person | Claim | Status | Action |
 |--------|-------|--------|--------|
-| Rajesh Srinivasan | Head of TechnoElevate, 18+ yrs, 60+ projects | 🔴 | Real bio + LinkedIn OR remove page |
+| Rajesh Srinivasan | Head of Innovexce, 18+ yrs, 60+ projects | 🔴 | Real bio + LinkedIn OR remove page |
 | Anita Patel | AI practice, LegalDST + CARS24 | 🔴 | Verify employment + projects |
 | Vikram Krishnan | BFSI director, Kotak/JPM/Lloyds | 🔴 | Verify |
 | Sarah Mitchell | US delivery director | 🔴 | Verify |

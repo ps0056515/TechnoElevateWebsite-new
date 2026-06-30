@@ -1,12 +1,12 @@
-# 🏗️ TechnoElevate Website — Comprehensive Engineering & Architectural Guide
+# 🏗️ Innovexce Website — Comprehensive Engineering & Architectural Guide
 
-Welcome to the official developer documentation guide for the **TechnoElevate Web Application**. This document serves as a complete blueprint of the project's technical architecture, codebase organization, data flows, routing mechanisms, and build pipelines.
+Welcome to the official developer documentation guide for the **Innovexce Web Application**. This document serves as a complete blueprint of the project's technical architecture, codebase organization, data flows, routing mechanisms, and build pipelines.
 
 ---
 
 ## 🚀 1. Executive Summary & Design Paradigm
 
-**TechnoElevate** (a division of *TestYantra Software Solutions*) is a high-performance product engineering studio specializing in enterprise AI, cloud-native software, DevOps/SRE, and advanced machine learning platforms. 
+**Innovexce** (a division of *TestYantra Software Solutions*) is a high-performance product engineering studio specializing in enterprise AI, cloud-native software, DevOps/SRE, and advanced machine learning platforms. 
 
 The website is engineered as a modern, lightning-fast **React 19 Single Page Application (SPA)** built with **Vite 6** and **React Router v7**. 
 
@@ -24,7 +24,7 @@ The website is engineered as a modern, lightning-fast **React 19 Single Page App
 The project is structured to separate static assets, shared styling systems, raw data catalogs, reusable components, and high-performance routing.
 
 <pre style="background: #0d1117; padding: 16px; border-radius: 8px; border: 1px solid #30363d; font-family: monospace; line-height: 1.5; color: #c9d1d9;">
-<strong>TechnoElevateWebsite-new/</strong>
+<strong>InnovexceWebsite-new/</strong>
 ├── 📂 <span style="color: #58a6ff;"><strong>legacy/</strong></span>                         <span style="color: #8b949e;"># Original static multi-page HTML source files (kept for archival sync)</span>
 │   ├── 📄 <span style="color: #ff7b72;">about.html</span>                  <span style="color: #8b949e;"># "Who We Are" profile page template</span>
 │   ├── 📄 <span style="color: #ff7b72;">ai-agentic.html</span>             <span style="color: #8b949e;"># Agentic AI Business Automation page template</span>
@@ -67,9 +67,9 @@ The project is structured to separate static assets, shared styling systems, raw
 │   └── 📄 <span style="color: #7ee787;">SITE-CLAIMS-AUDIT.md</span>         <span style="color: #8b949e;"># Exhaustive validation report of marketing and tech claims</span>
 ├── 📂 <span style="color: #58a6ff;"><strong>public/</strong></span>                         <span style="color: #8b949e;"># Static assets served in web root</span>
 │   ├── ⚙️ <span style="color: #c9d1d9;">_redirects</span>                   <span style="color: #8b949e;"># Netlify redirection file to rewrite routes to index.html</span>
-│   ├── 🎨 <span style="color: #c9d1d9;">technoelevate-logo-nav.svg</span>  <span style="color: #8b949e;"># Lightweight vectorized logo for site nav</span>
-│   ├── 🎨 <span style="color: #c9d1d9;">technoelevate-logo.svg</span>      <span style="color: #8b949e;"># Main vector branding graphic</span>
-│   └── 🖼️ <span style="color: #c9d1d9;">technoelevate_logo.png</span>      <span style="color: #8b949e;"># Raster fallback logo</span>
+│   ├── 🎨 <span style="color: #c9d1d9;">innovexce-logo-nav.svg</span>  <span style="color: #8b949e;"># Lightweight vectorized logo for site nav</span>
+│   ├── 🎨 <span style="color: #c9d1d9;">innovexce-logo.svg</span>      <span style="color: #8b949e;"># Main vector branding graphic</span>
+│   └── 🖼️ <span style="color: #c9d1d9;">innovexce_logo.png</span>      <span style="color: #8b949e;"># Raster fallback logo</span>
 ├── 📂 <span style="color: #58a6ff;"><strong>shared/</strong></span>                         <span style="color: #8b949e;"># Vanilla CSS files (modular stylesheets) and legacy code</span>
 │   ├── 📄 <span style="color: #ffa657;">backgrounds.css</span>              <span style="color: #8b949e;"># Premium background grids and card designs</span>
 │   ├── 📄 <span style="color: #ffa657;">content.css</span>                  <span style="color: #8b949e;"># Typography and layout constraints for dynamic HTML contents</span>
@@ -153,7 +153,7 @@ A key mechanism of the website is the automated extraction of legacy HTML files 
 >   "title": "Who We Are",
 >   "announcement": {
 >     "pill": "New",
->     "text": "TechnoElevate now supports AI product engineering...",
+>     "text": "Innovexce now supports AI product engineering...",
 >     "linkHref": "/ai-hub",
 >     "linkText": "Explore"
 >   },

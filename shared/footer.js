@@ -1,6 +1,6 @@
 (function(){
   const LOGO_SRC = 'Theme%20Light.svg';
-  const LOGO_ALT = 'TechnoElevate';
+  const LOGO_ALT = 'Innovexce';
   const LOGO_MARK = '<img src="' + LOGO_SRC + '" alt="' + LOGO_ALT + '" class="f-brand-img" width="200" height="44">';
 
   const FOOTER = `
@@ -74,7 +74,7 @@
       </ul></div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 TechnoElevate &nbsp;·&nbsp; A TestYantra Software Solutions Company</span>
+      <span>&copy; 2026 Innovexce &nbsp;·&nbsp; A TestYantra Software Solutions Company</span>
       <span><a href="mailto:contactus@testyantra.com">contactus@testyantra.com</a></span>
     </div>
   </div>
