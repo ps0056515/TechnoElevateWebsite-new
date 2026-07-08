@@ -1,6 +1,6 @@
 (function(){
   const page = (p) => p;
-  const LOGO_SRC = 'Theme%20Dark.svg';
+  const LOGO_SRC = 'IE_Light.svg';
   const LOGO_ALT = 'Innovexce';
 
   const NAV_HTML = `

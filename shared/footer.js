@@ -1,5 +1,5 @@
 (function(){
-  const LOGO_SRC = 'Theme%20Light.svg';
+  const LOGO_SRC = 'IE_Dark.svg';
   const LOGO_ALT = 'Innovexce';
   const LOGO_MARK = '<img src="' + LOGO_SRC + '" alt="' + LOGO_ALT + '" class="f-brand-img" width="200" height="44">';
 
