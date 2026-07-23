@@ -52,7 +52,7 @@ export function useReveal() {
 
 export function useDocumentTitle(title) {
   useEffect(() => {
-    document.title = title ? `${title} — TechnoElevate` : 'TechnoElevate — Software Engineering at Scale';
+    document.title = title ? `${title} — Innovexce` : 'Innovexce — Software Engineering at Scale';
   }, [title]);
 }
 

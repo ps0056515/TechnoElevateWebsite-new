@@ -278,7 +278,7 @@ export default function ProductPage() {
           <h2>
             Deploy {product.name}
             <br />
-            <em>with TechnoElevate</em>
+            <em>with Innovexce</em>
           </h2>
           <div className="cta-band-btns">
             <Link to="/contact" className="cta-band-primary">

@@ -1,4 +1,4 @@
-/* Homepage hero — TechnoElevate light theme (distinct from Persistent) */
+/* Homepage hero — Innovexce light theme (distinct from Persistent) */
 
 .hero.hero-home {
   background: #f8fafc;
@@ -239,7 +239,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: #ff4713; /* TechnoElevate signature high-tech orange accent */
+  background: #ff4713; /* Innovexce signature high-tech orange accent */
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);

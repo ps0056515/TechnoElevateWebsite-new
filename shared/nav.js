@@ -1,7 +1,7 @@
 (function(){
   const page = (p) => p;
-  const LOGO_SRC = 'Theme%20Dark.svg';
-  const LOGO_ALT = 'TechnoElevate';
+  const LOGO_SRC = 'IE_Light.svg';
+  const LOGO_ALT = 'Innovexce';
 
   const NAV_HTML = `
 <div class="nav-wrap" id="navWrap">
@@ -16,7 +16,7 @@
             <div class="mega-rule"></div>
             <div class="mega-cols">
               <div>
-                <a href="${page('ai-hub.html')}">TechnoElevate.AI</a>
+                <a href="${page('ai-hub.html')}">Innovexce.AI</a>
                 <a href="${page('ai-llm-rag.html')}">LLM &amp; RAG Engineering</a>
                 <a href="${page('ai-agentic.html')}">Agentic Business Automation</a>
                 <a href="${page('ai-ml-platform.html')}">ML &amp; Data Platforms</a>
@@ -110,7 +110,7 @@
             </div>
             <div class="mega-featured">
               <span class="mega-featured-badge">Featured</span>
-              <p>LegalDST — AI-powered legal research with verified case-law RAG. Built end-to-end by TechnoElevate.</p>
+              <p>LegalDST — AI-powered legal research with verified case-law RAG. Built end-to-end by Innovexce.</p>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@
         <button class="nav-trigger" aria-expanded="false">About <span class="chev">▾</span></button>
         <div class="mega-panel">
           <div class="mega-inner">
-            <a href="${page('about.html')}" class="mega-all">About TechnoElevate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="${page('about.html')}" class="mega-all">About Innovexce <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <div class="mega-rule"></div>
             <div class="mega-cols">
               <div>
@@ -194,7 +194,7 @@
 </div>
 <div class="nav-mobile" id="navMobile">
   <div class="mob-section"><h6>Services</h6>
-    <a href="${page('ai-hub.html')}">TechnoElevate.AI</a>
+    <a href="${page('ai-hub.html')}">Innovexce.AI</a>
     <a href="${page('ai-llm-rag.html')}">LLM &amp; RAG Engineering</a>
     <a href="${page('devops-sre.html')}">DevOps &amp; SRE</a>
     <a href="${page('services.html')}">All Services</a>
@@ -236,9 +236,9 @@
   ];
 
   const SEARCH_INDEX = [
-    { title: 'Home', href: 'index.html', cat: 'Pages', keys: 'homepage technoelevate ai engineering' },
+    { title: 'Home', href: 'index.html', cat: 'Pages', keys: 'homepage innovexce ai engineering' },
     { title: 'Contact Us', href: 'contact.html', cat: 'Pages', keys: 'contact email phone get in touch sales' },
-    { title: 'About TechnoElevate', href: 'about.html', cat: 'Pages', keys: 'about company testyantra partner' },
+    { title: 'About Innovexce', href: 'about.html', cat: 'Pages', keys: 'about company testyantra partner' },
     { title: 'Services', href: 'services.html', cat: 'Services', keys: 'application development cloud devops consulting' },
     { title: 'DevOps, SRE & Observability', href: 'devops-sre.html', cat: 'Services', keys: 'devops sre observability cicd kubernetes prometheus grafana' },
     { title: 'Engagement Models', href: 'engagement.html', cat: 'Services', keys: 'fixed scope t&m bot staff augmentation managed' },

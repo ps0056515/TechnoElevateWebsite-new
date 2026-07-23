@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
 
 // Inline route list (mirrors src/data/seo.js getAllPublicPaths) — kept here so Node can run without bundling app code.
-const SITE_URL = 'https://technoelevate.com';
+const SITE_URL = 'https://innovexce.com';
 
 async function loadPaths() {
   const { getAllPublicPaths } = await import('../src/data/seo.js');

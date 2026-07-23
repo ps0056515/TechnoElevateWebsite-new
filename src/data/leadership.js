@@ -1,4 +1,4 @@
-/** Leadership team — TechnoElevate (TestYantra group). */
+/** Leadership team — Innovexce (TestYantra group). */
 
 export const LEADERSHIP_GROUPS = [
   {
@@ -36,10 +36,10 @@ export const LEADERS = [
     id: 'pradeep',
     initials: 'PS',
     name: 'Pradeep Srinivasan',
-    title: 'Head of TechnoElevate',
+    title: 'Head of Innovexce',
     subtitle: 'Practice Head — AI & Data · Global Delivery Head · Product Head',
     group: 'executive',
-    bio: 'Leads TechnoElevate as the product engineering studio within TestYantra — spanning AI and data initiatives, global delivery operations, and product strategy for enterprise and growth-stage clients.',
+    bio: 'Leads Innovexce as the product engineering studio within TestYantra — spanning AI and data initiatives, global delivery operations, and product strategy for enterprise and growth-stage clients.',
     focus: ['AI & LLM / RAG programs', 'Global delivery governance', 'Product & platform strategy', 'BFSI · Telecom · Automotive'],
     linkedIn: null,
   },

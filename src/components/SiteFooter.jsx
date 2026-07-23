@@ -205,7 +205,7 @@ export default function SiteFooter() {
         </div>
         <div className="footer-bottom">
           <span>
-            &copy; 2026 TechnoElevate &nbsp;·&nbsp; A TestYantra Software
+            &copy; 2026 Innovexce &nbsp;·&nbsp; A TestYantra Software
             Solutions Company
           </span>
           <span>

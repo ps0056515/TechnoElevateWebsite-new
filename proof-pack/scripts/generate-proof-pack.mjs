@@ -377,7 +377,7 @@ write(
 
 | Claim | File to collect | Status |
 |-------|-----------------|--------|
-| TechnoElevate part of TestYantra | \`testyantra-group-structure.pdf\` | ☐ |
+| Innovexce part of TestYantra | \`testyantra-group-structure.pdf\` | ☐ |
 | Practice since 2016 | \`first-engagement-letter-2016.pdf\` | ☐ |
 | TestYantra founded 2003 | \`company-registration.pdf\` | ☐ |
 | 6 global regions | \`office-addresses.pdf\` | ☐ |
