@@ -1,6 +1,6 @@
 (function(){
   const page = (p) => p;
-  const LOGO_SRC = 'IE_Light.svg';
+  const LOGO_SRC = 'IE_Light.png';
   const LOGO_ALT = 'Innovexce';
 
   const NAV_HTML = `
@@ -282,7 +282,7 @@
 
     const logoLink = document.getElementById('navLogoLink');
     if(logoLink){
-      logoLink.innerHTML = '<img src="' + page(LOGO_SRC) + '" alt="' + LOGO_ALT + '" class="nav-logo-img" width="220" height="48">';
+      logoLink.innerHTML = '<img src="' + page(LOGO_SRC) + '" alt="' + LOGO_ALT + '" class="nav-logo-img" width="180" height="38">';
     }
 
     const navWrap = document.getElementById('navWrap');

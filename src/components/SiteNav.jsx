@@ -118,7 +118,7 @@ export default function SiteNav() {
       >
         <div className="nav-inner">
           <Link to="/" className="nav-logo" id="navLogoLink">
-            <img src={LOGO_NAV_SRC} alt={LOGO_ALT} className="nav-logo-img" width="280" height="52" />
+            <img src={LOGO_NAV_SRC} alt={LOGO_ALT} className="nav-logo-img" width="180" height="38" />
           </Link>
           <ul className="nav-menu" id="navMenu">
             <MegaItem id="services" open={openMega === 'services'} onToggle={() => setOpenMega(openMega === 'services' ? null : 'services')} onClose={closeAll}>
