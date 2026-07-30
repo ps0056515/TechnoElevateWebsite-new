@@ -118,7 +118,7 @@ export default function SiteNav() {
       >
         <div className="nav-inner">
           <Link to="/" className="nav-logo" id="navLogoLink">
-            <img src={LOGO_NAV_SRC} alt={LOGO_ALT} className="nav-logo-img" width="280" height="52" />
+            <img src={LOGO_NAV_SRC} alt={LOGO_ALT} className="nav-logo-img" width="180" height="38" />
           </Link>
           <ul className="nav-menu" id="navMenu">
             <MegaItem id="services" open={openMega === 'services'} onToggle={() => setOpenMega(openMega === 'services' ? null : 'services')} onClose={closeAll}>
@@ -261,12 +261,12 @@ export default function SiteNav() {
                   <MegaLink to="/engagement">How We Work</MegaLink>
                   <MegaLink to="/technology">Technology</MegaLink>
                   <MegaLink to="/security">Security &amp; Compliance</MegaLink>
-                  <MegaLink to="/careers">Careers</MegaLink>
+                  <a href="http://careers.innovexce.com/careers" target="_blank" rel="noopener noreferrer" className="mega-link">Careers</a>
                 </div>
               </MegaCols>
             </MegaItem>
             <li className="nav-item">
-              <Link to="/careers" className="nav-link-item">Careers</Link>
+              <a href="http://careers.innovexce.com/careers" target="_blank" rel="noopener noreferrer" className="nav-link-item">Careers</a>
             </li>
           </ul>
           <div className="nav-right">
@@ -428,7 +428,7 @@ export default function SiteNav() {
             <div className="mob-section"><h6>Company</h6>
               <Link to="/about" onClick={closeAll}>About</Link>
               <Link to="/leadership" onClick={closeAll}>Leadership</Link>
-              <Link to="/careers" onClick={closeAll}>Careers</Link>
+              <a href="http://careers.innovexce.com/careers" target="_blank" rel="noopener noreferrer" onClick={closeAll}>Careers</a>
               <Link to="/contact" onClick={closeAll}>Contact</Link>
             </div>
             <div className="mob-section"><h6>Language</h6>

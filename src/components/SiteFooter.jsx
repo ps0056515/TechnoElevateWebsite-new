@@ -195,7 +195,7 @@ export default function SiteFooter() {
                 <Link to="/privacy">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/careers">Careers</Link>
+                <a href="http://careers.innovexce.com/careers" target="_blank" rel="noopener noreferrer">Careers</a>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>
