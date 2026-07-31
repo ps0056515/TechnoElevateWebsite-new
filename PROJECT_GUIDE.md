@@ -1,4 +1,4 @@
-# 🏗️ Innovexce Website — Comprehensive Engineering & Architectural Guide
+# 🏗️ Innovexce Website - Comprehensive Engineering & Architectural Guide
 
 Welcome to the official developer documentation guide for the **Innovexce Web Application**. This document serves as a complete blueprint of the project's technical architecture, codebase organization, data flows, routing mechanisms, and build pipelines.
 
@@ -6,16 +6,18 @@ Welcome to the official developer documentation guide for the **Innovexce Web Ap
 
 ## 🚀 1. Executive Summary & Design Paradigm
 
-**Innovexce** (a division of *TestYantra Software Solutions*) is a high-performance product engineering studio specializing in enterprise AI, cloud-native software, DevOps/SRE, and advanced machine learning platforms. 
+**Innovexce** (a division of _TestYantra Software Solutions_) is a high-performance product engineering studio specializing in enterprise AI, cloud-native software, DevOps/SRE, and advanced machine learning platforms.
 
-The website is engineered as a modern, lightning-fast **React 19 Single Page Application (SPA)** built with **Vite 6** and **React Router v7**. 
+The website is engineered as a modern, lightning-fast **React 19 Single Page Application (SPA)** built with **Vite 6** and **React Router v7**.
 
 > [!TIP]
+>
 > ### 💡 Architectural Core Values
-> *   **Performance & Core Web Vitals**: Instantaneous navigation via React Router client-side routing, code-splitting (dynamic lazy-loading), and optimized image delivery (Unsplash source processing).
-> *   **Seamless Migration & Backward Compatibility**: Legacy multi-page static HTML paths (e.g., `/about.html`, `/services.html`) are dynamically mapped and routed cleanly to preserve SEO indexation and bookmarks.
-> *   **Zero Refactoring Friction**: A node compilation layer extracts legacy page bodies automatically, allowing designers and content creators to modify static HTML without disrupting the React core application.
-> *   **State-of-the-Art UX**: Premium dynamic visual effects, viewport intersection animations, a fast client-side fuzzy search (`Ctrl + K`), and multi-lingual compatibility.
+>
+> - **Performance & Core Web Vitals**: Instantaneous navigation via React Router client-side routing, code-splitting (dynamic lazy-loading), and optimized image delivery (Unsplash source processing).
+> - **Seamless Migration & Backward Compatibility**: Legacy multi-page static HTML paths (e.g., `/about.html`, `/services.html`) are dynamically mapped and routed cleanly to preserve SEO indexation and bookmarks.
+> - **Zero Refactoring Friction**: A node compilation layer extracts legacy page bodies automatically, allowing designers and content creators to modify static HTML without disrupting the React core application.
+> - **State-of-the-Art UX**: Premium dynamic visual effects, viewport intersection animations, a fast client-side fuzzy search (`Ctrl + K`), and multi-lingual compatibility.
 
 ---
 
@@ -127,18 +129,25 @@ The project is structured to separate static assets, shared styling systems, raw
 The application's routing framework is controlled within `src/App.jsx` and `src/utils/paths.js`, implementing a hybrid SPA structure.
 
 > [!NOTE]
+>
 > ### 📁 Static Page Autoloading (`src/App.jsx`)
+>
 > Instead of hardcoding every static page route, the app utilizes Vite’s high-performance dynamic import tool `import.meta.glob`:
+>
 > ```javascript
-> const pageLoaders = import.meta.glob('./content/pages/*.js');
+> const pageLoaders = import.meta.glob("./content/pages/*.js");
 > ```
+>
 > When a user accesses a static route (e.g. `/about`), the `LazyStaticRoute` component automatically identifies and resolves the target module (`./content/pages/about.js`). This facilitates asynchronous code-splitting: only the requested content bundle is downloaded to the browser.
 
 > [!IMPORTANT]
+>
 > ### 🛡️ Smart Link Interception (`src/components/HtmlContent.jsx`)
+>
 > Since pages imported from static legacy assets contain normal anchor links (`<a href="about.html">`), a traditional SPA would trigger a full-page browser refresh. To prevent this, `HtmlContent.jsx` intercepts click events dynamically:
-> *   A click-listener is attached to the parent container.
-> *   It intercepts clicks targeting anchor elements, normalizes the destination path (converting `name.html` into `/name`), and redirects browser default actions using React Router's `navigate(target)` under the hood.
+>
+> - A click-listener is attached to the parent container.
+> - It intercepts clicks targeting anchor elements, normalizes the destination path (converting `name.html` into `/name`), and redirects browser default actions using React Router's `navigate(target)` under the hood.
 
 ---
 
@@ -148,19 +157,20 @@ A key mechanism of the website is the automated extraction of legacy HTML files 
 
 > [!WARNING]
 > For every input page (e.g., `about.html`), the script writes a corresponding `src/content/pages/about.js` output:
+>
 > ```javascript
 > export const meta = {
->   "title": "Who We Are",
->   "announcement": {
->     "pill": "New",
->     "text": "Innovexce now supports AI product engineering...",
->     "linkHref": "/ai-hub",
->     "linkText": "Explore"
+>   title: "Who We Are",
+>   announcement: {
+>     pill: "New",
+>     text: "Innovexce now supports AI product engineering...",
+>     linkHref: "/ai-hub",
+>     linkText: "Explore",
 >   },
->   "bodyClass": "about-page"
+>   bodyClass: "about-page",
 > };
-> 
-> export const html = "<section class=\"section\">...</section>";
+>
+> export const html = '<section class="section">...</section>';
 > ```
 
 ---
@@ -168,21 +178,27 @@ A key mechanism of the website is the automated extraction of legacy HTML files 
 ## 🔍 5. Premium Interactive & Global Systems
 
 ### 🔍 A. The Universal Search Engine (`Ctrl + K`)
+
 Implemented directly inside `SiteNav.jsx` with database configurations stored in `src/data/site.js`:
-*   **Fuzzy In-Memory Indexing**: A robust search catalog (`SEARCH_INDEX`) maps page titles, categories (Pages, Services, AI, Insights, Company), paths, and keywords.
-*   **Live Query Highlighting**: When matching characters are entered, the engine intercepts the string and wraps exact matching substrings in standard `<mark>` tags via `highlightMatch()`.
-*   **Accessible Hotkeys**: Pressing `Ctrl + K` or `Cmd + K` opens the search modal, automatically focusing the input field. Pressing `Escape` closes all interactive panels immediately.
+
+- **Fuzzy In-Memory Indexing**: A robust search catalog (`SEARCH_INDEX`) maps page titles, categories (Pages, Services, AI, Insights, Company), paths, and keywords.
+- **Live Query Highlighting**: When matching characters are entered, the engine intercepts the string and wraps exact matching substrings in standard `<mark>` tags via `highlightMatch()`.
+- **Accessible Hotkeys**: Pressing `Ctrl + K` or `Cmd + K` opens the search modal, automatically focusing the input field. Pressing `Escape` closes all interactive panels immediately.
 
 ### ⚡ B. Viewport Intersection Scroll Reveal Engine
+
 The website incorporates advanced micro-animations via an Intersection Observer pattern in `src/hooks/useSiteEffects.js`:
+
 1.  Elements decorated with the class `.reveal` are automatically queued.
 2.  Once an element enters the visible viewport threshold (set to `0.12`), it is dynamically added the class `.up`, triggering keyframed slide-and-fade CSS transitions.
 3.  The observer instantly unobserves the element, preventing performance overhead and ensuring the animations run exactly once per mount.
 
 ### 🌍 C. Unified Localization System
+
 The multi-lingual configuration supports 12 native language codes (English, Hindi, French, German, Spanish, Japanese, Portuguese, Chinese, Arabic, Korean, Italian, Dutch):
-*   Saves selected localization state to `localStorage` key `te-lang`.
-*   Supports interactive triggers in both the main desktop mega-menus and mobile menus.
+
+- Saves selected localization state to `localStorage` key `te-lang`.
+- Supports interactive triggers in both the main desktop mega-menus and mobile menus.
 
 ---
 
@@ -191,23 +207,25 @@ The multi-lingual configuration supports 12 native language codes (English, Hind
 The primary business engine of the website resides in `src/data/cases.js`. This central repository catalog contains detailed schemas for over 20 enterprise-grade engineering case studies.
 
 ### 📋 Data Interface Structure:
+
 ```typescript
 interface CaseStudy {
-  id: string;             // URL-friendly dynamic identifier
-  client: string;         // Enterprise client name (e.g., "Kotak Mahindra Bank")
-  project: string;        // Full project title
-  services: string[];     // Services rendered (e.g., "App Dev", "AI & Data")
-  engagement: string;     // Engagement type (Fixed-Scope, T&M, BOT, Staff Aug)
-  regions: string[];      // Geographic delivery markets (e.g., "India", "US")
-  problem: string;        // In-depth challenge definition
-  solution: string;       // Custom software/architecture implementation
-  outcomes: string[];     // Measurable business KPI outcomes achieved
-  tech: string[];         // Direct technical stack utilised
-  industryNorm: string;   // Unified industry category (BFSI, Telecom, etc.)
+  id: string; // URL-friendly dynamic identifier
+  client: string; // Enterprise client name (e.g., "Kotak Mahindra Bank")
+  project: string; // Full project title
+  services: string[]; // Services rendered (e.g., "App Dev", "AI & Data")
+  engagement: string; // Engagement type (Fixed-Scope, T&M, BOT, Staff Aug)
+  regions: string[]; // Geographic delivery markets (e.g., "India", "US")
+  problem: string; // In-depth challenge definition
+  solution: string; // Custom software/architecture implementation
+  outcomes: string[]; // Measurable business KPI outcomes achieved
+  tech: string[]; // Direct technical stack utilised
+  industryNorm: string; // Unified industry category (BFSI, Telecom, etc.)
 }
 ```
 
 This model powers:
+
 1.  **The Case Studies Dashboard (`CaseStudiesPage.jsx`)**: Responsive filtering on category chips with client-specific pagination.
 2.  **The Case Study Detailed View (`CaseStudyPage.jsx`)**: Renders custom case study views with custom hero graphics linked dynamically from `src/config/images.js` utilizing highly aesthetic Unsplash backgrounds.
 
@@ -218,28 +236,37 @@ This model powers:
 Follow these commands to interact, extend, and build the application:
 
 ### ⚙️ Installing Dependencies
+
 ```bash
 npm install
 ```
 
 ### ⚡ Starting Local Development Server
+
 ```bash
 npm run dev
 ```
+
 Renders the development server at [http://localhost:5173](http://localhost:5173).
 
 ### 🔄 Syncing Content from Legacy HTML files
+
 When changes are made to the static `.html` files in the workspace root or the `legacy` directory, sync them to the dynamic SPA pages by running:
+
 ```bash
 node scripts/extract-page-bodies.mjs
 ```
 
 ### 🚀 Compiling Production Bundle
+
 ```bash
 npm run build
 ```
-Creates an optimized, production-ready static bundle under the `/dist` directory. 
+
+Creates an optimized, production-ready static bundle under the `/dist` directory.
 
 > [!CAUTION]
+>
 > ### ⚠️ SPA Production Routing Setup
+>
 > Since this is a Single Page Application (SPA) utilizing HTML5 Client-Side History Routing, ensure your production server or static host (Netlify, Vercel, AWS S3, or Nginx) is configured to **redirect or rewrite all routes back to `index.html`** to prevent 404 page-refresh failures.

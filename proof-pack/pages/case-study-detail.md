@@ -1,4 +1,4 @@
-# Page proof index — case-study-detail
+# Page proof index - case-study-detail
 
 **Route:** `/case-studies/:id`  
 **Content source:** `src/pages/CaseStudyPage.jsx + shared/cases.js`
@@ -14,21 +14,21 @@
 
 ## Cross-references
 
-| Claim type | Proof location |
-|------------|----------------|
-| Case study metrics | `evidence/03-case-studies/{case_id}/` |
-| Company / group facts | `evidence/01-company/` |
-| Certifications | `evidence/02-certifications/` |
-| Testimonials | `evidence/04-testimonials/` |
-| Security statements | `evidence/05-security/` |
-| Leadership bios | `evidence/07-leadership/` |
-| News items | `evidence/08-newsroom/` |
-| Whitepapers | `evidence/09-whitepapers/` |
+| Claim type            | Proof location                        |
+| --------------------- | ------------------------------------- |
+| Case study metrics    | `evidence/03-case-studies/{case_id}/` |
+| Company / group facts | `evidence/01-company/`                |
+| Certifications        | `evidence/02-certifications/`         |
+| Testimonials          | `evidence/04-testimonials/`           |
+| Security statements   | `evidence/05-security/`               |
+| Leadership bios       | `evidence/07-leadership/`             |
+| News items            | `evidence/08-newsroom/`               |
+| Whitepapers           | `evidence/09-whitepapers/`            |
 
 ## Page review
 
-| Reviewer | Date | Status |
-|----------|------|--------|
-| | | ☐ Pending |
+| Reviewer | Date | Status    |
+| -------- | ---- | --------- |
+|          |      | ☐ Pending |
 
 > **Tip:** Run a diff after each website edit and update this page's proof links.

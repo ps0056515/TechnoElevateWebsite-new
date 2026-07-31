@@ -239,7 +239,9 @@
   border-radius: 14px;
   padding: 32px;
   position: relative;
-  transition: background 0.3s, border-color 0.3s;
+  transition:
+    background 0.3s,
+    border-color 0.3s;
   overflow: hidden;
 }
 .testi-card::before {
@@ -324,7 +326,13 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, var(--rule) 20%, var(--rule) 80%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--rule) 20%,
+    var(--rule) 80%,
+    transparent 100%
+  );
 }
 .why-grid {
   display: grid;
@@ -338,7 +346,9 @@
   border-radius: 14px;
   padding: 32px 28px;
   text-align: left;
-  transition: background 0.3s, border-color 0.3s;
+  transition:
+    background 0.3s,
+    border-color 0.3s;
   position: relative;
   overflow: hidden;
 }
@@ -387,7 +397,9 @@
   display: grid;
   place-items: center;
   flex-shrink: 0;
-  transition: background 0.3s, transform 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.3s;
 }
 .why-item:hover .why-icon-wrap {
   background: rgba(255, 71, 19, 0.12);
@@ -524,13 +536,19 @@
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-top: 4px solid var(--orange);
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.04),
+    0 1px 3px rgba(0, 0, 0, 0.02);
   position: relative;
   z-index: 10;
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  transition:
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
 }
 .article-wrap:hover {
-  box-shadow: 0 30px 60px rgba(255, 71, 19, 0.06), 0 15px 35px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 30px 60px rgba(255, 71, 19, 0.06),
+    0 15px 35px rgba(0, 0, 0, 0.04);
 }
 .article-wrap h1 {
   font-size: clamp(28px, 3.5vw, 38px);
@@ -618,7 +636,7 @@
   }
 }
 
-/* Full case study page — Premium split layout */
+/* Full case study page - Premium split layout */
 .cs-full-hero {
   padding: 100px 0 70px;
   background: var(--ink);
@@ -744,7 +762,7 @@
   margin-top: 3px;
 }
 
-/* ── CTA card — dark gradient with vivid orange button ── */
+/* ── CTA card - dark gradient with vivid orange button ── */
 .cs-cta-card {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1259,7 +1277,9 @@
   background-size: cover;
   background-position: center;
   filter: brightness(1.06) saturate(1.04);
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s;
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.45s;
 }
 .home-insight-card:hover .home-insight-img {
   transform: scale(1.06);
@@ -1507,7 +1527,7 @@
 
 /* Hero background elements */
 .bg-privacy-hero {
-  background: #0D1117 !important;
+  background: #0d1117 !important;
 }
 
 .privacy-hero-glow-1 {
@@ -1517,7 +1537,11 @@
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 71, 19, 0.16) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 71, 19, 0.16) 0%,
+    transparent 70%
+  );
   z-index: 1;
   pointer-events: none;
   animation: breathingGlow 8s ease-in-out infinite alternate;
@@ -1530,7 +1554,11 @@
   width: 550px;
   height: 550px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.18) 0%,
+    transparent 70%
+  );
   z-index: 1;
   pointer-events: none;
   animation: breathingGlow-reverse 10s ease-in-out infinite alternate;
@@ -1550,7 +1578,7 @@
 .privacy-hero-grid {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 64px 64px;
@@ -1864,8 +1892,13 @@
 }
 
 @keyframes pulseStatus {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* Content Cards */
@@ -2169,7 +2202,11 @@
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 71, 19, 0.08) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 71, 19, 0.08) 0%,
+    transparent 70%
+  );
   z-index: 1;
   pointer-events: none;
 }
@@ -2228,7 +2265,7 @@
   background-color: var(--light);
 }
 
-/* Responsive adjustments — Tablet */
+/* Responsive adjustments - Tablet */
 @media (max-width: 1024px) {
   .privacy-page-layout {
     grid-template-columns: minmax(0, 1fr);
@@ -2260,7 +2297,7 @@
   }
 }
 
-/* Responsive — Mobile */
+/* Responsive - Mobile */
 @media (max-width: 768px) {
   .privacy-main-section {
     padding: 36px 0 60px;
@@ -2421,7 +2458,7 @@
   }
 }
 
-/* Responsive — Small phones */
+/* Responsive - Small phones */
 @media (max-width: 480px) {
   .privacy-main-section {
     padding: 24px 0 48px;

@@ -1,4 +1,4 @@
-# Proof manifest — Insight article
+# Proof manifest - Insight article
 
 **Route:** `/insight-iiot-ml`  
 **Title:** IIoT analytics and ML anomaly detection  
@@ -19,14 +19,14 @@ Insight articles are **thought leadership derived from delivery**. They are publ
 
 ## Article-specific claims to verify
 
-Review the live page at `/insight-iiot-ml` and list any **numbers or superlatives** — each needs a row in `METRICS-REGISTER.csv`.
+Review the live page at `/insight-iiot-ml` and list any **numbers or superlatives** - each needs a row in `METRICS-REGISTER.csv`.
 
 ## Files
 
-| File | Purpose |
-|------|---------|
-| `01-article-draft.pdf` | Final published text |
-| `02-fact-check-signoff.pdf` | Delivery lead approval |
+| File                        | Purpose                  |
+| --------------------------- | ------------------------ |
+| `01-article-draft.pdf`      | Final published text     |
+| `02-fact-check-signoff.pdf` | Delivery lead approval   |
 | `03-link-to-case-proof.pdf` | Reference to case folder |
 
 ## Status: ☐ Not verified

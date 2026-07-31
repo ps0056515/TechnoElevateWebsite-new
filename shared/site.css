@@ -135,7 +135,7 @@ img {
   overflow: hidden;
   background: #0d1117;
 }
-/* SVG/CSS background — full dark tech feel like Persistent/EPAM */
+/* SVG/CSS background - full dark tech feel like Persistent/EPAM */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -233,7 +233,7 @@ img {
   }
 }
 
-/* Abstract circuit lines — SVG inline */
+/* Abstract circuit lines - SVG inline */
 .hero-circuit {
   position: absolute;
   right: 0;

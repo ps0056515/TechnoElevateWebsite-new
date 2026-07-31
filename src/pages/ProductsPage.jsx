@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import Announcement from '../components/Announcement';
-import ProductVisual from '../components/ProductVisual';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import Announcement from "../components/Announcement";
+import ProductVisual from "../components/ProductVisual";
 import {
   PRODUCTS,
   PRODUCT_FILTERS,
@@ -10,19 +10,20 @@ import {
   PORTFOLIO_STATS,
   FEATURED_PRODUCT_SLUG,
   getProductFilterGroup,
-} from '../data/products';
-import { useDocumentTitle } from '../hooks/useSiteEffects';
+} from "../data/products";
+import { useDocumentTitle } from "../hooks/useSiteEffects";
 
 export default function ProductsPage() {
-  useDocumentTitle('Products');
-  const [filter, setFilter] = useState('all');
+  useDocumentTitle("Products");
+  const [filter, setFilter] = useState("all");
 
   const filtered =
-    filter === 'all'
+    filter === "all"
       ? PRODUCTS
       : PRODUCTS.filter((p) => getProductFilterGroup(p.slug) === filter);
 
-  const featured = PRODUCTS.find((p) => p.slug === FEATURED_PRODUCT_SLUG) || PRODUCTS[0];
+  const featured =
+    PRODUCTS.find((p) => p.slug === FEATURED_PRODUCT_SLUG) || PRODUCTS[0];
 
   return (
     <motion.div
@@ -32,16 +33,22 @@ export default function ProductsPage() {
     >
       <Announcement
         pill="Product portfolio"
-        text="Seven production platforms — voice AI, admissions, enterprise agents, ed-tech, accessibility, and hiring intelligence."
+        text="Seven production platforms - voice AI, admissions, enterprise agents, ed-tech, accessibility, and hiring intelligence."
         linkHref="/contact"
         linkText="Build your next product with us →"
       />
 
-      {/* Cinematic hero — Ushur-style dark + visual */}
+      {/* Cinematic hero - Ushur-style dark + visual */}
       <section className="products-cinematic-hero">
         <div className="products-cinematic-bg" aria-hidden="true" />
-        <div className="products-cinematic-orb products-cinematic-orb--1" aria-hidden="true" />
-        <div className="products-cinematic-orb products-cinematic-orb--2" aria-hidden="true" />
+        <div
+          className="products-cinematic-orb products-cinematic-orb--1"
+          aria-hidden="true"
+        />
+        <div
+          className="products-cinematic-orb products-cinematic-orb--2"
+          aria-hidden="true"
+        />
         <div className="wrap products-cinematic-inner">
           <div className="products-cinematic-copy">
             <div className="page-breadcrumb products-breadcrumb-light">
@@ -55,12 +62,16 @@ export default function ProductsPage() {
               <em>built for production.</em>
             </h1>
             <p className="products-cinematic-lead">
-              Purpose-built product lines for voice admissions, enterprise agents, ed-tech learning,
-              accessibility communities, and hiring intelligence — engineered end-to-end with the same
-              rigour we bring to Kotak, Tekion, and LegalDST engagements.
+              Purpose-built product lines for voice admissions, enterprise
+              agents, ed-tech learning, accessibility communities, and hiring
+              intelligence - engineered end-to-end with the same rigour we bring
+              to Kotak, Tekion, and LegalDST engagements.
             </p>
             <div className="products-cinematic-actions">
-              <Link to={`/products/${featured.slug}`} className="cta-band-primary">
+              <Link
+                to={`/products/${featured.slug}`}
+                className="cta-band-primary"
+              >
                 Explore {featured.name} →
               </Link>
               <Link to="/contact" className="products-hero-ghost">
@@ -89,20 +100,21 @@ export default function ProductsPage() {
           <div className="products-trust-head reveal">
             <div className="s-eyebrow">Platform DNA</div>
             <h2 className="s-title">
-              Trust-native architecture —
+              Trust-native architecture -
               <br />
               built in, not bolted on.
             </h2>
             <p className="s-sub" style={{ maxWidth: 560 }}>
-              Every product in the portfolio shares production patterns: governed AI, observable
-              pipelines, contract-first APIs, and deploy paths your ops team can actually run.
+              Every product in the portfolio shares production patterns:
+              governed AI, observable pipelines, contract-first APIs, and deploy
+              paths your ops team can actually run.
             </p>
           </div>
           <div className="products-trust-grid reveal">
             {PLATFORM_TRUST.map((pillar, i) => (
               <div
                 key={pillar.title}
-                className={`products-trust-card${i ? ` reveal-delay-${Math.min(i, 3)}` : ''}`}
+                className={`products-trust-card${i ? ` reveal-delay-${Math.min(i, 3)}` : ""}`}
               >
                 <div className="products-trust-icon">{pillar.icon}</div>
                 <h4>{pillar.title}</h4>
@@ -130,7 +142,7 @@ export default function ProductsPage() {
                 <button
                   key={f.id}
                   type="button"
-                  className={`products-filter-pill${filter === f.id ? ' active' : ''}`}
+                  className={`products-filter-pill${filter === f.id ? " active" : ""}`}
                   onClick={() => setFilter(f.id)}
                 >
                   {f.label}
@@ -143,14 +155,16 @@ export default function ProductsPage() {
             {filtered.map((p, i) => (
               <article
                 key={p.slug}
-                className={`product-showcase reveal${i % 2 === 1 ? ' product-showcase--reverse' : ''}`}
-                style={{ '--product-accent': p.accent }}
+                className={`product-showcase reveal${i % 2 === 1 ? " product-showcase--reverse" : ""}`}
+                style={{ "--product-accent": p.accent }}
               >
                 <div className="product-showcase-visual">
                   <ProductVisual product={p} image={p.cardImage} size="md" />
                 </div>
                 <div className="product-showcase-content">
-                  <span className="product-showcase-category">{p.category}</span>
+                  <span className="product-showcase-category">
+                    {p.category}
+                  </span>
                   <h3>{p.name}</h3>
                   <p className="product-showcase-tagline">{p.tagline}</p>
                   <p className="product-showcase-summary">{p.summary}</p>
@@ -170,7 +184,10 @@ export default function ProductsPage() {
                       </div>
                     ))}
                   </div>
-                  <Link to={`/products/${p.slug}`} className="product-showcase-cta">
+                  <Link
+                    to={`/products/${p.slug}`}
+                    className="product-showcase-cta"
+                  >
                     Explore {p.name} →
                   </Link>
                 </div>
@@ -192,7 +209,7 @@ export default function ProductsPage() {
                 to={`/products/${p.slug}`}
                 className="products-bento-tile"
                 style={{
-                  '--product-accent': p.accent,
+                  "--product-accent": p.accent,
                   backgroundImage: `url(${p.cardImage})`,
                 }}
               >
@@ -214,15 +231,31 @@ export default function ProductsPage() {
           <div className="s-eyebrow">How we ship products</div>
           <h2 className="s-title">From idea to production</h2>
           <p className="s-sub" style={{ maxWidth: 560, marginBottom: 32 }}>
-            Cursor-accelerated engineering with architecture-first delivery — the same playbook behind
-            every product in this portfolio.
+            Cursor-accelerated engineering with architecture-first delivery -
+            the same playbook behind every product in this portfolio.
           </p>
           <div className="products-pipeline reveal">
             {[
-              { step: '01', title: 'Discovery & PRD', desc: 'Align problem, personas, tenancy model, and success metrics.' },
-              { step: '02', title: 'Architecture', desc: 'Reference patterns, API contracts, and security posture signed off.' },
-              { step: '03', title: 'Build & integrate', desc: 'Monorepo delivery with AI-assisted velocity and QA gates.' },
-              { step: '04', title: 'Deploy & iterate', desc: 'Docker, observability, and content ops for continuous improvement.' },
+              {
+                step: "01",
+                title: "Discovery & PRD",
+                desc: "Align problem, personas, tenancy model, and success metrics.",
+              },
+              {
+                step: "02",
+                title: "Architecture",
+                desc: "Reference patterns, API contracts, and security posture signed off.",
+              },
+              {
+                step: "03",
+                title: "Build & integrate",
+                desc: "Monorepo delivery with AI-assisted velocity and QA gates.",
+              },
+              {
+                step: "04",
+                title: "Deploy & iterate",
+                desc: "Docker, observability, and content ops for continuous improvement.",
+              },
             ].map((item) => (
               <div key={item.step} className="products-pipeline-step">
                 <span className="products-pipeline-num">{item.step}</span>

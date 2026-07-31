@@ -1,22 +1,26 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import Announcement from '../components/Announcement';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import Announcement from "../components/Announcement";
 import {
   LEADERS,
   LEADERSHIP_GROUPS,
   LEADERSHIP_PRINCIPLES,
   OPERATING_MODEL,
-} from '../data/leadership';
-import { useDocumentTitle } from '../hooks/useSiteEffects';
+} from "../data/leadership";
+import { useDocumentTitle } from "../hooks/useSiteEffects";
 
 function LeaderCard({ leader, featured = false }) {
   return (
-    <article className={`leader-card-v2${featured ? ' leader-card-v2--featured' : ''}`}>
+    <article
+      className={`leader-card-v2${featured ? " leader-card-v2--featured" : ""}`}
+    >
       <div className="leader-photo">{leader.initials}</div>
       <div className="leader-card-v2-body">
         <h4>{leader.name}</h4>
         <div className="role">{leader.title}</div>
-        {leader.subtitle ? <div className="leader-subtitle">{leader.subtitle}</div> : null}
+        {leader.subtitle ? (
+          <div className="leader-subtitle">{leader.subtitle}</div>
+        ) : null}
         <p>{leader.bio}</p>
         {leader.focus?.length ? (
           <ul className="leader-focus">
@@ -41,10 +45,10 @@ function LeaderCard({ leader, featured = false }) {
 }
 
 export default function LeadershipPage() {
-  useDocumentTitle('Leadership');
+  useDocumentTitle("Leadership");
 
-  const executiveLeader = LEADERS.find((l) => l.id === 'pradeep');
-  const otherLeaders = LEADERS.filter((l) => l.id !== 'pradeep');
+  const executiveLeader = LEADERS.find((l) => l.id === "pradeep");
+  const otherLeaders = LEADERS.filter((l) => l.id !== "pradeep");
 
   return (
     <motion.div
@@ -54,7 +58,7 @@ export default function LeadershipPage() {
     >
       <Announcement
         pill="TestYantra group"
-        text="Innovexce leadership sits within TestYantra Software Solutions — CMMI Level 3 certified since 2003."
+        text="Innovexce leadership sits within TestYantra Software Solutions - CMMI Level 3 certified since 2003."
         linkHref="/about"
         linkText="About Innovexce →"
       />
@@ -74,9 +78,9 @@ export default function LeadershipPage() {
             <em>with accountability.</em>
           </h1>
           <p className="page-hero-lead">
-            Our leadership team blends hands-on engineering backgrounds with program and commercial
-            ownership — the same people who set architecture standards also stand in client forums when
-            it matters.
+            Our leadership team blends hands-on engineering backgrounds with
+            program and commercial ownership - the same people who set
+            architecture standards also stand in client forums when it matters.
           </p>
           <div className="leadership-hero-stats">
             <div className="leadership-hero-stat">
@@ -111,11 +115,13 @@ export default function LeadershipPage() {
               </h2>
             </div>
             <p className="s-sub leadership-intro-copy">
-              Innovexce is the product engineering studio within TestYantra. Leadership here is
-              structured around four pillars — practice &amp; product, technology, delivery, and client
-              growth — so every engagement has a clear owner from pursuit through production support.
-              We organise the way global consultancies do: visible executives, named practice
-              accountability, and transparent operating rhythms.
+              Innovexce is the product engineering studio within TestYantra.
+              Leadership here is structured around four pillars - practice &amp;
+              product, technology, delivery, and client growth - so every
+              engagement has a clear owner from pursuit through production
+              support. We organise the way global consultancies do: visible
+              executives, named practice accountability, and transparent
+              operating rhythms.
             </p>
           </div>
         </div>
@@ -140,28 +146,32 @@ export default function LeadershipPage() {
           <div className="s-eyebrow">Leadership team</div>
           <h2 className="s-title">Practice, delivery &amp; growth</h2>
           <p className="s-sub" style={{ maxWidth: 640, marginBottom: 40 }}>
-            Each leader owns a distinct lane — with shared standards for architecture, quality, and
-            client communication across the group.
+            Each leader owns a distinct lane - with shared standards for
+            architecture, quality, and client communication across the group.
           </p>
 
-          {LEADERSHIP_GROUPS.filter((g) => g.id !== 'executive').map((group) => {
-            const members = otherLeaders.filter((l) => l.group === group.id);
-            if (!members.length) return null;
-            return (
-              <div key={group.id} className="leadership-group reveal">
-                <div className="leadership-group-head">
-                  <span className="leadership-group-eyebrow">{group.eyebrow}</span>
-                  <h3>{group.title}</h3>
-                  <p>{group.description}</p>
+          {LEADERSHIP_GROUPS.filter((g) => g.id !== "executive").map(
+            (group) => {
+              const members = otherLeaders.filter((l) => l.group === group.id);
+              if (!members.length) return null;
+              return (
+                <div key={group.id} className="leadership-group reveal">
+                  <div className="leadership-group-head">
+                    <span className="leadership-group-eyebrow">
+                      {group.eyebrow}
+                    </span>
+                    <h3>{group.title}</h3>
+                    <p>{group.description}</p>
+                  </div>
+                  <div className="leadership-group-grid">
+                    {members.map((leader) => (
+                      <LeaderCard key={leader.id} leader={leader} />
+                    ))}
+                  </div>
                 </div>
-                <div className="leadership-group-grid">
-                  {members.map((leader) => (
-                    <LeaderCard key={leader.id} leader={leader} />
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+              );
+            },
+          )}
         </div>
       </section>
 
@@ -173,7 +183,7 @@ export default function LeadershipPage() {
             {LEADERSHIP_PRINCIPLES.map((p, i) => (
               <div
                 key={p.title}
-                className={`culture-card${i ? ` reveal-delay-${Math.min(i, 3)}` : ''}`}
+                className={`culture-card${i ? ` reveal-delay-${Math.min(i, 3)}` : ""}`}
               >
                 <div className="culture-icon">{p.icon}</div>
                 <h4>{p.title}</h4>
@@ -188,14 +198,14 @@ export default function LeadershipPage() {
         <div className="wrap">
           <div className="group-block reveal">
             <div>
-              <div className="s-eyebrow" style={{ color: 'var(--orange2)' }}>
+              <div className="s-eyebrow" style={{ color: "var(--orange2)" }}>
                 Operating model
               </div>
-              <h3>From pursuit to production — one accountable chain</h3>
+              <h3>From pursuit to production - one accountable chain</h3>
               <p>
-                Inspired by how global technology services firms govern programs, we use a simple
-                four-stage rhythm so clients always know who owns architecture, delivery, and
-                commercial health.
+                Inspired by how global technology services firms govern
+                programs, we use a simple four-stage rhythm so clients always
+                know who owns architecture, delivery, and commercial health.
               </p>
             </div>
             <div className="leadership-operating-steps">
@@ -228,7 +238,9 @@ export default function LeadershipPage() {
           <div className="stat-item reveal reveal-delay-2">
             <div className="sn">5</div>
             <div className="sl">Engagement models</div>
-            <div className="sd">Fixed · T&amp;M · BOT · Staff aug · Managed</div>
+            <div className="sd">
+              Fixed · T&amp;M · BOT · Staff aug · Managed
+            </div>
           </div>
           <div className="stat-item reveal reveal-delay-3">
             <div className="sn">500+</div>
@@ -246,15 +258,20 @@ export default function LeadershipPage() {
                 Work with our leadership team
               </h2>
               <p className="s-sub" style={{ margin: 0, maxWidth: 480 }}>
-                Discuss your program with the leaders who will own architecture, delivery, and
-                account outcomes — not a handoff to a faceless PMO.
+                Discuss your program with the leaders who will own architecture,
+                delivery, and account outcomes - not a handoff to a faceless
+                PMO.
               </p>
             </div>
             <div className="leadership-cta-actions">
               <Link to="/contact" className="cta-band-primary">
                 Talk to us →
               </Link>
-              <Link to="/careers" className="cta-outline" style={{ padding: '14px 28px', borderRadius: 8 }}>
+              <Link
+                to="/careers"
+                className="cta-outline"
+                style={{ padding: "14px 28px", borderRadius: 8 }}
+              >
                 Careers at Innovexce →
               </Link>
             </div>

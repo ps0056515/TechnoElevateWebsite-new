@@ -1,15 +1,15 @@
-# Newsroom — proof requirements
+# Newsroom - proof requirements
 
 **Route:** `/newsroom`  
 **Source:** `src/content/pages/newsroom.js`
 
 Each news item needs:
 
-| File | Description |
-|------|-------------|
-| `{date}-{slug}-press-release.pdf` | Internal or external announcement |
-| `{date}-{slug}-client-approval.pdf` | If client named |
-| `{date}-{slug}-fact-check.pdf` | Delivery lead sign-off |
+| File                                | Description                       |
+| ----------------------------------- | --------------------------------- |
+| `{date}-{slug}-press-release.pdf`   | Internal or external announcement |
+| `{date}-{slug}-client-approval.pdf` | If client named                   |
+| `{date}-{slug}-fact-check.pdf`      | Delivery lead sign-off            |
 
 **Do not publish future-dated items without proof.**
 

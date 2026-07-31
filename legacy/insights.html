@@ -1,48 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="icon" type="image/png" href="innovexce_logo.png?v=3">
-<title>Insights — Innovexce</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared/site.css">
-<link rel="stylesheet" href="shared/nav.css">
-<link rel="stylesheet" href="shared/backgrounds.css">
-<link rel="stylesheet" href="shared/content.css">
-</head>
-<body>
-<div id="site-nav"></div>
-<section class="page-hero bg-theme bg-casestudies">
-  <div class="page-hero-inner">
-    <div class="page-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Insights</span></div>
-    <h1>Engineering insights<br><em>from the field.</em></h1>
-    <p class="page-hero-lead">Articles, whitepapers and news from Innovexce engineers — drawn from real project experience across AI, BFSI, automotive and cloud-native delivery.</p>
-  </div>
-</section>
-<section class="section">
-  <div class="wrap">
-    <div class="ins-tabs">
-      <a href="insights.html" class="ins-tab on">Articles</a>
-      <a href="whitepapers.html" class="ins-tab">Whitepapers</a>
-      <a href="newsroom.html" class="ins-tab">Newsroom</a>
-      <a href="casestudies.html" class="ins-tab">Case Studies</a>
-    </div>
-    <div class="insights-grid reveal">
-      <a href="insight-devops-sre.html" class="insight-card"><div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=80');"></div><div class="insight-card-body"><div class="insight-tag">Platform Engineering</div><h3>Building SRE &amp; Observability for Production Microservices</h3><p>Metrics, logs and traces — plus SLIs, SLOs and error budgets — the platform layer behind Verizon MyBiz and Tekion DMS.</p><div class="insight-meta">7 min read · DevOps &amp; SRE</div></div></a>
-      <a href="insight-legaldst-rag.html" class="insight-card"><div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1620712943348-d21466881688?auto=format&fit=crop&w=600&q=80');"></div><div class="insight-card-body"><div class="insight-tag">Generative AI</div><h3>Building LegalDST: RAG with Verified Case-Law Citations</h3><p>How we engineered an LLM legal research platform where every answer is grounded in verified Indian case law — not hallucinated statutes.</p><div class="insight-meta">8 min read · AI Hub</div></div></a>
-      <a href="insight-cars24-ml.html" class="insight-card"><div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80');"></div><div class="insight-card-body"><div class="insight-tag">Machine Learning</div><h3>In-House Credit Scoring at CARS24 Scale</h3><p>Replacing third-party scoring APIs with proprietary ML models trained on alternative data — cutting costs and boosting new-to-credit approvals.</p><div class="insight-meta">6 min read · BFSI</div></div></a>
-      <a href="insight-kotak-automation.html" class="insight-card"><div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80');"></div><div class="insight-card-body"><div class="insight-tag">Digital Transformation</div><h3>Automating 80–90% of Branch Service Requests at Kotak</h3><p>Rule-based microservices that eliminated manual back-office bottlenecks across 400 high-volume service request types.</p><div class="insight-meta">7 min read · BFSI</div></div></a>
-      <a href="insight-tekion-dms.html" class="insight-card"><div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80');"></div><div class="insight-card-body"><div class="insight-tag">Automotive</div><h3>Cloud-Native DMS: Replacing Legacy Dealership Systems</h3><p>Event-driven microservices architecture for Tekion's API-first dealership management platform — built for multi-OEM scale.</p><div class="insight-meta">9 min read · Automotive</div></div></a>
-      <a href="insight-sdms-kafka.html" class="insight-card"><div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80');"></div><div class="insight-card-body"><div class="insight-tag">Migration</div><h3>Zero-Downtime Monolith Breakup with Kafka Event Sourcing</h3><p>How Dalmia Bharat Cement's SDMS went from a 3,000-thread Java 8 monolith to horizontally scalable microservices.</p><div class="insight-meta">10 min read · Manufacturing</div></div></a>
-      <a href="insight-iiot-ml.html" class="insight-card"><div class="insight-card-img" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80');"></div><div class="insight-card-body"><div class="insight-tag">IoT &amp; AI</div><h3>ML-Driven Anomaly Detection on Industrial Sensor Data</h3><p>Building real-time IIoT dashboards with multi-threshold alerting and ML models for operational anomaly detection.</p><div class="insight-meta">6 min read · Manufacturing</div></div></a>
-    </div>
-  </div>
-</section>
-<div id="site-footer"></div>
-<script src="shared/logo.js"></script>
-<script src="shared/nav.js?v=3"></script>
-<script src="shared/footer.js?v=3"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="innovexce_logo.png?v=3" />
+    <title>Insights - Innovexce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared/site.css" />
+    <link rel="stylesheet" href="shared/nav.css" />
+    <link rel="stylesheet" href="shared/backgrounds.css" />
+    <link rel="stylesheet" href="shared/content.css" />
+  </head>
+  <body>
+    <div id="site-nav"></div>
+    <section class="page-hero bg-theme bg-casestudies">
+      <div class="page-hero-inner">
+        <div class="page-breadcrumb">
+          <a href="index.html">Home</a><span>/</span><span>Insights</span>
+        </div>
+        <h1>Engineering insights<br /><em>from the field.</em></h1>
+        <p class="page-hero-lead">
+          Articles, whitepapers and news from Innovexce engineers - drawn from
+          real project experience across AI, BFSI, automotive and cloud-native
+          delivery.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="ins-tabs">
+          <a href="insights.html" class="ins-tab on">Articles</a>
+          <a href="whitepapers.html" class="ins-tab">Whitepapers</a>
+          <a href="newsroom.html" class="ins-tab">Newsroom</a>
+          <a href="casestudies.html" class="ins-tab">Case Studies</a>
+        </div>
+        <div class="insights-grid reveal">
+          <a href="insight-devops-sre.html" class="insight-card"
+            ><div
+              class="insight-card-img"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=80&quot;);
+              "
+            ></div>
+            <div class="insight-card-body">
+              <div class="insight-tag">Platform Engineering</div>
+              <h3>
+                Building SRE &amp; Observability for Production Microservices
+              </h3>
+              <p>
+                Metrics, logs and traces - plus SLIs, SLOs and error budgets -
+                the platform layer behind Verizon MyBiz and Tekion DMS.
+              </p>
+              <div class="insight-meta">7 min read · DevOps &amp; SRE</div>
+            </div></a
+          >
+          <a href="insight-legaldst-rag.html" class="insight-card"
+            ><div
+              class="insight-card-img"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1620712943348-d21466881688?auto=format&fit=crop&w=600&q=80&quot;);
+              "
+            ></div>
+            <div class="insight-card-body">
+              <div class="insight-tag">Generative AI</div>
+              <h3>Building LegalDST: RAG with Verified Case-Law Citations</h3>
+              <p>
+                How we engineered an LLM legal research platform where every
+                answer is grounded in verified Indian case law - not
+                hallucinated statutes.
+              </p>
+              <div class="insight-meta">8 min read · AI Hub</div>
+            </div></a
+          >
+          <a href="insight-cars24-ml.html" class="insight-card"
+            ><div
+              class="insight-card-img"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80&quot;);
+              "
+            ></div>
+            <div class="insight-card-body">
+              <div class="insight-tag">Machine Learning</div>
+              <h3>In-House Credit Scoring at CARS24 Scale</h3>
+              <p>
+                Replacing third-party scoring APIs with proprietary ML models
+                trained on alternative data - cutting costs and boosting
+                new-to-credit approvals.
+              </p>
+              <div class="insight-meta">6 min read · BFSI</div>
+            </div></a
+          >
+          <a href="insight-kotak-automation.html" class="insight-card"
+            ><div
+              class="insight-card-img"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80&quot;);
+              "
+            ></div>
+            <div class="insight-card-body">
+              <div class="insight-tag">Digital Transformation</div>
+              <h3>Automating 80–90% of Branch Service Requests at Kotak</h3>
+              <p>
+                Rule-based microservices that eliminated manual back-office
+                bottlenecks across 400 high-volume service request types.
+              </p>
+              <div class="insight-meta">7 min read · BFSI</div>
+            </div></a
+          >
+          <a href="insight-tekion-dms.html" class="insight-card"
+            ><div
+              class="insight-card-img"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80&quot;);
+              "
+            ></div>
+            <div class="insight-card-body">
+              <div class="insight-tag">Automotive</div>
+              <h3>Cloud-Native DMS: Replacing Legacy Dealership Systems</h3>
+              <p>
+                Event-driven microservices architecture for Tekion's API-first
+                dealership management platform - built for multi-OEM scale.
+              </p>
+              <div class="insight-meta">9 min read · Automotive</div>
+            </div></a
+          >
+          <a href="insight-sdms-kafka.html" class="insight-card"
+            ><div
+              class="insight-card-img"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80&quot;);
+              "
+            ></div>
+            <div class="insight-card-body">
+              <div class="insight-tag">Migration</div>
+              <h3>Zero-Downtime Monolith Breakup with Kafka Event Sourcing</h3>
+              <p>
+                How Dalmia Bharat Cement's SDMS went from a 3,000-thread Java 8
+                monolith to horizontally scalable microservices.
+              </p>
+              <div class="insight-meta">10 min read · Manufacturing</div>
+            </div></a
+          >
+          <a href="insight-iiot-ml.html" class="insight-card"
+            ><div
+              class="insight-card-img"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80&quot;);
+              "
+            ></div>
+            <div class="insight-card-body">
+              <div class="insight-tag">IoT &amp; AI</div>
+              <h3>ML-Driven Anomaly Detection on Industrial Sensor Data</h3>
+              <p>
+                Building real-time IIoT dashboards with multi-threshold alerting
+                and ML models for operational anomaly detection.
+              </p>
+              <div class="insight-meta">6 min read · Manufacturing</div>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+    <div id="site-footer"></div>
+    <script src="shared/logo.js"></script>
+    <script src="shared/nav.js?v=3"></script>
+    <script src="shared/footer.js?v=3"></script>
+  </body>
 </html>

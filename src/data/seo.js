@@ -1,64 +1,69 @@
-import { SITE } from '../config/site.js';
-import { PRODUCTS } from './products.js';
-import { CASES } from './cases.js';
-import { SEARCH_INDEX } from './site.js';
+import { SITE } from "../config/site.js";
+import { PRODUCTS } from "./products.js";
+import { CASES } from "./cases.js";
+import { SEARCH_INDEX } from "./site.js";
 
-/** Static route overrides — richer descriptions than page title alone. */
+/** Static route overrides - richer descriptions than page title alone. */
 const PAGE_SEO = {
-  '/': {
+  "/": {
     title: SITE.defaultTitle,
     description: SITE.defaultDescription,
   },
-  '/about': {
-    title: 'About Innovexce',
+  "/about": {
+    title: "About Innovexce",
     description:
-      'Product engineering studio within TestYantra — CMMI Level 3 certified. Embedded partners for BFSI, telecom, automotive and enterprise AI since 2016.',
+      "Product engineering studio within TestYantra - CMMI Level 3 certified. Embedded partners for BFSI, telecom, automotive and enterprise AI since 2016.",
   },
-  '/contact': {
-    title: 'Contact',
-    description: 'Talk to Innovexce about enterprise AI, DevOps/SRE, application development and product engineering engagements.',
-  },
-  '/services': {
-    title: 'Services',
+  "/contact": {
+    title: "Contact",
     description:
-      'Application development, cloud & DevOps, AI/ML, digital transformation, ERP integration and consulting — built for enterprise scale.',
+      "Talk to Innovexce about enterprise AI, DevOps/SRE, application development and product engineering engagements.",
   },
-  '/products': {
-    title: 'Products',
+  "/services": {
+    title: "Services",
     description:
-      'Production platforms built by Innovexce — IVRAI voice AI, AdmitIQ, Agentic Platform, ZupFly, AccessHub, LexiQuest and InterviewIQ.',
+      "Application development, cloud & DevOps, AI/ML, digital transformation, ERP integration and consulting - built for enterprise scale.",
   },
-  '/casestudies': {
-    title: 'Case Studies',
+  "/products": {
+    title: "Products",
     description:
-      'Documented outcomes for Kotak, CARS24, LegalDST, Tekion, Verizon, JPMorgan, Lloyds and global enterprise clients.',
+      "Production platforms built by Innovexce - IVRAI voice AI, AdmitIQ, Agentic Platform, ZupFly, AccessHub, LexiQuest and InterviewIQ.",
   },
-  '/ai-hub': {
-    title: 'AI Hub',
-    description: 'Enterprise AI strategy, LLM & RAG engineering, agentic workflows, ML platforms and computer vision — from Innovexce.',
+  "/casestudies": {
+    title: "Case Studies",
+    description:
+      "Documented outcomes for Kotak, CARS24, LegalDST, Tekion, Verizon, JPMorgan, Lloyds and global enterprise clients.",
   },
-  '/devops-sre': {
-    title: 'DevOps, SRE & Observability',
-    description: 'CI/CD, Kubernetes, Prometheus, Grafana and SRE practices for production microservices at enterprise scale.',
+  "/ai-hub": {
+    title: "AI Hub",
+    description:
+      "Enterprise AI strategy, LLM & RAG engineering, agentic workflows, ML platforms and computer vision - from Innovexce.",
   },
-  '/leadership': {
-    title: 'Leadership',
-    description: 'Innovexce leadership — practice heads for AI, cloud, delivery and client success within the TestYantra group.',
+  "/devops-sre": {
+    title: "DevOps, SRE & Observability",
+    description:
+      "CI/CD, Kubernetes, Prometheus, Grafana and SRE practices for production microservices at enterprise scale.",
   },
-  '/careers': {
-    title: 'Careers',
-    description: 'Engineering careers at Innovexce — Kotak-scale banking, CARS24 fintech ML, Tekion cloud DMS and LegalDST AI.',
+  "/leadership": {
+    title: "Leadership",
+    description:
+      "Innovexce leadership - practice heads for AI, cloud, delivery and client success within the TestYantra group.",
+  },
+  "/careers": {
+    title: "Careers",
+    description:
+      "Engineering careers at Innovexce - Kotak-scale banking, CARS24 fintech ML, Tekion cloud DMS and LegalDST AI.",
   },
 };
 
 function titleWithBrand(title) {
-  if (!title || title.includes('Innovexce')) return title || SITE.defaultTitle;
-  return `${title} — Innovexce`;
+  if (!title || title.includes("Innovexce")) return title || SITE.defaultTitle;
+  return `${title} - Innovexce`;
 }
 
 export function getSeoForPath(pathname) {
-  const path = pathname.replace(/\/+$/, '') || '/';
-  const canonical = `${SITE.url}${path === '/' ? '' : path}`;
+  const path = pathname.replace(/\/+$/, "") || "/";
+  const canonical = `${SITE.url}${path === "/" ? "" : path}`;
 
   if (PAGE_SEO[path]) {
     const p = PAGE_SEO[path];
@@ -74,7 +79,11 @@ export function getSeoForPath(pathname) {
         description: product.summary,
         canonical,
         path,
-        keywords: [product.name, product.category, ...product.tech.slice(0, 4)].join(', '),
+        keywords: [
+          product.name,
+          product.category,
+          ...product.tech.slice(0, 4),
+        ].join(", "),
       };
     }
   }
@@ -84,8 +93,9 @@ export function getSeoForPath(pathname) {
     const cs = CASES.find((c) => c.id === caseMatch[1]);
     if (cs) {
       return {
-        title: titleWithBrand(`${cs.client} — ${cs.project}`),
-        description: cs.problem.slice(0, 155) + (cs.problem.length > 155 ? '…' : ''),
+        title: titleWithBrand(`${cs.client} - ${cs.project}`),
+        description:
+          cs.problem.slice(0, 155) + (cs.problem.length > 155 ? "…" : ""),
         canonical,
         path,
       };
@@ -96,7 +106,7 @@ export function getSeoForPath(pathname) {
   if (indexEntry) {
     return {
       title: titleWithBrand(indexEntry.title),
-      description: `${indexEntry.title} — Innovexce product engineering, AI and enterprise delivery.`,
+      description: `${indexEntry.title} - Innovexce product engineering, AI and enterprise delivery.`,
       canonical,
       path,
     };
@@ -105,24 +115,24 @@ export function getSeoForPath(pathname) {
   return {
     title: SITE.defaultTitle,
     description: SITE.defaultDescription,
-    canonical: `${SITE.url}${path === '/' ? '' : path}`,
+    canonical: `${SITE.url}${path === "/" ? "" : path}`,
     path,
   };
 }
 
 /** All public paths for sitemap generation and prerender. */
 export function getAllPublicPaths() {
-  const paths = new Set(['/']);
+  const paths = new Set(["/"]);
 
   SEARCH_INDEX.forEach((item) => {
-    if (item.href && item.href.startsWith('/')) paths.add(item.href);
+    if (item.href && item.href.startsWith("/")) paths.add(item.href);
   });
 
   PRODUCTS.forEach((p) => paths.add(`/products/${p.slug}`));
   CASES.forEach((c) => paths.add(`/case-studies/${c.id}`));
 
-  paths.add('/leadership');
-  paths.add('/privacy');
+  paths.add("/leadership");
+  paths.add("/privacy");
 
   return [...paths].sort();
 }

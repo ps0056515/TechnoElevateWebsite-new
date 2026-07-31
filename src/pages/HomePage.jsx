@@ -69,7 +69,7 @@ export default function HomePage() {
     <>
       <Announcement
         pill="New"
-        text="Innovexce now supports AI-powered product engineering — LLM, RAG and ML at enterprise scale."
+        text="Innovexce now supports AI-powered product engineering - LLM, RAG and ML at enterprise scale."
         linkHref="/ai-hub"
         linkText="Explore AI Hub →"
         light
@@ -95,8 +95,8 @@ export default function HomePage() {
               <span className="hl-teal">real outcomes.</span>
             </motion.h1>
             <motion.p className="hero-home-lead" variants={itemVariants}>
-              Innovexce is the product engineering studio within TestYantra
-              — from LLM-powered legal research to ML credit scoring and
+              Innovexce is the product engineering studio within TestYantra -
+              from LLM-powered legal research to ML credit scoring and
               computer-vision retail, we design, build and scale enterprise
               software.
             </motion.p>
@@ -173,7 +173,7 @@ export default function HomePage() {
                   <h4>Architecture-first delivery</h4>
                   <p>
                     20+ documented enterprise engagements across BFSI, telecom,
-                    automotive &amp; AI — CMMI Level 3 processes.
+                    automotive &amp; AI - CMMI Level 3 processes.
                   </p>
                 </div>
               </motion.div>
@@ -233,7 +233,7 @@ function CoreServicesRow() {
   const services = [
     {
       title: "Application Development & Management",
-      desc: "We design, build and manage enterprise-grade web and mobile applications — from greenfield products to legacy modernization — with modern frameworks, design systems, and CI/CD-first delivery.",
+      desc: "We design, build and manage enterprise-grade web and mobile applications - from greenfield products to legacy modernization - with modern frameworks, design systems, and CI/CD-first delivery.",
       icon: "🌐",
       img: "/service_web_app.png",
       tags: ["React & Next.js", "Angular", "SPAs & SSR", "Micro-Frontends"],
@@ -250,7 +250,7 @@ function CoreServicesRow() {
     },
     {
       title: "Mobile Engineering",
-      desc: "Native and cross-platform mobile experiences built for scale — from ride-hailing to banking. We ship production apps with fluid animations, biometric auth, offline sync, and deep OS integrations.",
+      desc: "Native and cross-platform mobile experiences built for scale - from ride-hailing to banking. We ship production apps with fluid animations, biometric auth, offline sync, and deep OS integrations.",
       icon: "📱",
       img: "/service_mobile_dev.png",
       tags: ["React Native", "iOS & Android", "Flutter", "Offline Sync"],
@@ -267,7 +267,7 @@ function CoreServicesRow() {
     },
     {
       title: "Cloud & Infrastructure",
-      desc: "Cloud-native transformation from strategy to execution. We architect highly-available, auto-scaling infrastructure on AWS, Azure and GCP — with Kubernetes orchestration and infrastructure-as-code at the core.",
+      desc: "Cloud-native transformation from strategy to execution. We architect highly-available, auto-scaling infrastructure on AWS, Azure and GCP - with Kubernetes orchestration and infrastructure-as-code at the core.",
       icon: "☁️",
       img: "/home_hero_engineering_bg.png",
       tags: ["AWS & Azure", "Kubernetes", "Terraform", "GitOps"],
@@ -276,7 +276,7 @@ function CoreServicesRow() {
         "Multi-cloud strategy & workload migration",
         "Kubernetes cluster design, deployment & management",
         "Infrastructure-as-Code with Terraform & Pulumi",
-        "Cost optimization — avg. 35% cloud spend reduction",
+        "Cost optimization - avg. 35% cloud spend reduction",
       ],
       metric: "99.99%",
       metricLabel: "Uptime SLA achieved",
@@ -284,7 +284,7 @@ function CoreServicesRow() {
     },
     {
       title: "Data & Analytics",
-      desc: "Turn raw data into real-time intelligence. We build end-to-end data platforms — from ingestion pipelines and data lakes to BI dashboards and predictive analytics — enabling data-driven decision making at enterprise scale.",
+      desc: "Turn raw data into real-time intelligence. We build end-to-end data platforms - from ingestion pipelines and data lakes to BI dashboards and predictive analytics - enabling data-driven decision making at enterprise scale.",
       icon: "📈",
       img: "/home_hero_bank_bg.png",
       tags: ["Spark & Kafka", "Snowflake", "Power BI", "ETL Pipelines"],
@@ -301,7 +301,7 @@ function CoreServicesRow() {
     },
     {
       title: "AI & LLM Integration",
-      desc: "Production-grade AI that goes beyond proof-of-concept. We deploy enterprise LLMs, RAG pipelines with verified citations, ML scoring engines, and computer vision systems — with the guardrails regulated industries demand.",
+      desc: "Production-grade AI that goes beyond proof-of-concept. We deploy enterprise LLMs, RAG pipelines with verified citations, ML scoring engines, and computer vision systems - with the guardrails regulated industries demand.",
       icon: "🧠",
       img: "/service_ai_llm.png",
       tags: ["LLM & RAG", "Vector DBs", "ML Scoring", "Computer Vision"],
@@ -335,7 +335,7 @@ function CoreServicesRow() {
     },
     {
       title: "Enterprise Integration & APIs",
-      desc: "Connect your entire technology ecosystem with clean, well-documented APIs and robust integration layers. From payment gateways to ERP connectors — we build the middleware that makes enterprise systems work together seamlessly.",
+      desc: "Connect your entire technology ecosystem with clean, well-documented APIs and robust integration layers. From payment gateways to ERP connectors - we build the middleware that makes enterprise systems work together seamlessly.",
       icon: "🔌",
       img: "/service_api.png",
       tags: ["REST & GraphQL", "gRPC", "Event-Driven", "iPaaS"],
@@ -343,8 +343,8 @@ function CoreServicesRow() {
       highlights: [
         "RESTful & GraphQL API design with OpenAPI specs",
         "Event-driven architecture with Kafka & RabbitMQ",
-        "Payment gateway integration — Stripe, Razorpay, Adyen",
-        "ERP & CRM connectors — SAP, Salesforce, HubSpot",
+        "Payment gateway integration - Stripe, Razorpay, Adyen",
+        "ERP & CRM connectors - SAP, Salesforce, HubSpot",
       ],
       metric: "200+",
       metricLabel: "API endpoints managed",
@@ -360,7 +360,7 @@ function CoreServicesRow() {
       highlights: [
         "Zero-trust network architecture & micro-segmentation",
         "Identity & Access Management with OAuth2 & SAML",
-        "Compliance automation — SOC2, ISO 27001, GDPR",
+        "Compliance automation - SOC2, ISO 27001, GDPR",
         "Continuous vulnerability scanning & penetration testing",
       ],
       metric: "ISO 27001",
@@ -369,7 +369,7 @@ function CoreServicesRow() {
     },
     {
       title: "SRE & Observability",
-      desc: "Embed reliability into every layer of your infrastructure. We implement comprehensive distributed tracing, centralized logging, proactive alerting, and chaos engineering — ensuring zero-downtime operations at enterprise scale.",
+      desc: "Embed reliability into every layer of your infrastructure. We implement comprehensive distributed tracing, centralized logging, proactive alerting, and chaos engineering - ensuring zero-downtime operations at enterprise scale.",
       icon: "📊",
       img: "/service_sre.png",
       tags: ["Prometheus", "Grafana", "OpenTelemetry", "PagerDuty"],
@@ -386,7 +386,7 @@ function CoreServicesRow() {
     },
     {
       title: "CX Transformation",
-      desc: "Reimagine your customer experience with intelligent, omnichannel digital journeys. We create personalized touchpoints powered by data, design thinking, and AI — driving measurable improvements in engagement, retention, and revenue.",
+      desc: "Reimagine your customer experience with intelligent, omnichannel digital journeys. We create personalized touchpoints powered by data, design thinking, and AI - driving measurable improvements in engagement, retention, and revenue.",
       icon: "💎",
       img: "/hero_digital_bg.png",
       tags: [
@@ -399,7 +399,7 @@ function CoreServicesRow() {
       highlights: [
         "Customer journey mapping & experience audits",
         "AI-powered personalization & recommendation engines",
-        "Omnichannel engagement — web, mobile, voice, chat",
+        "Omnichannel engagement - web, mobile, voice, chat",
         "Conversion optimization with A/B testing frameworks",
       ],
       metric: "3x",
@@ -408,7 +408,7 @@ function CoreServicesRow() {
     },
     {
       title: "Quality Engineering & Testing",
-      desc: "Shift-left testing at enterprise scale. We build comprehensive test automation frameworks, performance benchmarking suites, and continuous quality gates — ensuring every release meets the highest standards before reaching production.",
+      desc: "Shift-left testing at enterprise scale. We build comprehensive test automation frameworks, performance benchmarking suites, and continuous quality gates - ensuring every release meets the highest standards before reaching production.",
       icon: "✅",
       img: "/ai_product_card_bg.png",
       tags: ["Selenium & Cypress", "JMeter", "API Testing", "CI Quality Gates"],
@@ -425,7 +425,7 @@ function CoreServicesRow() {
     },
     {
       title: "Consulting & Digital Strategy",
-      desc: "Strategic technology consulting that bridges the gap between business vision and engineering execution. We assess, plan and roadmap digital transformations — from modernization audits to architecture reviews — with clear, measurable outcomes.",
+      desc: "Strategic technology consulting that bridges the gap between business vision and engineering execution. We assess, plan and roadmap digital transformations - from modernization audits to architecture reviews - with clear, measurable outcomes.",
       icon: "🎯",
       img: "/service_consulting.png",
       tags: ["Tech Audits", "Architecture Review", "Roadmapping", "CMMI L3"],
@@ -497,7 +497,7 @@ function CoreServicesRow() {
           <div className="s-eyebrow">Enterprise Capabilities</div>
           <h2 className="s-title">Core Engineering Services</h2>
           <p className="s-sub" style={{ maxWidth: 700, margin: "0 auto" }}>
-            End-to-end digital engineering — from strategy and consulting
+            End-to-end digital engineering - from strategy and consulting
             through application development, cloud transformation, AI
             integration, and managed services. We imagine, engineer, modernize,
             and manage.
@@ -765,7 +765,7 @@ function PartnersBand() {
       <ScrollReveal direction="up" distance={15} delay={0.06}>
         <p className="partners-note">
           Cloud-native stack and quality practices we use on client engagements
-          — certification details available on request.
+          - certification details available on request.
         </p>
       </ScrollReveal>
 
@@ -810,7 +810,7 @@ function FeaturedCaseStudies() {
       metric: "10x",
       sub: "Research speedup",
       ind: "LegalTech",
-      title: "LegalDST — AI Legal Research Platform",
+      title: "LegalDST - AI Legal Research Platform",
       desc: "LLM-powered case-law research with verified citations, Clerk auth and Razorpay subscriptions.",
     },
     {
@@ -819,7 +819,7 @@ function FeaturedCaseStudies() {
       metric: "80–90%",
       sub: "SR volume automated",
       ind: "BFSI",
-      title: "Kotak — Service Request Automation",
+      title: "Kotak - Service Request Automation",
       desc: "Automated 400 high-volume branch service requests with real-time transaction authorization.",
     },
     {
@@ -828,7 +828,7 @@ function FeaturedCaseStudies() {
       metric: "50%",
       sub: "Underwriting cost cut",
       ind: "Fintech",
-      title: "CARS24 — Credit Underwriting ML",
+      title: "CARS24 - Credit Underwriting ML",
       desc: "Proprietary alternative-data scoring eliminating third-party API costs.",
     },
   ];
@@ -838,7 +838,7 @@ function FeaturedCaseStudies() {
         <div className="s-eyebrow">Proven Outcomes</div>
         <h2 className="s-title">Featured case studies.</h2>
         <p className="s-sub">
-          Real projects, measurable results — from India&apos;s largest private
+          Real projects, measurable results - from India&apos;s largest private
           bank to AI-powered legal research.
         </p>
         <div className="featured-cs-grid">
@@ -961,13 +961,13 @@ function AiShowcase() {
         </ScrollReveal>
         <ScrollReveal direction="up" distance={20} delay={0.06}>
           <h2 className="s-title white">
-            Enterprise AI — from strategy to production.
+            Enterprise AI - from strategy to production.
           </h2>
         </ScrollReveal>
         <ScrollReveal direction="up" distance={15} delay={0.1}>
           <p className="s-sub white" style={{ maxWidth: 640 }}>
             Production-grade RAG, ML scoring, agentic workflows and computer
-            vision — built with the same rigour as our core engineering work.
+            vision - built with the same rigour as our core engineering work.
           </p>
         </ScrollReveal>
         <div className="ai-grid">
@@ -1073,7 +1073,7 @@ function WhySection() {
         </svg>
       ),
       title: "Domain-Led Engineering",
-      desc: "Deep BFSI, telecom and automotive expertise — we understand your business, not just your stack.",
+      desc: "Deep BFSI, telecom and automotive expertise - we understand your business, not just your stack.",
     },
     {
       num: "02",
@@ -1095,7 +1095,7 @@ function WhySection() {
         </svg>
       ),
       title: "Production AI, Not PoCs",
-      desc: "LLM products with auth, billing and guardrails — LegalDST, CARS24 ML and Autonomo CV are live proof.",
+      desc: "LLM products with auth, billing and guardrails - LegalDST, CARS24 ML and Autonomo CV are live proof.",
     },
     {
       num: "03",
@@ -1118,7 +1118,7 @@ function WhySection() {
         </svg>
       ),
       title: "Architecture-First Delivery",
-      desc: "Microservices, event sourcing and cloud-native patterns from day one — speed without technical debt.",
+      desc: "Microservices, event sourcing and cloud-native patterns from day one - speed without technical debt.",
     },
     {
       num: "04",
@@ -1139,7 +1139,7 @@ function WhySection() {
         </svg>
       ),
       title: "Global Delivery Standard",
-      desc: "Six regions, one engineering bar — Bengaluru to Silicon Valley with CMMI Level 3 processes.",
+      desc: "Six regions, one engineering bar - Bengaluru to Silicon Valley with CMMI Level 3 processes.",
     },
   ];
 
@@ -1222,7 +1222,7 @@ function Testimonials() {
   const testimonials = [
     {
       quote:
-        "Innovexce embedded with our team like true partners — not vendors. They understood banking compliance constraints and still delivered sub-second API performance at peak load.",
+        "Innovexce embedded with our team like true partners - not vendors. They understood banking compliance constraints and still delivered sub-second API performance at peak load.",
       initials: "KM",
       name: "Engineering Lead",
       role: "Kotak Mahindra Bank",
@@ -1230,7 +1230,7 @@ function Testimonials() {
     },
     {
       quote:
-        "Building in-house ML scoring was a strategic bet. Innovexce delivered proprietary models that cut third-party costs and improved new-to-credit approval rates — at our production volume.",
+        "Building in-house ML scoring was a strategic bet. Innovexce delivered proprietary models that cut third-party costs and improved new-to-credit approval rates - at our production volume.",
       initials: "C24",
       name: "Product Director",
       role: "CARS24",
@@ -1238,7 +1238,7 @@ function Testimonials() {
     },
     {
       quote:
-        "The LegalDST platform needed verified case-law citations — not hallucinated answers. Innovexce built production RAG with the rigour our lawyer users demand.",
+        "The LegalDST platform needed verified case-law citations - not hallucinated answers. Innovexce built production RAG with the rigour our lawyer users demand.",
       initials: "LD",
       name: "Founder & CEO",
       role: "LegalDST",
@@ -1317,7 +1317,7 @@ function Testimonials() {
           ))}
         </motion.div>
         <p className="testi-disclaimer">
-          Representative feedback from client engagements — full references
+          Representative feedback from client engagements - full references
           available under NDA.
         </p>
       </div>
@@ -1376,7 +1376,7 @@ function InsightsPreview() {
         <ScrollReveal direction="up" distance={10} delay={0.1}>
           <p className="s-sub">
             How we approach RAG, ML scoring, DevOps/SRE and enterprise
-            automation — written by practitioners, not marketers.
+            automation - written by practitioners, not marketers.
           </p>
         </ScrollReveal>
 
@@ -1460,7 +1460,7 @@ function ExploreLinks() {
       "bg-link-about",
       "🎯",
       "About Us",
-      "Your engineering partner — not just a vendor.",
+      "Your engineering partner - not just a vendor.",
       "About us →",
     ],
     [
@@ -1527,7 +1527,7 @@ function ExploreLinks() {
           <div className="s-eyebrow">Explore</div>
         </ScrollReveal>
         <ScrollReveal direction="up" distance={15} delay={0.05}>
-          <h2 className="s-title">Everything we do — on dedicated pages.</h2>
+          <h2 className="s-title">Everything we do - on dedicated pages.</h2>
         </ScrollReveal>
 
         <motion.div

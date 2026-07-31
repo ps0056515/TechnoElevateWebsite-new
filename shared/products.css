@@ -516,7 +516,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════
-   Ushur-inspired redesign — cinematic heroes, visuals, bento
+   Ushur-inspired redesign - cinematic heroes, visuals, bento
    ═══════════════════════════════════════════════════════════ */
 
 .products-breadcrumb-light a,
@@ -538,7 +538,11 @@
   height: 70%;
   top: 10%;
   left: 10%;
-  background: color-mix(in srgb, var(--product-accent, #6366f1) 45%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--product-accent, #6366f1) 45%,
+    transparent
+  );
   filter: blur(60px);
   opacity: 0.55;
   border-radius: 50%;
@@ -562,7 +566,11 @@
     linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 24px 24px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 20%, transparent 100%);
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    #000 20%,
+    transparent 100%
+  );
   pointer-events: none;
   z-index: 1;
 }
@@ -750,7 +758,9 @@
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-  transition: background 0.25s, border-color 0.25s;
+  transition:
+    background 0.25s,
+    border-color 0.25s;
 }
 .products-hero-ghost:hover {
   background: rgba(255, 255, 255, 0.08);
@@ -801,7 +811,10 @@
   border-radius: 16px;
   border: 1px solid var(--rule);
   background: var(--white);
-  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s,
+    transform 0.3s;
 }
 .products-trust-card:hover {
   border-color: rgba(255, 71, 19, 0.3);
@@ -830,7 +843,11 @@
   border-color: rgba(255, 255, 255, 0.1);
 }
 .products-trust-grid--dark .products-trust-card--dark:hover {
-  border-color: color-mix(in srgb, var(--product-accent, #ff4713) 40%, transparent);
+  border-color: color-mix(
+    in srgb,
+    var(--product-accent, #ff4713) 40%,
+    transparent
+  );
   background: rgba(255, 255, 255, 0.06);
 }
 .products-trust-grid--dark .products-trust-card--dark h4 {
@@ -1066,7 +1083,9 @@
   background: var(--white);
   border: 1px solid var(--rule);
   border-radius: 14px;
-  transition: border-color 0.25s, box-shadow 0.25s;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
 }
 .products-pipeline-step:hover {
   border-color: rgba(255, 71, 19, 0.3);
@@ -1116,7 +1135,12 @@
     135deg,
     rgba(10, 14, 20, 0.92) 0%,
     rgba(13, 17, 23, 0.75) 45%,
-    color-mix(in srgb, var(--product-accent, #6366f1) 15%, rgba(10, 14, 20, 0.9)) 100%
+    color-mix(
+        in srgb,
+        var(--product-accent, #6366f1) 15%,
+        rgba(10, 14, 20, 0.9)
+      )
+      100%
   );
 }
 .product-detail-hero-inner {
@@ -1399,4 +1423,3 @@
     grid-template-columns: 1fr;
   }
 }
-

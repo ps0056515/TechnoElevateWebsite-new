@@ -1,42 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="icon" type="image/png" href="innovexce_logo.png?v=3">
-<title>In-House Credit Scoring at CARS24 Scale — Innovexce</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared/site.css">
-<link rel="stylesheet" href="shared/nav.css">
-<link rel="stylesheet" href="shared/backgrounds.css">
-<link rel="stylesheet" href="shared/content.css">
-</head>
-<body>
-<div id="site-nav"></div>
-<section class="page-hero bg-theme bg-casestudies" style="padding-bottom:40px;">
-  <div class="page-hero-inner">
-    <div class="page-breadcrumb"><a href="index.html">Home</a><span>/</span><a href="insights.html">Insights</a><span>/</span><span>CARS24 ML</span></div>
-  </div>
-</section>
-<article class="article-wrap reveal">
-  <div class="insight-tag">Machine Learning</div>
-  <h1>In-House Credit Scoring at CARS24 Scale</h1>
-  <div class="article-meta">6 min read · BFSI · By Innovexce Engineering</div>
-  <div class="article-body">
-    <p>CARS24's used-car lending business was paying heavily for third-party credit scoring APIs — while still struggling to approve new-to-credit applicants who lacked traditional bureau history. The business case for in-house ML was clear: cut per-application costs and unlock a segment competitors couldn't serve.</p>
-    <h2>Alternative data as the differentiator</h2>
-    <p>Traditional bureau scores fail for thin-file applicants. CARS24's advantage was rich alternative data: banking transaction patterns, SMS-derived financial behaviour and platform engagement signals. Innovexce built proprietary microservices to ingest, normalise and score this data in real time — eliminating external API dependency entirely.</p>
-    <h2>Engineering for lending volume</h2>
-    <p>The scoring engine runs as part of a broader fintech microservices stack (Saarthi + Simpler platforms), handling CARS24's application volume with sub-second inference. Models are versioned, A/B tested and monitored for drift — standard MLOps practice applied to a high-stakes underwriting domain.</p>
-    <h2>Measurable impact</h2>
-    <p>Significant cost reduction versus third-party scoring, higher approval rates for new-to-credit users, and a fully owned IP asset that scales with CARS24's lending growth. This is the pattern we replicate across BFSI clients: replace expensive black-box APIs with transparent, tunable in-house models.</p>
-    <p><a href="case-study.html?id=cars24-credit" style="color:var(--orange);font-weight:700;">Read the full CARS24 case study →</a></p>
-  </div>
-</article>
-<div id="site-footer"></div>
-<script src="shared/logo.js"></script>
-<script src="shared/nav.js?v=3"></script>
-<script src="shared/footer.js?v=3"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="innovexce_logo.png?v=3" />
+    <title>In-House Credit Scoring at CARS24 Scale - Innovexce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared/site.css" />
+    <link rel="stylesheet" href="shared/nav.css" />
+    <link rel="stylesheet" href="shared/backgrounds.css" />
+    <link rel="stylesheet" href="shared/content.css" />
+  </head>
+  <body>
+    <div id="site-nav"></div>
+    <section
+      class="page-hero bg-theme bg-casestudies"
+      style="padding-bottom: 40px"
+    >
+      <div class="page-hero-inner">
+        <div class="page-breadcrumb">
+          <a href="index.html">Home</a><span>/</span
+          ><a href="insights.html">Insights</a><span>/</span
+          ><span>CARS24 ML</span>
+        </div>
+      </div>
+    </section>
+    <article class="article-wrap reveal">
+      <div class="insight-tag">Machine Learning</div>
+      <h1>In-House Credit Scoring at CARS24 Scale</h1>
+      <div class="article-meta">
+        6 min read · BFSI · By Innovexce Engineering
+      </div>
+      <div class="article-body">
+        <p>
+          CARS24's used-car lending business was paying heavily for third-party
+          credit scoring APIs - while still struggling to approve new-to-credit
+          applicants who lacked traditional bureau history. The business case
+          for in-house ML was clear: cut per-application costs and unlock a
+          segment competitors couldn't serve.
+        </p>
+        <h2>Alternative data as the differentiator</h2>
+        <p>
+          Traditional bureau scores fail for thin-file applicants. CARS24's
+          advantage was rich alternative data: banking transaction patterns,
+          SMS-derived financial behaviour and platform engagement signals.
+          Innovexce built proprietary microservices to ingest, normalise and
+          score this data in real time - eliminating external API dependency
+          entirely.
+        </p>
+        <h2>Engineering for lending volume</h2>
+        <p>
+          The scoring engine runs as part of a broader fintech microservices
+          stack (Saarthi + Simpler platforms), handling CARS24's application
+          volume with sub-second inference. Models are versioned, A/B tested and
+          monitored for drift - standard MLOps practice applied to a high-stakes
+          underwriting domain.
+        </p>
+        <h2>Measurable impact</h2>
+        <p>
+          Significant cost reduction versus third-party scoring, higher approval
+          rates for new-to-credit users, and a fully owned IP asset that scales
+          with CARS24's lending growth. This is the pattern we replicate across
+          BFSI clients: replace expensive black-box APIs with transparent,
+          tunable in-house models.
+        </p>
+        <p>
+          <a
+            href="case-study.html?id=cars24-credit"
+            style="color: var(--orange); font-weight: 700"
+            >Read the full CARS24 case study →</a
+          >
+        </p>
+      </div>
+    </article>
+    <div id="site-footer"></div>
+    <script src="shared/logo.js"></script>
+    <script src="shared/nav.js?v=3"></script>
+    <script src="shared/footer.js?v=3"></script>
+  </body>
 </html>

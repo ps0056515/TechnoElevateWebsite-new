@@ -1,81 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="icon" type="image/png" href="innovexce_logo.png?v=3">
-<title>Case Studies — Innovexce</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared/site.css">
-<link rel="stylesheet" href="shared/nav.css">
-<link rel="stylesheet" href="shared/backgrounds.css">
-<link rel="stylesheet" href="shared/content.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="innovexce_logo.png?v=3" />
+    <title>Case Studies - Innovexce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared/site.css" />
+    <link rel="stylesheet" href="shared/nav.css" />
+    <link rel="stylesheet" href="shared/backgrounds.css" />
+    <link rel="stylesheet" href="shared/content.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <span class="pill">Case Studies</span>
+      <span
+        >20+ documented engagements for Kotak, JPMorgan, Tekion, Verizon,
+        CARS24, and enterprise clients worldwide.</span
+      >
+      <a href="contact.html">Start your project &rarr;</a>
+    </div>
+    <div id="site-nav"></div>
 
-<div class="announcement">
-  <span class="pill">Case Studies</span>
-  <span>20+ documented engagements for Kotak, JPMorgan, Tekion, Verizon, CARS24, and enterprise clients worldwide.</span>
-  <a href="contact.html">Start your project &rarr;</a>
-</div>
-<div id="site-nav"></div>
-
-<section class="page-hero bg-theme bg-casestudies">
-  <div class="page-hero-inner">
-    <div class="page-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Case Studies</span></div>
-    <h1>Real clients.<br><em>Real outcomes.</em></h1>
-    <p class="page-hero-lead">From loan collection systems at Kotak Mahindra Bank to cloud-native DMS at Tekion and AI legal research at LegalDST — explore how we deliver measurable results across industries.</p>
-  </div>
-</section>
-
-<section class="section bg-light" id="casestudies">
-  <div class="wrap">
-    <div class="cs-head">
-      <div>
-        <div class="s-eyebrow">Case Studies</div>
-        <h2 class="s-title">Real clients.<br>Real outcomes.</h2>
+    <section class="page-hero bg-theme bg-casestudies">
+      <div class="page-hero-inner">
+        <div class="page-breadcrumb">
+          <a href="index.html">Home</a><span>/</span><span>Case Studies</span>
+        </div>
+        <h1>Real clients.<br /><em>Real outcomes.</em></h1>
+        <p class="page-hero-lead">
+          From loan collection systems at Kotak Mahindra Bank to cloud-native
+          DMS at Tekion and AI legal research at LegalDST - explore how we
+          deliver measurable results across industries.
+        </p>
       </div>
-      <div class="cs-filter-wrap" id="csFilters">
-        <button class="cs-f on" data-f="all">All</button>
-        <button class="cs-f" data-f="BFSI">BFSI</button>
-        <button class="cs-f" data-f="Telecom">Telecom</button>
-        <button class="cs-f" data-f="Automotive">Automotive</button>
-        <button class="cs-f" data-f="Healthcare">Healthcare</button>
-        <button class="cs-f" data-f="Insurance">Insurance</button>
-        <button class="cs-f" data-f="Manufacturing">Manufacturing</button>
-        <button class="cs-f" data-f="Retail & E-com">Retail</button>
-        <button class="cs-f" data-f="AI">AI</button>
+    </section>
+
+    <section class="section bg-light" id="casestudies">
+      <div class="wrap">
+        <div class="cs-head">
+          <div>
+            <div class="s-eyebrow">Case Studies</div>
+            <h2 class="s-title">Real clients.<br />Real outcomes.</h2>
+          </div>
+          <div class="cs-filter-wrap" id="csFilters">
+            <button class="cs-f on" data-f="all">All</button>
+            <button class="cs-f" data-f="BFSI">BFSI</button>
+            <button class="cs-f" data-f="Telecom">Telecom</button>
+            <button class="cs-f" data-f="Automotive">Automotive</button>
+            <button class="cs-f" data-f="Healthcare">Healthcare</button>
+            <button class="cs-f" data-f="Insurance">Insurance</button>
+            <button class="cs-f" data-f="Manufacturing">Manufacturing</button>
+            <button class="cs-f" data-f="Retail & E-com">Retail</button>
+            <button class="cs-f" data-f="AI">AI</button>
+          </div>
+        </div>
+        <div class="cs-grid" id="csGrid"></div>
+        <div class="cs-more-wrap">
+          <button class="btn-more" id="csMore">
+            Load More Case Studies &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-bd" id="mBd">
+      <div class="modal">
+        <div class="modal-hd">
+          <button class="modal-x" id="mX">&times;</button>
+          <div class="m-ind" id="mInd"></div>
+          <div class="m-cli" id="mCli"></div>
+          <div class="m-proj" id="mProj"></div>
+          <div class="m-tags" id="mTags"></div>
+        </div>
+        <div class="modal-body">
+          <div class="m-sec" data-k="problem">
+            <div class="m-head">The Challenge</div>
+            <p class="m-txt" id="mProb"></p>
+          </div>
+          <div class="m-sec" data-k="solution">
+            <div class="m-head">Our Solution</div>
+            <p class="m-txt" id="mSol"></p>
+          </div>
+          <div class="m-sec" data-k="outcomes">
+            <div class="m-head">Outcomes Delivered</div>
+            <div class="m-outcomes" id="mOut"></div>
+          </div>
+          <div class="m-sec" data-k="tech">
+            <div class="m-head">Technology Stack</div>
+            <div class="m-tech-row" id="mTech"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="cs-grid" id="csGrid"></div>
-    <div class="cs-more-wrap"><button class="btn-more" id="csMore">Load More Case Studies &rarr;</button></div>
-  </div>
-</section>
 
-<div class="modal-bd" id="mBd">
-  <div class="modal">
-    <div class="modal-hd">
-      <button class="modal-x" id="mX">&times;</button>
-      <div class="m-ind" id="mInd"></div>
-      <div class="m-cli" id="mCli"></div>
-      <div class="m-proj" id="mProj"></div>
-      <div class="m-tags" id="mTags"></div>
-    </div>
-    <div class="modal-body">
-      <div class="m-sec" data-k="problem"><div class="m-head">The Challenge</div><p class="m-txt" id="mProb"></p></div>
-      <div class="m-sec" data-k="solution"><div class="m-head">Our Solution</div><p class="m-txt" id="mSol"></p></div>
-      <div class="m-sec" data-k="outcomes"><div class="m-head">Outcomes Delivered</div><div class="m-outcomes" id="mOut"></div></div>
-      <div class="m-sec" data-k="tech"><div class="m-head">Technology Stack</div><div class="m-tech-row" id="mTech"></div></div>
-    </div>
-  </div>
-</div>
-
-<div id="site-footer"></div>
-<script src="shared/logo.js"></script>
-<script src="shared/nav.js?v=3"></script>
-<script src="shared/footer.js?v=3"></script>
-<script src="shared/cases.js"></script>
-</body>
+    <div id="site-footer"></div>
+    <script src="shared/logo.js"></script>
+    <script src="shared/nav.js?v=3"></script>
+    <script src="shared/footer.js?v=3"></script>
+    <script src="shared/cases.js"></script>
+  </body>
 </html>

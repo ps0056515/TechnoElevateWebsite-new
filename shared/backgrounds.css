@@ -1,34 +1,65 @@
 /* ─── Themed photographic backgrounds (Unsplash) ─── */
 
 /* Homepage hero */
-.hero.bg-home .hero-bg{
+.hero.bg-home .hero-bg {
   background:
-    radial-gradient(ellipse 120% 80% at 65% 40%, rgba(27,42,74,.75) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 60% at 10% 80%, rgba(255,71,19,.15) 0%, transparent 50%),
-    linear-gradient(135deg, rgba(13,17,23,.58) 0%, rgba(15,25,35,.52) 45%, rgba(20,30,46,.62) 100%),
-    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    radial-gradient(
+      ellipse 120% 80% at 65% 40%,
+      rgba(27, 42, 74, 0.75) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 60% 60% at 10% 80%,
+      rgba(255, 71, 19, 0.15) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(13, 17, 23, 0.58) 0%,
+      rgba(15, 25, 35, 0.52) 45%,
+      rgba(20, 30, 46, 0.62) 100%
+    ),
+    url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80")
+      center/cover no-repeat;
 }
 
 /* Page hero themes */
-.page-hero.bg-theme{
-  background-color:#0D1117;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+.page-hero.bg-theme {
+  background-color: #0d1117;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.page-hero.bg-theme::before{
-  content:'';position:absolute;inset:0;z-index:0;
-  background:linear-gradient(135deg,rgba(13,17,23,.62) 0%,rgba(20,30,50,.55) 50%,rgba(13,17,23,.68) 100%);
+.page-hero.bg-theme::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 17, 23, 0.62) 0%,
+    rgba(20, 30, 50, 0.55) 50%,
+    rgba(13, 17, 23, 0.68) 100%
+  );
 }
-.page-hero.bg-theme::after{opacity:.35;z-index:0;}
-.page-hero.bg-theme .page-hero-inner{z-index:1;}
+.page-hero.bg-theme::after {
+  opacity: 0.35;
+  z-index: 0;
+}
+.page-hero.bg-theme .page-hero-inner {
+  z-index: 1;
+}
 
-.bg-ai{background-image:url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80');}
-.bg-ai-llm{background-image:url('/ai_rag_hero_bg.png') !important;}
+.bg-ai {
+  background-image: url("https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-ai-llm {
+  background-image: url("/ai_rag_hero_bg.png") !important;
+}
 
 /* Premium AI LLM Page Hero customization */
 .page-hero.bg-ai-llm {
-  background-image: url('/ai_rag_hero_bg.png') !important;
+  background-image: url("/ai_rag_hero_bg.png") !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,23 +68,40 @@
 
 /* Let our custom gradient overlays blend with the background image */
 .page-hero.bg-ai-llm::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: 
-    radial-gradient(circle at 75% 35%, rgba(255, 71, 19, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 25% 75%, rgba(99, 102, 241, 0.25) 0%, transparent 55%),
-    linear-gradient(135deg, rgba(10, 14, 20, 0.85) 0%, rgba(13, 20, 38, 0.65) 50%, rgba(10, 14, 20, 0.9) 100%) !important;
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(255, 71, 19, 0.22) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 25% 75%,
+      rgba(99, 102, 241, 0.25) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(10, 14, 20, 0.85) 0%,
+      rgba(13, 20, 38, 0.65) 50%,
+      rgba(10, 14, 20, 0.9) 100%
+    ) !important;
 }
 
 /* Pulsing background glow effect */
 .page-hero.bg-ai-llm::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 71, 19, 0.05) 0%, transparent 60%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 71, 19, 0.05) 0%,
+    transparent 60%
+  );
   animation: breathingGlow 8s ease-in-out infinite alternate;
   pointer-events: none;
   opacity: 0.8;
@@ -93,10 +141,18 @@
   opacity: 0;
   animation: faderIn 0.5s ease-out forwards;
 }
-.page-hero.bg-ai-llm .page-tag:nth-child(1) { animation-delay: 0.4s; }
-.page-hero.bg-ai-llm .page-tag:nth-child(2) { animation-delay: 0.5s; }
-.page-hero.bg-ai-llm .page-tag:nth-child(3) { animation-delay: 0.6s; }
-.page-hero.bg-ai-llm .page-tag:nth-child(4) { animation-delay: 0.7s; }
+.page-hero.bg-ai-llm .page-tag:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.page-hero.bg-ai-llm .page-tag:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.page-hero.bg-ai-llm .page-tag:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.page-hero.bg-ai-llm .page-tag:nth-child(4) {
+  animation-delay: 0.7s;
+}
 
 @keyframes faderSlide {
   0% {
@@ -135,14 +191,18 @@
   border-color: rgba(255, 71, 19, 0.35);
   border-left-color: var(--orange2);
   color: #fff;
-  box-shadow: 0 0 16px rgba(255, 71, 19, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 16px rgba(255, 71, 19, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.bg-ai-agentic{background-image:url('/ai_agentic_card_bg.png') !important;}
+.bg-ai-agentic {
+  background-image: url("/ai_agentic_card_bg.png") !important;
+}
 
 /* Premium AI Agentic Page Hero customization */
 .page-hero.bg-ai-agentic {
-  background-image: url('/ai_agentic_card_bg.png') !important;
+  background-image: url("/ai_agentic_card_bg.png") !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,23 +211,40 @@
 
 /* Blend the hero with premium neon overlays */
 .page-hero.bg-ai-agentic::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: 
-    radial-gradient(circle at 75% 35%, rgba(255, 71, 19, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 25% 75%, rgba(6, 182, 212, 0.25) 0%, transparent 55%),
-    linear-gradient(135deg, rgba(10, 14, 20, 0.85) 0%, rgba(13, 20, 38, 0.65) 50%, rgba(10, 14, 20, 0.9) 100%) !important;
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(255, 71, 19, 0.22) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 25% 75%,
+      rgba(6, 182, 212, 0.25) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(10, 14, 20, 0.85) 0%,
+      rgba(13, 20, 38, 0.65) 50%,
+      rgba(10, 14, 20, 0.9) 100%
+    ) !important;
 }
 
 /* Pulsing background glow effect */
 .page-hero.bg-ai-agentic::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 60%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(6, 182, 212, 0.05) 0%,
+    transparent 60%
+  );
   animation: breathingGlowAgentic 8s ease-in-out infinite alternate;
   pointer-events: none;
   opacity: 0.8;
@@ -207,10 +284,18 @@
   opacity: 0;
   animation: faderIn 0.5s ease-out forwards;
 }
-.page-hero.bg-ai-agentic .page-tag:nth-child(1) { animation-delay: 0.4s; }
-.page-hero.bg-ai-agentic .page-tag:nth-child(2) { animation-delay: 0.5s; }
-.page-hero.bg-ai-agentic .page-tag:nth-child(3) { animation-delay: 0.6s; }
-.page-hero.bg-ai-agentic .page-tag:nth-child(4) { animation-delay: 0.7s; }
+.page-hero.bg-ai-agentic .page-tag:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.page-hero.bg-ai-agentic .page-tag:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.page-hero.bg-ai-agentic .page-tag:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.page-hero.bg-ai-agentic .page-tag:nth-child(4) {
+  animation-delay: 0.7s;
+}
 
 /* Glassmorphism for tags */
 .page-hero.bg-ai-agentic .page-tag {
@@ -227,28 +312,62 @@
   border-color: rgba(255, 71, 19, 0.35);
   border-left-color: var(--orange2);
   color: #fff;
-  box-shadow: 0 0 16px rgba(255, 71, 19, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 16px rgba(255, 71, 19, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.3);
 }
-.bg-ai-ml{background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80');}
-.bg-ai-vision{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80');}
-.bg-services{background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80');}
-.bg-industries{background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');}
-.bg-products{background-image:url('/home_hero_engineering_bg.png');}
-.bg-product-ivrai{background-image:url('/products/ivrai-hero.jpg');}
-.bg-product-admitiq{background-image:url('/products/admitiq-hero.jpg');}
-.bg-product-agentic{background-image:url('/products/agentic-hero.jpg');}
-.bg-product-zupfly{background-image:url('/products/zupfly-hero.jpg');}
-.bg-product-accesshub{background-image:url('/products/accesshub-hero.jpg');}
-.bg-product-lexiquest{background-image:url('/products/lexiquest-hero.jpg');}
-.bg-product-interviewiq{background-image:url('/products/interviewiq-hero.jpg');}
-.bg-about{background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80');}
-.bg-contact{background-image:url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1920&q=80');}
-.bg-technology{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');}
-.bg-devops{background-image:url('/ai_devops_hero_bg.png') !important;}
+.bg-ai-ml {
+  background-image: url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-ai-vision {
+  background-image: url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-services {
+  background-image: url("https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-industries {
+  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-products {
+  background-image: url("/home_hero_engineering_bg.png");
+}
+.bg-product-ivrai {
+  background-image: url("/products/ivrai-hero.jpg");
+}
+.bg-product-admitiq {
+  background-image: url("/products/admitiq-hero.jpg");
+}
+.bg-product-agentic {
+  background-image: url("/products/agentic-hero.jpg");
+}
+.bg-product-zupfly {
+  background-image: url("/products/zupfly-hero.jpg");
+}
+.bg-product-accesshub {
+  background-image: url("/products/accesshub-hero.jpg");
+}
+.bg-product-lexiquest {
+  background-image: url("/products/lexiquest-hero.jpg");
+}
+.bg-product-interviewiq {
+  background-image: url("/products/interviewiq-hero.jpg");
+}
+.bg-about {
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-contact {
+  background-image: url("https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-technology {
+  background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-devops {
+  background-image: url("/ai_devops_hero_bg.png") !important;
+}
 
 /* Premium DevOps Page Hero customization */
 .page-hero.bg-devops {
-  background-image: url('/ai_devops_hero_bg.png') !important;
+  background-image: url("/ai_devops_hero_bg.png") !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -257,23 +376,40 @@
 
 /* Blend the hero with premium neon overlays */
 .page-hero.bg-devops::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: 
-    radial-gradient(circle at 75% 35%, rgba(16, 185, 129, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 25% 75%, rgba(6, 182, 212, 0.25) 0%, transparent 55%),
-    linear-gradient(135deg, rgba(10, 14, 20, 0.85) 0%, rgba(13, 20, 38, 0.65) 50%, rgba(10, 14, 20, 0.9) 100%) !important;
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(16, 185, 129, 0.22) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 25% 75%,
+      rgba(6, 182, 212, 0.25) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(10, 14, 20, 0.85) 0%,
+      rgba(13, 20, 38, 0.65) 50%,
+      rgba(10, 14, 20, 0.9) 100%
+    ) !important;
 }
 
 /* Pulsing background glow effect */
 .page-hero.bg-devops::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(16, 185, 129, 0.05) 0%,
+    transparent 60%
+  );
   animation: breathingGlowDevOps 8s ease-in-out infinite alternate;
   pointer-events: none;
   opacity: 0.8;
@@ -313,10 +449,18 @@
   opacity: 0;
   animation: faderIn 0.5s ease-out forwards;
 }
-.page-hero.bg-devops .page-tag:nth-child(1) { animation-delay: 0.4s; }
-.page-hero.bg-devops .page-tag:nth-child(2) { animation-delay: 0.5s; }
-.page-hero.bg-devops .page-tag:nth-child(3) { animation-delay: 0.6s; }
-.page-hero.bg-devops .page-tag:nth-child(4) { animation-delay: 0.7s; }
+.page-hero.bg-devops .page-tag:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.page-hero.bg-devops .page-tag:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.page-hero.bg-devops .page-tag:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.page-hero.bg-devops .page-tag:nth-child(4) {
+  animation-delay: 0.7s;
+}
 
 /* Glassmorphism for tags */
 .page-hero.bg-devops .page-tag {
@@ -333,142 +477,307 @@
   border-color: rgba(255, 71, 19, 0.35);
   border-left-color: var(--orange2);
   color: #fff;
-  box-shadow: 0 0 16px rgba(255, 71, 19, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 16px rgba(255, 71, 19, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.3);
 }
-.bg-casestudies{background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80');}
-.bg-engagement{background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80');}
+.bg-casestudies {
+  background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80");
+}
+.bg-engagement {
+  background-image: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80");
+}
 
 /* AI showcase band */
-.ai-showcase.bg-ai-section{
+.ai-showcase.bg-ai-section {
   background:
-    linear-gradient(135deg,rgba(13,17,23,.9) 0%,rgba(20,30,46,.85) 100%),
-    url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    linear-gradient(
+      135deg,
+      rgba(13, 17, 23, 0.9) 0%,
+      rgba(20, 30, 46, 0.85) 100%
+    ),
+    url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1920&q=80")
+      center/cover no-repeat;
 }
 
 /* AI cards with topic imagery */
-.ai-card.has-bg{
-  background-size:cover;
-  background-position:center;
-  border-color:rgba(255,255,255,.1);
+.ai-card.has-bg {
+  background-size: cover;
+  background-position: center;
+  border-color: rgba(255, 255, 255, 0.1);
 }
-.ai-card.has-bg::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(13,17,23,.55) 0%,rgba(13,17,23,.92) 70%);
-  z-index:0;
+.ai-card.has-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 17, 23, 0.55) 0%,
+    rgba(13, 17, 23, 0.92) 70%
+  );
+  z-index: 0;
 }
-.ai-card.has-bg > *{position:relative;z-index:1;}
-.ai-card.bg-card-llm{background-image:url('/service_rag_card.png');}
-.ai-card.bg-card-agentic{background-image:url('/service_agentic_card.png');}
-.ai-card.bg-card-ml{background-image:url('/service_ml_card.png');}
-.ai-card.bg-card-vision{background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80');}
-.ai-card.bg-card-governance{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80');}
-.ai-card.bg-card-product{background-image:url('/ai_product_card_bg.png');}
+.ai-card.has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+.ai-card.bg-card-llm {
+  background-image: url("/service_rag_card.png");
+}
+.ai-card.bg-card-agentic {
+  background-image: url("/service_agentic_card.png");
+}
+.ai-card.bg-card-ml {
+  background-image: url("/service_ml_card.png");
+}
+.ai-card.bg-card-vision {
+  background-image: url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80");
+}
+.ai-card.bg-card-governance {
+  background-image: url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80");
+}
+.ai-card.bg-card-product {
+  background-image: url("/ai_product_card_bg.png");
+}
 
 /* About page visual panel */
-.about-img-bg.has-photo{
+.about-img-bg.has-photo {
   background:
-    linear-gradient(135deg,rgba(15,25,35,.75) 0%,rgba(27,58,92,.65) 100%),
-    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    linear-gradient(
+      135deg,
+      rgba(15, 25, 35, 0.75) 0%,
+      rgba(27, 58, 92, 0.65) 100%
+    ),
+    url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80")
+      center/cover no-repeat;
 }
 
-/* Industry cards — themed photo strip */
-.ind-card.ind-themed{min-height:220px;padding-top:0;padding-bottom:32px;}
-.ind-card.ind-themed .ind-card-media{
-  height:110px;margin:-0px -40px 20px;
-  background-size:cover;background-position:center;
-  position:relative;
+/* Industry cards - themed photo strip */
+.ind-card.ind-themed {
+  min-height: 220px;
+  padding-top: 0;
+  padding-bottom: 32px;
 }
-.ind-card.ind-themed .ind-card-media::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+.ind-card.ind-themed .ind-card-media {
+  height: 110px;
+  margin: -0px -40px 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.ind-card.ind-themed .ind-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 .ind-card.ind-themed .ind-top,
-.ind-card.ind-themed .ind-examples{position:relative;z-index:1;padding:0 40px;}
-.ind-card.ind-themed:hover .ind-card-media::after{
-  background:linear-gradient(180deg,rgba(255,242,238,.2) 0%,rgba(249,250,251,1) 100%);
+.ind-card.ind-themed .ind-examples {
+  position: relative;
+  z-index: 1;
+  padding: 0 40px;
+}
+.ind-card.ind-themed:hover .ind-card-media::after {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 242, 238, 0.2) 0%,
+    rgba(249, 250, 251, 1) 100%
+  );
 }
 
-.ind-bfsi .ind-card-media{background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80');}
-.ind-telecom .ind-card-media{background-image:url('https://images.unsplash.com/photo-1516321318823-687547d67d65?auto=format&fit=crop&w=800&q=80');}
-.ind-automotive .ind-card-media{background-image:url('https://images.unsplash.com/photo-1494976388532-6f2ed50298ed?auto=format&fit=crop&w=800&q=80');}
-.ind-insurance .ind-card-media{background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80');}
-.ind-healthcare .ind-card-media{background-image:url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80');}
-.ind-manufacturing .ind-card-media{background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80');}
-.ind-retail .ind-card-media{background-image:url('https://images.unsplash.com/photo-1556742111-e7e712da0fcc?auto=format&fit=crop&w=800&q=80');}
-.ind-energy .ind-card-media{background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80');}
-.ind-public .ind-card-media{background-image:url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80');}
-.ind-agri .ind-card-media{background-image:url('https://images.unsplash.com/photo-1625246333197-78bfbf810830?auto=format&fit=crop&w=800&q=80');}
+.ind-bfsi .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80");
+}
+.ind-telecom .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1516321318823-687547d67d65?auto=format&fit=crop&w=800&q=80");
+}
+.ind-automotive .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1494976388532-6f2ed50298ed?auto=format&fit=crop&w=800&q=80");
+}
+.ind-insurance .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80");
+}
+.ind-healthcare .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80");
+}
+.ind-manufacturing .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80");
+}
+.ind-retail .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1556742111-e7e712da0fcc?auto=format&fit=crop&w=800&q=80");
+}
+.ind-energy .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80");
+}
+.ind-public .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80");
+}
+.ind-agri .ind-card-media {
+  background-image: url("https://images.unsplash.com/photo-1625246333197-78bfbf810830?auto=format&fit=crop&w=800&q=80");
+}
 
-/* Service cards — clean layout (no background photos) */
-.svc.svc-themed{background-image:none !important;}
+/* Service cards - clean layout (no background photos) */
+.svc.svc-themed {
+  background-image: none !important;
+}
 
 /* Home explore cards */
-.home-link-card.has-bg{
-  background-size:cover;background-position:center;position:relative;overflow:hidden;
-  border-color:transparent;color:#fff;
+.home-link-card.has-bg {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-color: transparent;
+  color: #fff;
 }
-.home-link-card.has-bg::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(13,17,23,.22) 0%,rgba(13,17,23,.72) 100%);
-  transition:background .3s;
+.home-link-card.has-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 17, 23, 0.22) 0%,
+    rgba(13, 17, 23, 0.72) 100%
+  );
+  transition: background 0.3s;
 }
-.home-link-card.has-bg:hover::before{
-  background:linear-gradient(180deg,rgba(255,71,19,.2) 0%,rgba(13,17,23,.78) 100%);
+.home-link-card.has-bg:hover::before {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 71, 19, 0.2) 0%,
+    rgba(13, 17, 23, 0.78) 100%
+  );
 }
-.home-link-card.has-bg > *{position:relative;z-index:1;}
-.home-link-card.has-bg h3,.home-link-card.has-bg p,.home-link-card.has-bg .hl-arrow{color:#fff;}
-.home-link-card.has-bg p{color:rgba(255,255,255,.7);}
-.home-link-card.bg-link-services{background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-industries{background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-cases{background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-about{background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-tech{background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-engage{background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-ai{background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-devops{background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80');}
-.home-link-card.bg-link-contact{background-image:url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=600&q=80');}
+.home-link-card.has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+.home-link-card.has-bg h3,
+.home-link-card.has-bg p,
+.home-link-card.has-bg .hl-arrow {
+  color: #fff;
+}
+.home-link-card.has-bg p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.home-link-card.bg-link-services {
+  background-image: url("https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80");
+}
+.home-link-card.bg-link-industries {
+  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80");
+}
+.home-link-card.bg-link-cases {
+  background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80");
+}
+.home-link-card.bg-link-about {
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80");
+}
+.home-link-card.bg-link-tech {
+  background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80");
+}
+.home-link-card.bg-link-engage {
+  background-image: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80");
+}
+.home-link-card.bg-link-ai {
+  background-image: url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80");
+}
+.home-link-card.bg-link-devops {
+  background-image: url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80");
+}
+.home-link-card.bg-link-contact {
+  background-image: url("https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=600&q=80");
+}
 
-/* Case study & hero — themed imagery */
-.img-hero-engineering,.img-hero-ai,.img-cs-legal,.img-cs-bfsi,.img-cs-fintech{background-size:cover;background-position:center;}
-.img-hero-engineering{background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80');} /* Premium enterprise networking cloud servers representing Cloud & AI Engineering */
-.img-hero-ai{background-image:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80');} /* Gorgeous abstract glowing 3D neural synaptic connectivity network representing AI, LLMs, and RAG */
-.img-cs-legal{background-image:url('/cs_legal_card.png');}
-.img-cs-bfsi{background-image:url('/cs_kotak_card.png');}
-.img-cs-fintech{background-image:url('/cs_cars24_card.png');}
-.bento-photo-sm{height:130px;}
+/* Case study & hero - themed imagery */
+.img-hero-engineering,
+.img-hero-ai,
+.img-cs-legal,
+.img-cs-bfsi,
+.img-cs-fintech {
+  background-size: cover;
+  background-position: center;
+}
+.img-hero-engineering {
+  background-image: url("https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80");
+} /* Premium enterprise networking cloud servers representing Cloud & AI Engineering */
+.img-hero-ai {
+  background-image: url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80");
+} /* Gorgeous abstract glowing 3D neural synaptic connectivity network representing AI, LLMs, and RAG */
+.img-cs-legal {
+  background-image: url("/cs_legal_card.png");
+}
+.img-cs-bfsi {
+  background-image: url("/cs_kotak_card.png");
+}
+.img-cs-fintech {
+  background-image: url("/cs_cars24_card.png");
+}
+.bento-photo-sm {
+  height: 130px;
+}
 
 /* Engagement dark section */
-.feature-dark.bg-engage-section{
+.feature-dark.bg-engage-section {
   background:
-    linear-gradient(135deg,rgba(17,24,39,.92) 0%,rgba(15,25,40,.88) 100%),
-    url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    linear-gradient(
+      135deg,
+      rgba(17, 24, 39, 0.92) 0%,
+      rgba(15, 25, 40, 0.88) 100%
+    ),
+    url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80")
+      center/cover no-repeat;
 }
 .feature-dark.bg-engage-section::before,
-.feature-dark.bg-engage-section::after{display:none;}
+.feature-dark.bg-engage-section::after {
+  display: none;
+}
 
 /* Technology section subtle bg */
-.section.bg-tech-section{
+.section.bg-tech-section {
   background:
-    linear-gradient(180deg,#fff 0%,rgba(249,250,251,.95) 100%),
-    url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-  background-blend-mode:normal;
+    linear-gradient(180deg, #fff 0%, rgba(249, 250, 251, 0.95) 100%),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80")
+      center/cover no-repeat;
+  background-blend-mode: normal;
 }
-.section.bg-tech-section::before{
-  content:'';position:absolute;inset:0;
-  background:rgba(255,255,255,.92);pointer-events:none;
+.section.bg-tech-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+  pointer-events: none;
 }
-.section.bg-tech-section .wrap{position:relative;z-index:1;}
+.section.bg-tech-section .wrap {
+  position: relative;
+  z-index: 1;
+}
 
 /* Content sections with side imagery */
-.content-section.bg-content-ai{
+.content-section.bg-content-ai {
   background:
-    linear-gradient(90deg,#fff 0%,#fff 62%,rgba(255,255,255,.9) 100%),
-    url('https://images.unsplash.com/photo-1620712943348-d21466881688?auto=format&fit=crop&w=1200&q=80') right center/cover no-repeat;
+    linear-gradient(90deg, #fff 0%, #fff 62%, rgba(255, 255, 255, 0.9) 100%),
+    url("https://images.unsplash.com/photo-1620712943348-d21466881688?auto=format&fit=crop&w=1200&q=80")
+      right center/cover no-repeat;
 }
 
-@media(max-width:900px){
-  .ind-card.ind-themed .ind-card-media{height:90px;margin-left:-24px;margin-right:-24px;}
-  .ind-card.ind-themed .ind-top,.ind-card.ind-themed .ind-examples{padding:0 24px;}
-  .svc-themed{background-image:none !important;}
-  .home-link-card.has-bg{min-height:160px;}
+@media (max-width: 900px) {
+  .ind-card.ind-themed .ind-card-media {
+    height: 90px;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .ind-card.ind-themed .ind-top,
+  .ind-card.ind-themed .ind-examples {
+    padding: 0 24px;
+  }
+  .svc-themed {
+    background-image: none !important;
+  }
+  .home-link-card.has-bg {
+    min-height: 160px;
+  }
 }

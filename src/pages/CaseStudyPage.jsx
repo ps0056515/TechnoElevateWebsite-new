@@ -15,7 +15,7 @@ export default function CaseStudyPage() {
   const { id } = useParams();
   const c = CASES.find((x) => x.id === id);
 
-  useDocumentTitle(c ? `${c.client} — Case Study` : "Case Study");
+  useDocumentTitle(c ? `${c.client} - Case Study` : "Case Study");
   useEffect(() => {
     document.body.className = "";
     window.scrollTo(0, 0); // Always scroll to top on mount

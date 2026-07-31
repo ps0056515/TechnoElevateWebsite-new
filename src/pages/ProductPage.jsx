@@ -1,19 +1,19 @@
-import { Link, useParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import Announcement from '../components/Announcement';
-import ProductVisual from '../components/ProductVisual';
-import { getProduct, PRODUCTS, PLATFORM_TRUST } from '../data/products';
-import { useDocumentTitle } from '../hooks/useSiteEffects';
+import { Link, useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import Announcement from "../components/Announcement";
+import ProductVisual from "../components/ProductVisual";
+import { getProduct, PRODUCTS, PLATFORM_TRUST } from "../data/products";
+import { useDocumentTitle } from "../hooks/useSiteEffects";
 
 export default function ProductPage() {
   const { slug } = useParams();
   const product = getProduct(slug);
 
-  useDocumentTitle(product ? product.name : 'Product');
+  useDocumentTitle(product ? product.name : "Product");
 
   if (!product) {
     return (
-      <div className="wrap" style={{ padding: '80px var(--pad)' }}>
+      <div className="wrap" style={{ padding: "80px var(--pad)" }}>
         <h1>Product not found</h1>
         <p>
           <Link to="/products">← All products</Link>
@@ -29,7 +29,7 @@ export default function ProductPage() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-      style={{ '--product-accent': product.accent }}
+      style={{ "--product-accent": product.accent }}
     >
       <Announcement
         pill={product.category}
@@ -40,7 +40,11 @@ export default function ProductPage() {
 
       {/* Product cinematic hero */}
       <section className="product-detail-hero">
-        <div className="product-detail-hero-bg" style={{ backgroundImage: `url(${product.heroImage})` }} aria-hidden="true" />
+        <div
+          className="product-detail-hero-bg"
+          style={{ backgroundImage: `url(${product.heroImage})` }}
+          aria-hidden="true"
+        />
         <div className="product-detail-hero-overlay" aria-hidden="true" />
         <div className="wrap product-detail-hero-inner">
           <div className="product-detail-hero-copy">
@@ -85,7 +89,7 @@ export default function ProductPage() {
         </div>
       </section>
 
-      {/* Challenge / solution — rich split */}
+      {/* Challenge / solution - rich split */}
       <section className="section product-detail-overview">
         <div className="wrap">
           <div className="product-detail-split reveal">
@@ -107,7 +111,9 @@ export default function ProductPage() {
                 <p>{product.problem}</p>
               </div>
               <div className="product-challenge-card product-challenge-card--solution">
-                <span className="product-challenge-label">How {product.name} solves it</span>
+                <span className="product-challenge-label">
+                  How {product.name} solves it
+                </span>
                 <p>{product.solution}</p>
               </div>
             </div>
@@ -125,25 +131,30 @@ export default function ProductPage() {
               />
               <div
                 className="product-detail-gallery-tile"
-                style={{ backgroundImage: `url(${product.galleryAlt || product.cardImage})` }}
+                style={{
+                  backgroundImage: `url(${product.galleryAlt || product.cardImage})`,
+                }}
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust pillars — tinted per product */}
+      {/* Trust pillars - tinted per product */}
       <section className="product-trust-band">
         <div className="wrap">
           <div className="products-trust-head reveal">
-            <div className="s-eyebrow" style={{ color: 'var(--orange2)' }}>
+            <div className="s-eyebrow" style={{ color: "var(--orange2)" }}>
               Platform capabilities
             </div>
             <h2 className="s-title white">What {product.name} delivers</h2>
           </div>
           <div className="products-trust-grid products-trust-grid--dark reveal">
             {PLATFORM_TRUST.map((pillar) => (
-              <div key={pillar.title} className="products-trust-card products-trust-card--dark">
+              <div
+                key={pillar.title}
+                className="products-trust-card products-trust-card--dark"
+              >
                 <div className="products-trust-icon">{pillar.icon}</div>
                 <h4>{pillar.title}</h4>
                 <p>{pillar.desc}</p>
@@ -153,18 +164,24 @@ export default function ProductPage() {
         </div>
       </section>
 
-      {/* Use cases — icon cards */}
+      {/* Use cases - icon cards */}
       <section className="section bg-light">
         <div className="wrap">
           <div className="s-eyebrow">Use cases</div>
           <h2 className="s-title">Who uses {product.name}</h2>
           <p className="s-sub" style={{ maxWidth: 640 }}>
-            Typical adoption patterns from institutes, enterprises, and teams we have designed for.
+            Typical adoption patterns from institutes, enterprises, and teams we
+            have designed for.
           </p>
           <div className="product-use-grid product-use-grid--rich reveal">
             {product.useCases.map((uc, i) => (
-              <div key={uc.title} className="product-use-card product-use-card--rich">
-                <span className="product-use-num">{String(i + 1).padStart(2, '0')}</span>
+              <div
+                key={uc.title}
+                className="product-use-card product-use-card--rich"
+              >
+                <span className="product-use-num">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <h4>{uc.title}</h4>
                 <p>{uc.desc}</p>
               </div>
@@ -182,9 +199,11 @@ export default function ProductPage() {
             {product.modules.map((mod, i) => (
               <div
                 key={mod.title}
-                className={`product-module-bento${i === 0 ? ' product-module-bento--wide' : ''}`}
+                className={`product-module-bento${i === 0 ? " product-module-bento--wide" : ""}`}
               >
-                <span className="product-module-num">{String(i + 1).padStart(2, '0')}</span>
+                <span className="product-module-num">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <h4>{mod.title}</h4>
                 <p>{mod.desc}</p>
               </div>
@@ -201,7 +220,9 @@ export default function ProductPage() {
           <div className="product-features-grid reveal">
             {product.features.map((f, i) => (
               <div key={f} className="product-feature-tile">
-                <span className="product-feature-num">{String(i + 1).padStart(2, '0')}</span>
+                <span className="product-feature-num">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <p>{f}</p>
               </div>
             ))}
@@ -217,7 +238,9 @@ export default function ProductPage() {
           <div className="products-pipeline reveal">
             {product.workflow.map((step, i) => (
               <div key={step} className="products-pipeline-step">
-                <span className="products-pipeline-num">{String(i + 1).padStart(2, '0')}</span>
+                <span className="products-pipeline-num">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <h4>{step}</h4>
               </div>
             ))}
@@ -257,7 +280,7 @@ export default function ProductPage() {
                   to={`/products/${p.slug}`}
                   className="products-bento-tile products-bento-tile--sm"
                   style={{
-                    '--product-accent': p.accent,
+                    "--product-accent": p.accent,
                     backgroundImage: `url(${p.cardImage})`,
                   }}
                 >

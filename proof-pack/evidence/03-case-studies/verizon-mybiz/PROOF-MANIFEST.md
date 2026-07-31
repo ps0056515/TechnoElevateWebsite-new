@@ -1,4 +1,4 @@
-# Proof manifest — Verizon
+# Proof manifest - Verizon
 
 **Case ID:** `verizon-mybiz`  
 **Website:** `/case-studies/verizon-mybiz`  
@@ -9,22 +9,25 @@
 
 ## Published content (must match proof)
 
-| Field | Website text |
-|-------|----------------|
-| Client | Verizon |
-| Project | MyBiz — SMB Self-Service Digital Platform |
-| Industry | Telecom |
-| Engagement | Managed Services |
-| Regions | US |
-| Services | App Dev, Cloud & DevOps |
+| Field      | Website text                              |
+| ---------- | ----------------------------------------- |
+| Client     | Verizon                                   |
+| Project    | MyBiz - SMB Self-Service Digital Platform |
+| Industry   | Telecom                                   |
+| Engagement | Managed Services                          |
+| Regions    | US                                        |
+| Services   | App Dev, Cloud & DevOps                   |
 
 ### Problem
-Verizon's SMB customers needed full self-service for wireless account management, device upgrades, orders, billing and payments — while supporting NSE, NSO, BYOD and NAO business flows with minimal production incidents.
+
+Verizon's SMB customers needed full self-service for wireless account management, device upgrades, orders, billing and payments - while supporting NSE, NSO, BYOD and NAO business flows with minimal production incidents.
 
 ### Solution
+
 Built a microservices backend for MyBiz with real-time visibility, proactive monitoring, root-cause analysis and performance tuning across all core SMB business flows.
 
 ### Tech stack
+
 - Microservices
 - Java
 - Spring Boot
@@ -32,28 +35,28 @@ Built a microservices backend for MyBiz with real-time visibility, proactive mon
 
 ---
 
-## Outcomes — evidence required
+## Outcomes - evidence required
 
-| # | Claim on website | Evidence type | Collected |
-|---|------------------|---------------|-----------|
-| 1 | SMB self-service replacing costly support queues | Internal KPI / client email / load test | ☐ |
-| 2 | Real-time account, device and order visibility | Internal KPI / client email / load test | ☐ |
-| 3 | Minimal production incidents across all flows | Internal KPI / client email / load test | ☐ |
-| 4 | High-availability microservices architecture | Internal KPI / client email / load test | ☐ |
+| #   | Claim on website                                 | Evidence type                           | Collected |
+| --- | ------------------------------------------------ | --------------------------------------- | --------- |
+| 1   | SMB self-service replacing costly support queues | Internal KPI / client email / load test | ☐         |
+| 2   | Real-time account, device and order visibility   | Internal KPI / client email / load test | ☐         |
+| 3   | Minimal production incidents across all flows    | Internal KPI / client email / load test | ☐         |
+| 4   | High-availability microservices architecture     | Internal KPI / client email / load test | ☐         |
 
 ---
 
 ## Files to drop in this folder
 
-| File | Description |
-|------|-------------|
-| `01-sow-or-po-redacted.pdf` | See naming convention below |
+| File                                    | Description                 |
+| --------------------------------------- | --------------------------- |
+| `01-sow-or-po-redacted.pdf`             | See naming convention below |
 | `02-architecture-diagram-sanitized.pdf` | See naming convention below |
-| `03-uat-or-go-live-signoff.pdf` | See naming convention below |
-| `04-metrics-evidence.pdf` | See naming convention below |
-| `05-client-case-study-approval.pdf` | See naming convention below |
-| `06-screenshots-or-demo-redacted.pdf` | See naming convention below |
-| `07-case-study-sales-2pager.pdf` | See naming convention below |
+| `03-uat-or-go-live-signoff.pdf`         | See naming convention below |
+| `04-metrics-evidence.pdf`               | See naming convention below |
+| `05-client-case-study-approval.pdf`     | See naming convention below |
+| `06-screenshots-or-demo-redacted.pdf`   | See naming convention below |
+| `07-case-study-sales-2pager.pdf`        | See naming convention below |
 
 **Naming convention:** use the filenames above. Redact client-confidential data; keep metric validation visible.
 
@@ -74,9 +77,9 @@ Built a microservices backend for MyBiz with real-time visibility, proactive mon
 
 ## Status
 
-| Field | Value |
-|-------|-------|
-| Proof tier | See PROJECT-REGISTER.csv |
-| Safe for enterprise pitch with metrics | ☐ No — until Tier A checklist complete |
-| Last reviewed | |
-| Owner | |
+| Field                                  | Value                                  |
+| -------------------------------------- | -------------------------------------- |
+| Proof tier                             | See PROJECT-REGISTER.csv               |
+| Safe for enterprise pitch with metrics | ☐ No - until Tier A checklist complete |
+| Last reviewed                          |                                        |
+| Owner                                  |                                        |

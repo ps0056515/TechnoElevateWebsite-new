@@ -1,5 +1,5 @@
 case_id,client_name,project_name,industry,region,engagement_model,services,start_year,end_year,status,website_published,proof_tier,sow_on_file,client_logo_ok,reference_call_ok,case_study_ok,metrics_verified,key_metrics,proof_folder_path,owner,last_reviewed,notes
-kotak-lcrms,Kotak Mahindra Bank,LCRMS — Loan Collection & Recovery,BFSI,India,Fixed-Scope,"App Dev; Cloud & DevOps",,,Active,Yes,A,N,N,N,N,N,"Sub-1s API; 10K+ concurrent cases",evidence/03-case-studies/kotak-lcrms/,,,
+kotak-lcrms,Kotak Mahindra Bank,LCRMS - Loan Collection & Recovery,BFSI,India,Fixed-Scope,"App Dev; Cloud & DevOps",,,Active,Yes,A,N,N,N,N,N,"Sub-1s API; 10K+ concurrent cases",evidence/03-case-studies/kotak-lcrms/,,,
 kotak-sra,Kotak Mahindra Bank,Service Request Automation + TAS,BFSI,India,Fixed-Scope,"App Dev; Digital Transformation",,,Active,Yes,A,N,N,N,N,N,"80-90% SR automated",evidence/03-case-studies/kotak-sra/,,,
 jpmorgan-tps,JPMorgan Chase,Trade Processing System (TPS),BFSI,Global,Staff Augmentation,"App Dev; Cloud & DevOps",,,Active,Yes,B,N,N,N,N,N,Zero-defect regulatory docs,evidence/03-case-studies/jpmorgan-tps/,,,
 lloyds-ddrx,Lloyds Banking Group,DDRX + DFX Dynamic Discounting,BFSI,UK,T&M,"App Dev; Digital Transformation",,,Active,Yes,B,N,N,N,N,N,SME liquidity platform,evidence/03-case-studies/lloyds-ddrx/,,,

@@ -1,57 +1,57 @@
-# Proof Gaps — Action Plan
+# Proof Gaps - Action Plan
 
 Prioritized remediation for website credibility and sales readiness.
 
 ---
 
-## Week 1 — Stop credibility leaks (website)
+## Week 1 - Stop credibility leaks (website)
 
-| # | Action | Page(s) | Owner | Done |
-|---|--------|---------|-------|------|
-| 1 | Change **60+ projects** to verified count OR populate register to 60+ | index, about, casestudies, locations | Marketing | [ ] |
-| 2 | Remove **100% client retention** → "Long-term client partnerships" | index, about, leadership | Marketing | [ ] |
-| 3 | Remove **future-dated newsroom** items (Mar 2026 etc.) or backdate with proof | newsroom | Marketing | [ ] |
-| 4 | Change partner badges to **"Capabilities"** text OR add cert PDFs | index, security | Marketing + Legal | [ ] |
-| 5 | Add testimonial disclaimer OR remove until signed | index | Marketing | [ ] |
-| 6 | Fix **200+ vs 500+** engineer count conflict | locations, about | HR | [ ] |
-| 7 | Align **industry project counts** with PROJECT-REGISTER.csv | industries, industry-* pages | Delivery | [ ] |
-
----
-
-## Week 2 — Build minimum proof kit
-
-| # | Action | Deliverable | Owner | Done |
-|---|--------|-------------|-------|------|
-| 8 | Fill **PROJECT-REGISTER.csv** — all columns for 20 cases | Updated CSV | Delivery lead | [ ] |
-| 9 | Complete **CLIENT-REFERENCE-MATRIX.csv** for logo clients | Updated CSV | Sales | [ ] |
-| 10 | Obtain **CMMI certificate** PDF → `evidence/02-certifications/` | PDF | QA / HR | [ ] |
-| 11 | Build **Tier A pack: kotak-sra** | Folder + 2-pager | Account team | [ ] |
-| 12 | Build **Tier A pack: legaldst** | Folder + demo access | AI practice | [ ] |
-| 13 | Build **Tier A pack: cars24-credit** | Folder (NDA aware) | Account team | [ ] |
+| #   | Action                                                                        | Page(s)                              | Owner             | Done |
+| --- | ----------------------------------------------------------------------------- | ------------------------------------ | ----------------- | ---- |
+| 1   | Change **60+ projects** to verified count OR populate register to 60+         | index, about, casestudies, locations | Marketing         | [ ]  |
+| 2   | Remove **100% client retention** → "Long-term client partnerships"            | index, about, leadership             | Marketing         | [ ]  |
+| 3   | Remove **future-dated newsroom** items (Mar 2026 etc.) or backdate with proof | newsroom                             | Marketing         | [ ]  |
+| 4   | Change partner badges to **"Capabilities"** text OR add cert PDFs             | index, security                      | Marketing + Legal | [ ]  |
+| 5   | Add testimonial disclaimer OR remove until signed                             | index                                | Marketing         | [ ]  |
+| 6   | Fix **200+ vs 500+** engineer count conflict                                  | locations, about                     | HR                | [ ]  |
+| 7   | Align **industry project counts** with PROJECT-REGISTER.csv                   | industries, industry-\* pages        | Delivery          | [ ]  |
 
 ---
 
-## Week 3 — Leadership, references, security
+## Week 2 - Build minimum proof kit
 
-| # | Action | Owner | Done |
-|---|--------|-------|------|
-| 14 | Replace leadership placeholders with **real bios + LinkedIn** OR hide page | HR / Marketing | [ ] |
-| 15 | Get **3 signed testimonials** (Kotak, CARS24, LegalDST) | Account managers | [ ] |
-| 16 | Create **security one-pager** (SDLC, OWASP, data handling) | Security / QA | [ ] |
-| 17 | Write **2 whitepapers** OR change whitepapers page to "Request briefing" | Practice heads | [ ] |
-| 18 | Verify **careers listings** are real open roles | HR | [ ] |
+| #   | Action                                                          | Deliverable          | Owner         | Done |
+| --- | --------------------------------------------------------------- | -------------------- | ------------- | ---- |
+| 8   | Fill **PROJECT-REGISTER.csv** - all columns for 20 cases        | Updated CSV          | Delivery lead | [ ]  |
+| 9   | Complete **CLIENT-REFERENCE-MATRIX.csv** for logo clients       | Updated CSV          | Sales         | [ ]  |
+| 10  | Obtain **CMMI certificate** PDF → `evidence/02-certifications/` | PDF                  | QA / HR       | [ ]  |
+| 11  | Build **Tier A pack: kotak-sra**                                | Folder + 2-pager     | Account team  | [ ]  |
+| 12  | Build **Tier A pack: legaldst**                                 | Folder + demo access | AI practice   | [ ]  |
+| 13  | Build **Tier A pack: cars24-credit**                            | Folder (NDA aware)   | Account team  | [ ]  |
 
 ---
 
-## Week 4 — Sales enablement
+## Week 3 - Leadership, references, security
 
-| # | Action | Owner | Done |
-|---|--------|-------|------|
-| 19 | Master **sales deck** synced to proof pack only | Sales | [ ] |
-| 20 | **AI Hub demo** environment ready for prospects | AI practice | [ ] |
-| 21 | **DevOps/SRE demo** (pipeline + Grafana sanitized) | Cloud practice | [ ] |
-| 22 | Train team: **never cite unverified metrics** | Sales lead | [ ] |
-| 23 | Quarterly **proof pack review** calendar | Proof pack owner | [ ] |
+| #   | Action                                                                     | Owner            | Done |
+| --- | -------------------------------------------------------------------------- | ---------------- | ---- |
+| 14  | Replace leadership placeholders with **real bios + LinkedIn** OR hide page | HR / Marketing   | [ ]  |
+| 15  | Get **3 signed testimonials** (Kotak, CARS24, LegalDST)                    | Account managers | [ ]  |
+| 16  | Create **security one-pager** (SDLC, OWASP, data handling)                 | Security / QA    | [ ]  |
+| 17  | Write **2 whitepapers** OR change whitepapers page to "Request briefing"   | Practice heads   | [ ]  |
+| 18  | Verify **careers listings** are real open roles                            | HR               | [ ]  |
+
+---
+
+## Week 4 - Sales enablement
+
+| #   | Action                                             | Owner            | Done |
+| --- | -------------------------------------------------- | ---------------- | ---- |
+| 19  | Master **sales deck** synced to proof pack only    | Sales            | [ ]  |
+| 20  | **AI Hub demo** environment ready for prospects    | AI practice      | [ ]  |
+| 21  | **DevOps/SRE demo** (pipeline + Grafana sanitized) | Cloud practice   | [ ]  |
+| 22  | Train team: **never cite unverified metrics**      | Sales lead       | [ ]  |
+| 23  | Quarterly **proof pack review** calendar           | Proof pack owner | [ ]  |
 
 ---
 
@@ -59,14 +59,14 @@ Prioritized remediation for website credibility and sales readiness.
 
 Use these until proof is on file:
 
-| Current | Replace with |
-|---------|--------------|
-| 60+ projects delivered | 20+ enterprise engagements documented · expanding portfolio |
-| 100% client retention | Repeat engagements across BFSI, telecom and AI clients |
-| CMMI Level 3 (badge) | Engineering practices aligned with CMMI Level 3 standards* |
-| AWS Partner (badge) | Cloud-native delivery on AWS, Azure and GCP |
-| ISO 27001 Aligned | Security practices aligned with ISO 27001 frameworks |
-| India's largest private bank | Leading Indian private sector bank (if Kotak not approved) |
+| Current                      | Replace with                                                |
+| ---------------------------- | ----------------------------------------------------------- |
+| 60+ projects delivered       | 20+ enterprise engagements documented · expanding portfolio |
+| 100% client retention        | Repeat engagements across BFSI, telecom and AI clients      |
+| CMMI Level 3 (badge)         | Engineering practices aligned with CMMI Level 3 standards\* |
+| AWS Partner (badge)          | Cloud-native delivery on AWS, Azure and GCP                 |
+| ISO 27001 Aligned            | Security practices aligned with ISO 27001 frameworks        |
+| India's largest private bank | Leading Indian private sector bank (if Kotak not approved)  |
 
 \*Only use "CMMI Level 3 certified" when certificate is in evidence folder.
 
@@ -83,7 +83,7 @@ Use these until proof is on file:
 
 ---
 
-## Evidence folder — create these subfolders
+## Evidence folder - create these subfolders
 
 ```
 evidence/
